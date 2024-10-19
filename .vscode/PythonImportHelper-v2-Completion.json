@@ -137,6 +137,54 @@
         "documentation": {}
     },
     {
+        "label": "ABC",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "ABC",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "ABC",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
         "label": "Motorcycle",
         "importPath": "Implementacion",
         "description": "Implementacion",
@@ -582,6 +630,78 @@
         "documentation": {}
     },
     {
+        "label": "IEngine",
+        "kind": 6,
+        "importPath": "codes.bridge.BridgeAutos",
+        "description": "codes.bridge.BridgeAutos",
+        "peekOfCode": "class IEngine(ABC):\n    print(\"Interfaz Engine\")\n    @abstractmethod\n    def stop(self):\n        pass\n    @abstractmethod\n    def start(self):\n        pass\nclass Vehicle(ABC):\n    print(\"Abstraccion Vehiculo\")",
+        "detail": "codes.bridge.BridgeAutos",
+        "documentation": {}
+    },
+    {
+        "label": "Vehicle",
+        "kind": 6,
+        "importPath": "codes.bridge.BridgeAutos",
+        "description": "codes.bridge.BridgeAutos",
+        "peekOfCode": "class Vehicle(ABC):\n    print(\"Abstraccion Vehiculo\")\n    def __init__(self, engine: IEngine) -> None:\n        self._engine = engine\n    @abstractmethod\n    def drive( self ):\n        pass\nclass Bus( Vehicle ):\n    print(\"definiendo bus <- Vehiculo \")\n    def drive(self):",
+        "detail": "codes.bridge.BridgeAutos",
+        "documentation": {}
+    },
+    {
+        "label": "Bus",
+        "kind": 6,
+        "importPath": "codes.bridge.BridgeAutos",
+        "description": "codes.bridge.BridgeAutos",
+        "peekOfCode": "class Bus( Vehicle ):\n    print(\"definiendo bus <- Vehiculo \")\n    def drive(self):\n        print(\"Manejando el bus\")\n        self._engine.start()\nclass Car( Vehicle ):\n    print(\"definiendo carro <- Vehiculo \")\n    def drive(self):\n        print(\"Manejando el carro\")\n        self._engine.start()",
+        "detail": "codes.bridge.BridgeAutos",
+        "documentation": {}
+    },
+    {
+        "label": "Car",
+        "kind": 6,
+        "importPath": "codes.bridge.BridgeAutos",
+        "description": "codes.bridge.BridgeAutos",
+        "peekOfCode": "class Car( Vehicle ):\n    print(\"definiendo carro <- Vehiculo \")\n    def drive(self):\n        print(\"Manejando el carro\")\n        self._engine.start()\nclass ElectricEngine(IEngine):\n    print(\"definiendo motor electrico <- Iengine (implementando)\")\n    def start(self):\n        print(F\"start {self.__class__.__name__}\")\n    def stop(self):",
+        "detail": "codes.bridge.BridgeAutos",
+        "documentation": {}
+    },
+    {
+        "label": "ElectricEngine",
+        "kind": 6,
+        "importPath": "codes.bridge.BridgeAutos",
+        "description": "codes.bridge.BridgeAutos",
+        "peekOfCode": "class ElectricEngine(IEngine):\n    print(\"definiendo motor electrico <- Iengine (implementando)\")\n    def start(self):\n        print(F\"start {self.__class__.__name__}\")\n    def stop(self):\n        print(F\"stop {self.__class__.__name__}\")\nclass PetrolEngine(IEngine):\n    print(\"definiendo motor de gasolina <- Iengine (implementando)\")\n    def start(self):\n        print(F\"start {self.__class__.__name__}\")",
+        "detail": "codes.bridge.BridgeAutos",
+        "documentation": {}
+    },
+    {
+        "label": "PetrolEngine",
+        "kind": 6,
+        "importPath": "codes.bridge.BridgeAutos",
+        "description": "codes.bridge.BridgeAutos",
+        "peekOfCode": "class PetrolEngine(IEngine):\n    print(\"definiendo motor de gasolina <- Iengine (implementando)\")\n    def start(self):\n        print(F\"start {self.__class__.__name__}\")\n    def stop(self):\n        print(F\"stop {self.__class__.__name__}\")\nprint(\"_____________ INICIANDO EJECUCION _____________ \")\ncar_whith_petrol_engine = Car( PetrolEngine() )\ncar_whith_petrol_engine.drive()\nbus_whith_electric_engine = Bus( ElectricEngine() )",
+        "detail": "codes.bridge.BridgeAutos",
+        "documentation": {}
+    },
+    {
+        "label": "car_whith_petrol_engine",
+        "kind": 5,
+        "importPath": "codes.bridge.BridgeAutos",
+        "description": "codes.bridge.BridgeAutos",
+        "peekOfCode": "car_whith_petrol_engine = Car( PetrolEngine() )\ncar_whith_petrol_engine.drive()\nbus_whith_electric_engine = Bus( ElectricEngine() )\nbus_whith_electric_engine.drive()",
+        "detail": "codes.bridge.BridgeAutos",
+        "documentation": {}
+    },
+    {
+        "label": "bus_whith_electric_engine",
+        "kind": 5,
+        "importPath": "codes.bridge.BridgeAutos",
+        "description": "codes.bridge.BridgeAutos",
+        "peekOfCode": "bus_whith_electric_engine = Bus( ElectricEngine() )\nbus_whith_electric_engine.drive()",
+        "detail": "codes.bridge.BridgeAutos",
+        "documentation": {}
+    },
+    {
         "label": "IFormat",
         "kind": 6,
         "importPath": "codes.bridge.bridge",
@@ -672,6 +792,96 @@
         "documentation": {}
     },
     {
+        "label": "IFormat",
+        "kind": 6,
+        "importPath": "codes.bridge.bridgeLive",
+        "description": "codes.bridge.bridgeLive",
+        "peekOfCode": "class IFormat(ABC):\n    print(f\"Se define IFormat\")\n    @abstractmethod\n    def play(self, file_path: str) -> None:\n        pass\nclass MusicPlayer( ABC ):\n    print(f\"Se define MusicPlayer\")\n    def __init__(self, format:IFormat):\n        self.format = format \n    @abstractmethod",
+        "detail": "codes.bridge.bridgeLive",
+        "documentation": {}
+    },
+    {
+        "label": "MusicPlayer",
+        "kind": 6,
+        "importPath": "codes.bridge.bridgeLive",
+        "description": "codes.bridge.bridgeLive",
+        "peekOfCode": "class MusicPlayer( ABC ):\n    print(f\"Se define MusicPlayer\")\n    def __init__(self, format:IFormat):\n        self.format = format \n    @abstractmethod\n    def play(self, file_path: str) -> None:\n        pass\nclass DesktopPlayer(MusicPlayer):\n    print(f\"DesktopPlayer <- Musicplay (play)\")\n    def play(self, file_path:str) -> None:",
+        "detail": "codes.bridge.bridgeLive",
+        "documentation": {}
+    },
+    {
+        "label": "DesktopPlayer",
+        "kind": 6,
+        "importPath": "codes.bridge.bridgeLive",
+        "description": "codes.bridge.bridgeLive",
+        "peekOfCode": "class DesktopPlayer(MusicPlayer):\n    print(f\"DesktopPlayer <- Musicplay (play)\")\n    def play(self, file_path:str) -> None:\n        print(\"Using DesktopPlayer\")\n        self.format.play( file_path )\nclass MobilPlayer(MusicPlayer):\n    print(f\"MobilePlayer <- Musicplay (play)\")\n    def play(self, file_path:str) -> None:\n        print(\"Using Mobileplayer\")\n        self.format.play( file_path )",
+        "detail": "codes.bridge.bridgeLive",
+        "documentation": {}
+    },
+    {
+        "label": "MobilPlayer",
+        "kind": 6,
+        "importPath": "codes.bridge.bridgeLive",
+        "description": "codes.bridge.bridgeLive",
+        "peekOfCode": "class MobilPlayer(MusicPlayer):\n    print(f\"MobilePlayer <- Musicplay (play)\")\n    def play(self, file_path:str) -> None:\n        print(\"Using Mobileplayer\")\n        self.format.play( file_path )\nclass MP3(IFormat):\n    print(F\"MP3 <- IMPLEMENTA IFormat\")\n    def play(self, file_path: str) -> None:\n        print(f\"Playing MP3 FILE {file_path}\")\nclass WAV(IFormat):",
+        "detail": "codes.bridge.bridgeLive",
+        "documentation": {}
+    },
+    {
+        "label": "MP3",
+        "kind": 6,
+        "importPath": "codes.bridge.bridgeLive",
+        "description": "codes.bridge.bridgeLive",
+        "peekOfCode": "class MP3(IFormat):\n    print(F\"MP3 <- IMPLEMENTA IFormat\")\n    def play(self, file_path: str) -> None:\n        print(f\"Playing MP3 FILE {file_path}\")\nclass WAV(IFormat):\n    print(F\"MP3 <- IMPLEMENTA IFormat\")\n    def play(self, file_path: str) -> None:\n        print(f\"Playing WAV FILE {file_path}\")\nprint(\"____________ inicia la ejecucion ____________\")\nmp3_format = MP3()",
+        "detail": "codes.bridge.bridgeLive",
+        "documentation": {}
+    },
+    {
+        "label": "WAV",
+        "kind": 6,
+        "importPath": "codes.bridge.bridgeLive",
+        "description": "codes.bridge.bridgeLive",
+        "peekOfCode": "class WAV(IFormat):\n    print(F\"MP3 <- IMPLEMENTA IFormat\")\n    def play(self, file_path: str) -> None:\n        print(f\"Playing WAV FILE {file_path}\")\nprint(\"____________ inicia la ejecucion ____________\")\nmp3_format = MP3()\nplayer = DesktopPlayer(mp3_format)\nplayer.play(\"song mp3\")\nwav_format = WAV()\nplayer2 = DesktopPlayer(wav_format)",
+        "detail": "codes.bridge.bridgeLive",
+        "documentation": {}
+    },
+    {
+        "label": "mp3_format",
+        "kind": 5,
+        "importPath": "codes.bridge.bridgeLive",
+        "description": "codes.bridge.bridgeLive",
+        "peekOfCode": "mp3_format = MP3()\nplayer = DesktopPlayer(mp3_format)\nplayer.play(\"song mp3\")\nwav_format = WAV()\nplayer2 = DesktopPlayer(wav_format)\nplayer2.play(\"song wab\")",
+        "detail": "codes.bridge.bridgeLive",
+        "documentation": {}
+    },
+    {
+        "label": "player",
+        "kind": 5,
+        "importPath": "codes.bridge.bridgeLive",
+        "description": "codes.bridge.bridgeLive",
+        "peekOfCode": "player = DesktopPlayer(mp3_format)\nplayer.play(\"song mp3\")\nwav_format = WAV()\nplayer2 = DesktopPlayer(wav_format)\nplayer2.play(\"song wab\")",
+        "detail": "codes.bridge.bridgeLive",
+        "documentation": {}
+    },
+    {
+        "label": "wav_format",
+        "kind": 5,
+        "importPath": "codes.bridge.bridgeLive",
+        "description": "codes.bridge.bridgeLive",
+        "peekOfCode": "wav_format = WAV()\nplayer2 = DesktopPlayer(wav_format)\nplayer2.play(\"song wab\")",
+        "detail": "codes.bridge.bridgeLive",
+        "documentation": {}
+    },
+    {
+        "label": "player2",
+        "kind": 5,
+        "importPath": "codes.bridge.bridgeLive",
+        "description": "codes.bridge.bridgeLive",
+        "peekOfCode": "player2 = DesktopPlayer(wav_format)\nplayer2.play(\"song wab\")",
+        "detail": "codes.bridge.bridgeLive",
+        "documentation": {}
+    },
+    {
         "label": "IRobotBuilder",
         "kind": 6,
         "importPath": "codes.builder.buillder",
@@ -732,6 +942,87 @@
         "description": "codes.builder.buillder",
         "peekOfCode": "robot = robot_builder.get_robot()\n# El cliente muestra la información del robot construido.\nrobot.display_robot_info()",
         "detail": "codes.builder.buillder",
+        "documentation": {}
+    },
+    {
+        "label": "IFileSystemItem",
+        "kind": 6,
+        "importPath": "codes.composite.composite",
+        "description": "codes.composite.composite",
+        "peekOfCode": "class IFileSystemItem(ABC): # Interfaz del patron\n    @abstractmethod\n    def display(self, ident = \" \"):\n        pass\nclass AppFile(IFileSystemItem): # objeto para archivos que tiene nombre he implementa display\n    def __init__(self, name) -> None:\n        self._name = name \n    def display(self, ident=\"   \"):\n        print(f\"{ident} - {self.__class__.__name__} : {self._name}\")\nclass Folder(IFileSystemItem): # objeto para folers define su display y add item ",
+        "detail": "codes.composite.composite",
+        "documentation": {}
+    },
+    {
+        "label": "AppFile",
+        "kind": 6,
+        "importPath": "codes.composite.composite",
+        "description": "codes.composite.composite",
+        "peekOfCode": "class AppFile(IFileSystemItem): # objeto para archivos que tiene nombre he implementa display\n    def __init__(self, name) -> None:\n        self._name = name \n    def display(self, ident=\"   \"):\n        print(f\"{ident} - {self.__class__.__name__} : {self._name}\")\nclass Folder(IFileSystemItem): # objeto para folers define su display y add item \n    def __init__(self, name) -> None:\n        self._name = name \n        self._items = []\n    def add_item(self, item):",
+        "detail": "codes.composite.composite",
+        "documentation": {}
+    },
+    {
+        "label": "Folder",
+        "kind": 6,
+        "importPath": "codes.composite.composite",
+        "description": "codes.composite.composite",
+        "peekOfCode": "class Folder(IFileSystemItem): # objeto para folers define su display y add item \n    def __init__(self, name) -> None:\n        self._name = name \n        self._items = []\n    def add_item(self, item):\n        self._items.append(item)\n    def display(self, ident=\"\"):\n        print(f\"|{ident} - {self.__class__.__name__} : {self._name}\")\n        for item in self._items:\n            item.display( ident + \"     \" )",
+        "detail": "codes.composite.composite",
+        "documentation": {}
+    },
+    {
+        "label": "file1",
+        "kind": 5,
+        "importPath": "codes.composite.composite",
+        "description": "codes.composite.composite",
+        "peekOfCode": "file1 = AppFile(\"File1\")\nfile2 = AppFile(\"File2\")\nfile3 = AppFile(\"File3\")\nfolder1 = Folder(\"Folder1\")\nfolder2 = Folder(\"Folder2\")\nfolder1.add_item(file1)\nfolder1.add_item(file2)\nfolder2.add_item(file3)\nroot = Folder(\"root\")\nroot.add_item(folder1)",
+        "detail": "codes.composite.composite",
+        "documentation": {}
+    },
+    {
+        "label": "file2",
+        "kind": 5,
+        "importPath": "codes.composite.composite",
+        "description": "codes.composite.composite",
+        "peekOfCode": "file2 = AppFile(\"File2\")\nfile3 = AppFile(\"File3\")\nfolder1 = Folder(\"Folder1\")\nfolder2 = Folder(\"Folder2\")\nfolder1.add_item(file1)\nfolder1.add_item(file2)\nfolder2.add_item(file3)\nroot = Folder(\"root\")\nroot.add_item(folder1)\nroot.add_item(folder2)",
+        "detail": "codes.composite.composite",
+        "documentation": {}
+    },
+    {
+        "label": "file3",
+        "kind": 5,
+        "importPath": "codes.composite.composite",
+        "description": "codes.composite.composite",
+        "peekOfCode": "file3 = AppFile(\"File3\")\nfolder1 = Folder(\"Folder1\")\nfolder2 = Folder(\"Folder2\")\nfolder1.add_item(file1)\nfolder1.add_item(file2)\nfolder2.add_item(file3)\nroot = Folder(\"root\")\nroot.add_item(folder1)\nroot.add_item(folder2)\nroot.display()",
+        "detail": "codes.composite.composite",
+        "documentation": {}
+    },
+    {
+        "label": "folder1",
+        "kind": 5,
+        "importPath": "codes.composite.composite",
+        "description": "codes.composite.composite",
+        "peekOfCode": "folder1 = Folder(\"Folder1\")\nfolder2 = Folder(\"Folder2\")\nfolder1.add_item(file1)\nfolder1.add_item(file2)\nfolder2.add_item(file3)\nroot = Folder(\"root\")\nroot.add_item(folder1)\nroot.add_item(folder2)\nroot.display()",
+        "detail": "codes.composite.composite",
+        "documentation": {}
+    },
+    {
+        "label": "folder2",
+        "kind": 5,
+        "importPath": "codes.composite.composite",
+        "description": "codes.composite.composite",
+        "peekOfCode": "folder2 = Folder(\"Folder2\")\nfolder1.add_item(file1)\nfolder1.add_item(file2)\nfolder2.add_item(file3)\nroot = Folder(\"root\")\nroot.add_item(folder1)\nroot.add_item(folder2)\nroot.display()",
+        "detail": "codes.composite.composite",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "codes.composite.composite",
+        "description": "codes.composite.composite",
+        "peekOfCode": "root = Folder(\"root\")\nroot.add_item(folder1)\nroot.add_item(folder2)\nroot.display()",
+        "detail": "codes.composite.composite",
         "documentation": {}
     },
     {
