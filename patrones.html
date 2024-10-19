@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Patrón Builder - Ladrillos en Movimiento</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* Estilos personalizados para el diagrama */
+        .diagram-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .builder-process {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .director, .machine, .product {
+            display: inline-block;
+            margin: 20px;
+            text-align: center;
+        }
+        .machine img {
+            width: 100px;
+        }
+        .brick {
+            width: 50px;
+            height: 25px;
+            background-color: #d9534f;
+            display: inline-block;
+            margin: 2px;
+            border-radius: 4px;
+            position: absolute;
+            top: 50%;
+            left: 25%;
+            transform: translate(-50%, -50%);
+            animation: moveBrick 4s ease-in-out infinite;
+        }
+        .wall {
+            border: 2px solid #343a40;
+            width: 350px;
+            height: 150px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: start;
+            align-items: center;
+        }
+        /* Animación para mover ladrillos */
+        @keyframes moveBrick {
+            0% {
+                transform: translate(0, 0);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(450px, -50px);
+                opacity: 0;
+            }
+        }
+        /* Flecha */
+        .arrow {
+            display: block;
+            margin: 10px;
+            width: 60px;
+            height: 20px;
+            background-color: #007bff;
+            position: relative;
+        }
+        .arrow:after {
+            content: "";
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            border-left: 20px solid transparent;
+            border-right: 0 solid transparent;
+            border-top: 10px solid #007bff;
+            border-bottom: 0 solid transparent;
+        }
+        /* Añadir ladrillos reales en la pared */
+        .wall .brick {
+            animation: none;
+            opacity: 1;
+            position: relative;
+        }
+        footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">MiSitio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Encabezado -->
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1>Patrón de Diseño: Builder</h1>
+            <p class="lead">Simulación interactiva del patrón Builder con ladrillos y una pared</p>
+        </div>
+    </header>
+
+    <!-- Diagrama del Patrón Builder -->
+    <main class="container my-5 diagram-container">
+        <h2>Diagrama del Patrón Builder</h2>
+        <div class="builder-process">
+            <!-- Director -->
+            <div class="director">
+                <strong>Director</strong>
+                <p>El Director da instrucciones</p>
+                <img src="https://cdn-icons-png.flaticon.com/512/4286/4286708.png" width="100" alt="Director">
+            </div>
+            <div class="arrow"></div>
+
+            <!-- Máquina (Builder) -->
+            <div class="machine">
+                <strong>Builder</strong>
+                <p>La máquina crea los ladrillos</p>
+                <img src="https://cdn-icons-png.flaticon.com/512/606/606579.png" alt="Machine">
+                <div class="brick"></div> <!-- Ladrillo que se mueve -->
+            </div>
+            <div class="arrow"></div>
+
+            <!-- Producto Final (Pared) -->
+            <div class="product">
+                <strong>Pared (Producto Final)</strong>
+                <p>El resultado final es una pared</p>
+                <div class="wall">
+                    <!-- Pared formada por ladrillos reales -->
+                    <div class="brick"></div>
+                    <div class="brick"></div>
+                    <div class="brick"></div>
+                    <div class="brick"></div>
+                    <div class="brick"></div>
+                    <div class="brick"></div>
+                    <div class="brick"></div>
+                    <div class="brick"></div>
+                    <div class="brick"></div>
+                    <div class="brick"></div>
+                    <div class="brick"></div>
+                    <div class="brick"></div>
+                    <div class="brick"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Mi Sitio. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

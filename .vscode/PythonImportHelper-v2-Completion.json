@@ -1,0 +1,863 @@
+[
+    {
+        "label": "abc",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "abc",
+        "description": "abc",
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "ABC",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "ABC",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "ABC",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "ABC",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "ABC",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "ABC",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "ABC",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "ABC",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "Motorcycle",
+        "importPath": "Implementacion",
+        "description": "Implementacion",
+        "isExtraImport": true,
+        "detail": "Implementacion",
+        "documentation": {}
+    },
+    {
+        "label": "Car",
+        "importPath": "Implementacion",
+        "description": "Implementacion",
+        "isExtraImport": true,
+        "detail": "Implementacion",
+        "documentation": {}
+    },
+    {
+        "label": "Bike",
+        "importPath": "Implementacion",
+        "description": "Implementacion",
+        "isExtraImport": true,
+        "detail": "Implementacion",
+        "documentation": {}
+    },
+    {
+        "label": "live",
+        "importPath": "debug",
+        "description": "debug",
+        "isExtraImport": true,
+        "detail": "debug",
+        "documentation": {}
+    },
+    {
+        "label": "live",
+        "importPath": "debug",
+        "description": "debug",
+        "isExtraImport": true,
+        "detail": "debug",
+        "documentation": {}
+    },
+    {
+        "label": "copy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "copy",
+        "description": "copy",
+        "detail": "copy",
+        "documentation": {}
+    },
+    {
+        "label": "uuid",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "uuid",
+        "description": "uuid",
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "FactoryVehicle",
+        "kind": 6,
+        "importPath": "codes.abstractFactory.ciclo_vida.Abstraccion",
+        "description": "codes.abstractFactory.ciclo_vida.Abstraccion",
+        "peekOfCode": "class FactoryVehicle(ABC, live):\n    @abstractmethod\n    def create_vehicle(self):\n        pass\n    def order_vehicle(self):\n        vehicle = self.create_vehicle()\n        print(f\"Vehículo {vehicle.__class__.__name__} creado.\")\n        vehicle.start()\n        vehicle.drive()\n        vehicle.stop()",
+        "detail": "codes.abstractFactory.ciclo_vida.Abstraccion",
+        "documentation": {}
+    },
+    {
+        "label": "FactoryBike",
+        "kind": 6,
+        "importPath": "codes.abstractFactory.ciclo_vida.Abstraccion",
+        "description": "codes.abstractFactory.ciclo_vida.Abstraccion",
+        "peekOfCode": "class FactoryBike(FactoryVehicle, live):\n    def create_vehicle(self):\n        return Bike()\nclass FactoryCar(FactoryVehicle, live):\n    def create_vehicle(self):\n        return Car()\nclass FactoryMotorcycle(FactoryVehicle, live):\n    def create_vehicle(self):\n        return Motorcycle()\n# Usando la fábrica de bicicletas como ejemplo",
+        "detail": "codes.abstractFactory.ciclo_vida.Abstraccion",
+        "documentation": {}
+    },
+    {
+        "label": "FactoryCar",
+        "kind": 6,
+        "importPath": "codes.abstractFactory.ciclo_vida.Abstraccion",
+        "description": "codes.abstractFactory.ciclo_vida.Abstraccion",
+        "peekOfCode": "class FactoryCar(FactoryVehicle, live):\n    def create_vehicle(self):\n        return Car()\nclass FactoryMotorcycle(FactoryVehicle, live):\n    def create_vehicle(self):\n        return Motorcycle()\n# Usando la fábrica de bicicletas como ejemplo\nvehicle_factory = FactoryBike()\nvehicle = vehicle_factory.order_vehicle()\nprint(f\"=================== Usas un {vehicle.__class__.__name__}\")",
+        "detail": "codes.abstractFactory.ciclo_vida.Abstraccion",
+        "documentation": {}
+    },
+    {
+        "label": "FactoryMotorcycle",
+        "kind": 6,
+        "importPath": "codes.abstractFactory.ciclo_vida.Abstraccion",
+        "description": "codes.abstractFactory.ciclo_vida.Abstraccion",
+        "peekOfCode": "class FactoryMotorcycle(FactoryVehicle, live):\n    def create_vehicle(self):\n        return Motorcycle()\n# Usando la fábrica de bicicletas como ejemplo\nvehicle_factory = FactoryBike()\nvehicle = vehicle_factory.order_vehicle()\nprint(f\"=================== Usas un {vehicle.__class__.__name__}\")\nvehicle_factory2 = FactoryCar()\nvehicle = vehicle_factory2.order_vehicle()\nprint(f\"=================== Usas un {vehicle.__class__.__name__}\")",
+        "detail": "codes.abstractFactory.ciclo_vida.Abstraccion",
+        "documentation": {}
+    },
+    {
+        "label": "vehicle_factory",
+        "kind": 5,
+        "importPath": "codes.abstractFactory.ciclo_vida.Abstraccion",
+        "description": "codes.abstractFactory.ciclo_vida.Abstraccion",
+        "peekOfCode": "vehicle_factory = FactoryBike()\nvehicle = vehicle_factory.order_vehicle()\nprint(f\"=================== Usas un {vehicle.__class__.__name__}\")\nvehicle_factory2 = FactoryCar()\nvehicle = vehicle_factory2.order_vehicle()\nprint(f\"=================== Usas un {vehicle.__class__.__name__}\")",
+        "detail": "codes.abstractFactory.ciclo_vida.Abstraccion",
+        "documentation": {}
+    },
+    {
+        "label": "vehicle",
+        "kind": 5,
+        "importPath": "codes.abstractFactory.ciclo_vida.Abstraccion",
+        "description": "codes.abstractFactory.ciclo_vida.Abstraccion",
+        "peekOfCode": "vehicle = vehicle_factory.order_vehicle()\nprint(f\"=================== Usas un {vehicle.__class__.__name__}\")\nvehicle_factory2 = FactoryCar()\nvehicle = vehicle_factory2.order_vehicle()\nprint(f\"=================== Usas un {vehicle.__class__.__name__}\")",
+        "detail": "codes.abstractFactory.ciclo_vida.Abstraccion",
+        "documentation": {}
+    },
+    {
+        "label": "vehicle_factory2",
+        "kind": 5,
+        "importPath": "codes.abstractFactory.ciclo_vida.Abstraccion",
+        "description": "codes.abstractFactory.ciclo_vida.Abstraccion",
+        "peekOfCode": "vehicle_factory2 = FactoryCar()\nvehicle = vehicle_factory2.order_vehicle()\nprint(f\"=================== Usas un {vehicle.__class__.__name__}\")",
+        "detail": "codes.abstractFactory.ciclo_vida.Abstraccion",
+        "documentation": {}
+    },
+    {
+        "label": "vehicle",
+        "kind": 5,
+        "importPath": "codes.abstractFactory.ciclo_vida.Abstraccion",
+        "description": "codes.abstractFactory.ciclo_vida.Abstraccion",
+        "peekOfCode": "vehicle = vehicle_factory2.order_vehicle()\nprint(f\"=================== Usas un {vehicle.__class__.__name__}\")",
+        "detail": "codes.abstractFactory.ciclo_vida.Abstraccion",
+        "documentation": {}
+    },
+    {
+        "label": "IVehicle",
+        "kind": 6,
+        "importPath": "codes.abstractFactory.ciclo_vida.Implementacion",
+        "description": "codes.abstractFactory.ciclo_vida.Implementacion",
+        "peekOfCode": "class IVehicle(ABC, live):\n    @abstractmethod\n    def start(self):\n        pass\n    @abstractmethod\n    def stop(self):\n        pass\n    @abstractmethod\n    def drive(self):\n        pass ",
+        "detail": "codes.abstractFactory.ciclo_vida.Implementacion",
+        "documentation": {}
+    },
+    {
+        "label": "Motorcycle",
+        "kind": 6,
+        "importPath": "codes.abstractFactory.ciclo_vida.Implementacion",
+        "description": "codes.abstractFactory.ciclo_vida.Implementacion",
+        "peekOfCode": "class Motorcycle(IVehicle, live):\n    def drive(self):\n        print(\"__________Conduciendo la motocicleta...\")\n    def start(self):\n        print(\"__________Motocicleta encendida.\")\n    def stop(self):\n        print(\"__________Motocicleta apagada.\")\nclass Car(IVehicle, live):\n    def drive(self):\n        print(\"__________Conduciendo el coche...\")",
+        "detail": "codes.abstractFactory.ciclo_vida.Implementacion",
+        "documentation": {}
+    },
+    {
+        "label": "Car",
+        "kind": 6,
+        "importPath": "codes.abstractFactory.ciclo_vida.Implementacion",
+        "description": "codes.abstractFactory.ciclo_vida.Implementacion",
+        "peekOfCode": "class Car(IVehicle, live):\n    def drive(self):\n        print(\"__________Conduciendo el coche...\")\n    def start(self):\n        print(\"__________Coche encendido.\")\n    def stop(self):\n        print(\"__________Coche apagado.\")\nclass Bike(IVehicle, live):\n    def drive(self):\n        print(\"__________Conduciendo la bicicleta...\")",
+        "detail": "codes.abstractFactory.ciclo_vida.Implementacion",
+        "documentation": {}
+    },
+    {
+        "label": "Bike",
+        "kind": 6,
+        "importPath": "codes.abstractFactory.ciclo_vida.Implementacion",
+        "description": "codes.abstractFactory.ciclo_vida.Implementacion",
+        "peekOfCode": "class Bike(IVehicle, live):\n    def drive(self):\n        print(\"__________Conduciendo la bicicleta...\")\n    def start(self):\n        print(\"__________Bicicleta encendida.\")\n    def stop(self):\n        print(\"__________Bicicleta apagada.\")",
+        "detail": "codes.abstractFactory.ciclo_vida.Implementacion",
+        "documentation": {}
+    },
+    {
+        "label": "live",
+        "kind": 6,
+        "importPath": "codes.abstractFactory.ciclo_vida.debug",
+        "description": "codes.abstractFactory.ciclo_vida.debug",
+        "peekOfCode": "class live():\n    def __init__(self):\n        print(f\"___ Instancia de {self.__class__.__name__}\")",
+        "detail": "codes.abstractFactory.ciclo_vida.debug",
+        "documentation": {}
+    },
+    {
+        "label": "IButton",
+        "kind": 6,
+        "importPath": "codes.abstractFactory.Abstracciones",
+        "description": "codes.abstractFactory.Abstracciones",
+        "peekOfCode": "class IButton(ABC):  # IButton hereda de ABC para ser una clase abstracta\n    @abstractmethod  # Define un método abstracto que debe ser implementado por las subclases\n    def render(self):\n        pass  # Método abstracto que no tiene implementación en esta clase\nclass IDropDown(ABC):  # IDropDown es una clase abstracta\n    @abstractmethod  # Método abstracto que debe ser implementado en subclases\n    def render(self):\n        pass  # Método sin implementación\nclass ITextBox(ABC):  # ITextBox es una clase abstracta\n    @abstractmethod  # Método abstracto que será implementado por subclases",
+        "detail": "codes.abstractFactory.Abstracciones",
+        "documentation": {}
+    },
+    {
+        "label": "IDropDown",
+        "kind": 6,
+        "importPath": "codes.abstractFactory.Abstracciones",
+        "description": "codes.abstractFactory.Abstracciones",
+        "peekOfCode": "class IDropDown(ABC):  # IDropDown es una clase abstracta\n    @abstractmethod  # Método abstracto que debe ser implementado en subclases\n    def render(self):\n        pass  # Método sin implementación\nclass ITextBox(ABC):  # ITextBox es una clase abstracta\n    @abstractmethod  # Método abstracto que será implementado por subclases\n    def render(self):\n        pass  # Método sin implementación\n# ------------------------------------------------------------------------------------------------\n# --------------    Factory - Creadora abstracta",
+        "detail": "codes.abstractFactory.Abstracciones",
+        "documentation": {}
+    },
+    {
+        "label": "ITextBox",
+        "kind": 6,
+        "importPath": "codes.abstractFactory.Abstracciones",
+        "description": "codes.abstractFactory.Abstracciones",
+        "peekOfCode": "class ITextBox(ABC):  # ITextBox es una clase abstracta\n    @abstractmethod  # Método abstracto que será implementado por subclases\n    def render(self):\n        pass  # Método sin implementación\n# ------------------------------------------------------------------------------------------------\n# --------------    Factory - Creadora abstracta\n# ------------------------------------------------------------------------------------------------\nclass IThemeFactory(ABC):  # IThemeFactory es una clase abstracta\n    @abstractmethod  # Método abstracto para crear un botón\n    def create_button(self):",
+        "detail": "codes.abstractFactory.Abstracciones",
+        "documentation": {}
+    },
+    {
+        "label": "IThemeFactory",
+        "kind": 6,
+        "importPath": "codes.abstractFactory.Abstracciones",
+        "description": "codes.abstractFactory.Abstracciones",
+        "peekOfCode": "class IThemeFactory(ABC):  # IThemeFactory es una clase abstracta\n    @abstractmethod  # Método abstracto para crear un botón\n    def create_button(self):\n        pass  # Método sin implementación\n    @abstractmethod  # Método abstracto para crear un dropdown\n    def create_dropdown(self):\n        pass  # Método sin implementación\n    @abstractmethod  # Método abstracto para crear una caja de texto\n    def create_text_box(self):\n        pass  # Método sin implementación",
+        "detail": "codes.abstractFactory.Abstracciones",
+        "documentation": {}
+    },
+    {
+        "label": "LinuxButton",
+        "kind": 6,
+        "importPath": "codes.abstractFactory.Abstracciones",
+        "description": "codes.abstractFactory.Abstracciones",
+        "peekOfCode": "class LinuxButton(IButton):  # Hereda de IButton e implementa el método render\n    def render(self):\n        print(\"render linux button\")  # Imprime un mensaje indicando la representación del botón de Linux\n# Implementación concreta de un dropdown para Linux\nclass LinuxDropDown(IDropDown):  # Hereda de IDropDown e implementa el método render\n    def render(self):\n        print(\"render linux dropdown\")  # Imprime un mensaje indicando la representación del dropdown de Linux\n# Implementación concreta de una caja de texto para Linux\nclass LinuxTextBox(ITextBox):  # Hereda de ITextBox e implementa el método render\n    def render(self):",
+        "detail": "codes.abstractFactory.Abstracciones",
+        "documentation": {}
+    },
+    {
+        "label": "LinuxDropDown",
+        "kind": 6,
+        "importPath": "codes.abstractFactory.Abstracciones",
+        "description": "codes.abstractFactory.Abstracciones",
+        "peekOfCode": "class LinuxDropDown(IDropDown):  # Hereda de IDropDown e implementa el método render\n    def render(self):\n        print(\"render linux dropdown\")  # Imprime un mensaje indicando la representación del dropdown de Linux\n# Implementación concreta de una caja de texto para Linux\nclass LinuxTextBox(ITextBox):  # Hereda de ITextBox e implementa el método render\n    def render(self):\n        print(\"render linux textbox\")  # Imprime un mensaje indicando la representación de la caja de texto de Linux\n# Implementación concreta de un botón para Mac\nclass MacButton(IButton):  # Hereda de IButton e implementa el método render\n    def render(self):",
+        "detail": "codes.abstractFactory.Abstracciones",
+        "documentation": {}
+    },
+    {
+        "label": "LinuxTextBox",
+        "kind": 6,
+        "importPath": "codes.abstractFactory.Abstracciones",
+        "description": "codes.abstractFactory.Abstracciones",
+        "peekOfCode": "class LinuxTextBox(ITextBox):  # Hereda de ITextBox e implementa el método render\n    def render(self):\n        print(\"render linux textbox\")  # Imprime un mensaje indicando la representación de la caja de texto de Linux\n# Implementación concreta de un botón para Mac\nclass MacButton(IButton):  # Hereda de IButton e implementa el método render\n    def render(self):\n        print(\"render Mac button\")  # Imprime un mensaje indicando la representación del botón de Mac\n# Implementación concreta de un dropdown para Mac\nclass MacDropDown(IDropDown):  # Hereda de IDropDown e implementa el método render\n    def render(self):",
+        "detail": "codes.abstractFactory.Abstracciones",
+        "documentation": {}
+    },
+    {
+        "label": "MacButton",
+        "kind": 6,
+        "importPath": "codes.abstractFactory.Abstracciones",
+        "description": "codes.abstractFactory.Abstracciones",
+        "peekOfCode": "class MacButton(IButton):  # Hereda de IButton e implementa el método render\n    def render(self):\n        print(\"render Mac button\")  # Imprime un mensaje indicando la representación del botón de Mac\n# Implementación concreta de un dropdown para Mac\nclass MacDropDown(IDropDown):  # Hereda de IDropDown e implementa el método render\n    def render(self):\n        print(\"render Mac dropdown\")  # Imprime un mensaje indicando la representación del dropdown de Mac\n# Implementación concreta de una caja de texto para Mac\nclass MacTextBox(ITextBox):  # Hereda de ITextBox e implementa el método render\n    def render(self):",
+        "detail": "codes.abstractFactory.Abstracciones",
+        "documentation": {}
+    },
+    {
+        "label": "MacDropDown",
+        "kind": 6,
+        "importPath": "codes.abstractFactory.Abstracciones",
+        "description": "codes.abstractFactory.Abstracciones",
+        "peekOfCode": "class MacDropDown(IDropDown):  # Hereda de IDropDown e implementa el método render\n    def render(self):\n        print(\"render Mac dropdown\")  # Imprime un mensaje indicando la representación del dropdown de Mac\n# Implementación concreta de una caja de texto para Mac\nclass MacTextBox(ITextBox):  # Hereda de ITextBox e implementa el método render\n    def render(self):\n        print(\"render Mac textbox\")  # Imprime un mensaje indicando la representación de la caja de texto de Mac\n# ------------------------------------------------------------------------------------------------\n# --------------    Factory concretas - definiciones de sus metodos\n# ------------------------------------------------------------------------------------------------",
+        "detail": "codes.abstractFactory.Abstracciones",
+        "documentation": {}
+    },
+    {
+        "label": "MacTextBox",
+        "kind": 6,
+        "importPath": "codes.abstractFactory.Abstracciones",
+        "description": "codes.abstractFactory.Abstracciones",
+        "peekOfCode": "class MacTextBox(ITextBox):  # Hereda de ITextBox e implementa el método render\n    def render(self):\n        print(\"render Mac textbox\")  # Imprime un mensaje indicando la representación de la caja de texto de Mac\n# ------------------------------------------------------------------------------------------------\n# --------------    Factory concretas - definiciones de sus metodos\n# ------------------------------------------------------------------------------------------------\n# Implementación concreta de una fábrica de temas para Linux\nclass LinuxFactory(IThemeFactory):  # Hereda de IThemeFactory e implementa los métodos para crear componentes\n    def create_button(self):\n        return LinuxButton()  # Retorna una instancia de LinuxButton",
+        "detail": "codes.abstractFactory.Abstracciones",
+        "documentation": {}
+    },
+    {
+        "label": "LinuxFactory",
+        "kind": 6,
+        "importPath": "codes.abstractFactory.Abstracciones",
+        "description": "codes.abstractFactory.Abstracciones",
+        "peekOfCode": "class LinuxFactory(IThemeFactory):  # Hereda de IThemeFactory e implementa los métodos para crear componentes\n    def create_button(self):\n        return LinuxButton()  # Retorna una instancia de LinuxButton\n    def create_dropdown(self):\n        return LinuxDropDown()  # Retorna una instancia de LinuxDropDown\n    def create_text_box(self):\n        return LinuxTextBox()  # Retorna una instancia de LinuxTextBox\n# Implementación concreta de una fábrica de temas para Mac\nclass MacFactory(IThemeFactory):  # Hereda de IThemeFactory e implementa los métodos para crear componentes\n    def create_button(self):",
+        "detail": "codes.abstractFactory.Abstracciones",
+        "documentation": {}
+    },
+    {
+        "label": "MacFactory",
+        "kind": 6,
+        "importPath": "codes.abstractFactory.Abstracciones",
+        "description": "codes.abstractFactory.Abstracciones",
+        "peekOfCode": "class MacFactory(IThemeFactory):  # Hereda de IThemeFactory e implementa los métodos para crear componentes\n    def create_button(self):\n        return MacButton()  # Retorna una instancia de MacButton\n    def create_dropdown(self):\n        return MacDropDown()  # Retorna una instancia de MacDropDown\n    def create_text_box(self):\n        return MacTextBox()  # Retorna una instancia de MacTextBox\n# Crear una fábrica de temas para Linux\nlinux_factory = LinuxFactory()  # Instancia de LinuxFactory\nmac_factory = MacFactory()  # Instancia de MacFactory",
+        "detail": "codes.abstractFactory.Abstracciones",
+        "documentation": {}
+    },
+    {
+        "label": "linux_factory",
+        "kind": 5,
+        "importPath": "codes.abstractFactory.Abstracciones",
+        "description": "codes.abstractFactory.Abstracciones",
+        "peekOfCode": "linux_factory = LinuxFactory()  # Instancia de LinuxFactory\nmac_factory = MacFactory()  # Instancia de MacFactory\nlinux_button = linux_factory.create_button()  # Crea una instancia de LinuxButton\nmac_drodown = mac_factory.create_dropdown()  # Crea una instancia de MacDropDown\nmac_button = mac_factory.create_button()  # Crea una instancia de MacButton\nlinux_button.render()  # Llama al método render del botón de Linux\nmac_drodown.render()  # Llama al método render del dropdown de Mac\nmac_button.render()  # Llama al método render del botón de Mac",
+        "detail": "codes.abstractFactory.Abstracciones",
+        "documentation": {}
+    },
+    {
+        "label": "mac_factory",
+        "kind": 5,
+        "importPath": "codes.abstractFactory.Abstracciones",
+        "description": "codes.abstractFactory.Abstracciones",
+        "peekOfCode": "mac_factory = MacFactory()  # Instancia de MacFactory\nlinux_button = linux_factory.create_button()  # Crea una instancia de LinuxButton\nmac_drodown = mac_factory.create_dropdown()  # Crea una instancia de MacDropDown\nmac_button = mac_factory.create_button()  # Crea una instancia de MacButton\nlinux_button.render()  # Llama al método render del botón de Linux\nmac_drodown.render()  # Llama al método render del dropdown de Mac\nmac_button.render()  # Llama al método render del botón de Mac",
+        "detail": "codes.abstractFactory.Abstracciones",
+        "documentation": {}
+    },
+    {
+        "label": "linux_button",
+        "kind": 5,
+        "importPath": "codes.abstractFactory.Abstracciones",
+        "description": "codes.abstractFactory.Abstracciones",
+        "peekOfCode": "linux_button = linux_factory.create_button()  # Crea una instancia de LinuxButton\nmac_drodown = mac_factory.create_dropdown()  # Crea una instancia de MacDropDown\nmac_button = mac_factory.create_button()  # Crea una instancia de MacButton\nlinux_button.render()  # Llama al método render del botón de Linux\nmac_drodown.render()  # Llama al método render del dropdown de Mac\nmac_button.render()  # Llama al método render del botón de Mac",
+        "detail": "codes.abstractFactory.Abstracciones",
+        "documentation": {}
+    },
+    {
+        "label": "mac_drodown",
+        "kind": 5,
+        "importPath": "codes.abstractFactory.Abstracciones",
+        "description": "codes.abstractFactory.Abstracciones",
+        "peekOfCode": "mac_drodown = mac_factory.create_dropdown()  # Crea una instancia de MacDropDown\nmac_button = mac_factory.create_button()  # Crea una instancia de MacButton\nlinux_button.render()  # Llama al método render del botón de Linux\nmac_drodown.render()  # Llama al método render del dropdown de Mac\nmac_button.render()  # Llama al método render del botón de Mac",
+        "detail": "codes.abstractFactory.Abstracciones",
+        "documentation": {}
+    },
+    {
+        "label": "mac_button",
+        "kind": 5,
+        "importPath": "codes.abstractFactory.Abstracciones",
+        "description": "codes.abstractFactory.Abstracciones",
+        "peekOfCode": "mac_button = mac_factory.create_button()  # Crea una instancia de MacButton\nlinux_button.render()  # Llama al método render del botón de Linux\nmac_drodown.render()  # Llama al método render del dropdown de Mac\nmac_button.render()  # Llama al método render del botón de Mac",
+        "detail": "codes.abstractFactory.Abstracciones",
+        "documentation": {}
+    },
+    {
+        "label": "ReproductorAudio",
+        "kind": 6,
+        "importPath": "codes.adapter.Adapter",
+        "description": "codes.adapter.Adapter",
+        "peekOfCode": "class ReproductorAudio(ABC):\n    @abstractmethod\n    def reproducir(self, archivo):\n        pass\n# Servicio para reproducir archivos MP3\nclass ServicioMP3:\n    def reproducir_mp3(self, archivo_mp3):\n        print(f\"Reproduciendo archivo MP3: {archivo_mp3}\")\n# Servicio para reproducir archivos WAV\nclass ServicioWAV:",
+        "detail": "codes.adapter.Adapter",
+        "documentation": {}
+    },
+    {
+        "label": "ServicioMP3",
+        "kind": 6,
+        "importPath": "codes.adapter.Adapter",
+        "description": "codes.adapter.Adapter",
+        "peekOfCode": "class ServicioMP3:\n    def reproducir_mp3(self, archivo_mp3):\n        print(f\"Reproduciendo archivo MP3: {archivo_mp3}\")\n# Servicio para reproducir archivos WAV\nclass ServicioWAV:\n    def reproducir_wav(self, archivo_wav):\n        print(f\"Reproduciendo archivo WAV: {archivo_wav}\")\n# Adaptador para el servicio MP3\nclass AdaptadorMP3(ReproductorAudio):\n    def __init__(self, servicio_mp3):",
+        "detail": "codes.adapter.Adapter",
+        "documentation": {}
+    },
+    {
+        "label": "ServicioWAV",
+        "kind": 6,
+        "importPath": "codes.adapter.Adapter",
+        "description": "codes.adapter.Adapter",
+        "peekOfCode": "class ServicioWAV:\n    def reproducir_wav(self, archivo_wav):\n        print(f\"Reproduciendo archivo WAV: {archivo_wav}\")\n# Adaptador para el servicio MP3\nclass AdaptadorMP3(ReproductorAudio):\n    def __init__(self, servicio_mp3):\n        self.servicio_mp3 = servicio_mp3\n    def reproducir(self, archivo):\n        # Llamamos al método específico del servicio MP3\n        self.servicio_mp3.reproducir_mp3(archivo)",
+        "detail": "codes.adapter.Adapter",
+        "documentation": {}
+    },
+    {
+        "label": "AdaptadorMP3",
+        "kind": 6,
+        "importPath": "codes.adapter.Adapter",
+        "description": "codes.adapter.Adapter",
+        "peekOfCode": "class AdaptadorMP3(ReproductorAudio):\n    def __init__(self, servicio_mp3):\n        self.servicio_mp3 = servicio_mp3\n    def reproducir(self, archivo):\n        # Llamamos al método específico del servicio MP3\n        self.servicio_mp3.reproducir_mp3(archivo)\n# Adaptador para el servicio WAV\nclass AdaptadorWAV(ReproductorAudio):\n    def __init__(self, servicio_wav):\n        self.servicio_wav = servicio_wav",
+        "detail": "codes.adapter.Adapter",
+        "documentation": {}
+    },
+    {
+        "label": "AdaptadorWAV",
+        "kind": 6,
+        "importPath": "codes.adapter.Adapter",
+        "description": "codes.adapter.Adapter",
+        "peekOfCode": "class AdaptadorWAV(ReproductorAudio):\n    def __init__(self, servicio_wav):\n        self.servicio_wav = servicio_wav\n    def reproducir(self, archivo):\n        # Llamamos al método específico del servicio WAV\n        self.servicio_wav.reproducir_wav(archivo)\n# Cliente que usa el adaptador para reproducir archivos de audio sin preocuparse del formato\nclass Reproductor:\n    def __init__(self, reproductor_audio):\n        self.reproductor_audio = reproductor_audio",
+        "detail": "codes.adapter.Adapter",
+        "documentation": {}
+    },
+    {
+        "label": "Reproductor",
+        "kind": 6,
+        "importPath": "codes.adapter.Adapter",
+        "description": "codes.adapter.Adapter",
+        "peekOfCode": "class Reproductor:\n    def __init__(self, reproductor_audio):\n        self.reproductor_audio = reproductor_audio\n    def reproducir_archivo(self, archivo):\n        self.reproductor_audio.reproducir(archivo)\n# Uso del sistema con ambos adaptadores\nif __name__ == \"__main__\":\n    # Servicio de MP3\n    servicio_mp3 = ServicioMP3()\n    adaptador_mp3 = AdaptadorMP3(servicio_mp3)",
+        "detail": "codes.adapter.Adapter",
+        "documentation": {}
+    },
+    {
+        "label": "live",
+        "kind": 6,
+        "importPath": "codes.adapter.AdapterCicle",
+        "description": "codes.adapter.AdapterCicle",
+        "peekOfCode": "class live():\n    def __init__(self):\n        print(f\"___ Instancia de {self.__class__.__name__}\")\n# Interfaz esperada para reproducir archivos de audio\nclass ReproductorAudio(ABC, live):\n    @abstractmethod\n    def reproducir(self, archivo):\n        pass\n# Servicio para reproducir archivos MP3\nclass ServicioMP3(live):",
+        "detail": "codes.adapter.AdapterCicle",
+        "documentation": {}
+    },
+    {
+        "label": "ReproductorAudio",
+        "kind": 6,
+        "importPath": "codes.adapter.AdapterCicle",
+        "description": "codes.adapter.AdapterCicle",
+        "peekOfCode": "class ReproductorAudio(ABC, live):\n    @abstractmethod\n    def reproducir(self, archivo):\n        pass\n# Servicio para reproducir archivos MP3\nclass ServicioMP3(live):\n    def reproducir_mp3(self, archivo_mp3):\n        print(f\"Reproduciendo archivo MP3: {archivo_mp3}\")\n# Servicio para reproducir archivos WAV\nclass ServicioWAV(live):",
+        "detail": "codes.adapter.AdapterCicle",
+        "documentation": {}
+    },
+    {
+        "label": "ServicioMP3",
+        "kind": 6,
+        "importPath": "codes.adapter.AdapterCicle",
+        "description": "codes.adapter.AdapterCicle",
+        "peekOfCode": "class ServicioMP3(live):\n    def reproducir_mp3(self, archivo_mp3):\n        print(f\"Reproduciendo archivo MP3: {archivo_mp3}\")\n# Servicio para reproducir archivos WAV\nclass ServicioWAV(live):\n    def reproducir_wav(self, archivo_wav):\n        print(f\"Reproduciendo archivo WAV: {archivo_wav}\")\n# Adaptador para el servicio MP3\nclass AdaptadorMP3(ReproductorAudio, live):\n    def __init__(self, servicio_mp3):",
+        "detail": "codes.adapter.AdapterCicle",
+        "documentation": {}
+    },
+    {
+        "label": "ServicioWAV",
+        "kind": 6,
+        "importPath": "codes.adapter.AdapterCicle",
+        "description": "codes.adapter.AdapterCicle",
+        "peekOfCode": "class ServicioWAV(live):\n    def reproducir_wav(self, archivo_wav):\n        print(f\"Reproduciendo archivo WAV: {archivo_wav}\")\n# Adaptador para el servicio MP3\nclass AdaptadorMP3(ReproductorAudio, live):\n    def __init__(self, servicio_mp3):\n        print(f\"___ Instancia de {self.__class__.__name__}\")\n        self.servicio_mp3 = servicio_mp3\n    def reproducir(self, archivo):\n        # Llamamos al método específico del servicio MP3",
+        "detail": "codes.adapter.AdapterCicle",
+        "documentation": {}
+    },
+    {
+        "label": "AdaptadorMP3",
+        "kind": 6,
+        "importPath": "codes.adapter.AdapterCicle",
+        "description": "codes.adapter.AdapterCicle",
+        "peekOfCode": "class AdaptadorMP3(ReproductorAudio, live):\n    def __init__(self, servicio_mp3):\n        print(f\"___ Instancia de {self.__class__.__name__}\")\n        self.servicio_mp3 = servicio_mp3\n    def reproducir(self, archivo):\n        # Llamamos al método específico del servicio MP3\n        self.servicio_mp3.reproducir_mp3(archivo)\n# Adaptador para el servicio WAV\nclass AdaptadorWAV(ReproductorAudio, live):\n    def __init__(self, servicio_wav):",
+        "detail": "codes.adapter.AdapterCicle",
+        "documentation": {}
+    },
+    {
+        "label": "AdaptadorWAV",
+        "kind": 6,
+        "importPath": "codes.adapter.AdapterCicle",
+        "description": "codes.adapter.AdapterCicle",
+        "peekOfCode": "class AdaptadorWAV(ReproductorAudio, live):\n    def __init__(self, servicio_wav):\n        print(f\"___ Instancia de {self.__class__.__name__}\")\n        self.servicio_wav = servicio_wav\n    def reproducir(self, archivo):\n        # Llamamos al método específico del servicio WAV\n        self.servicio_wav.reproducir_wav(archivo)\n# Cliente que usa el adaptador para reproducir archivos de audio sin preocuparse del formato\nclass Reproductor(live):\n    def __init__(self, reproductor_audio):",
+        "detail": "codes.adapter.AdapterCicle",
+        "documentation": {}
+    },
+    {
+        "label": "Reproductor",
+        "kind": 6,
+        "importPath": "codes.adapter.AdapterCicle",
+        "description": "codes.adapter.AdapterCicle",
+        "peekOfCode": "class Reproductor(live):\n    def __init__(self, reproductor_audio):\n        print(f\"___ Instancia de {self.__class__.__name__}\")\n        self.reproductor_audio = reproductor_audio\n    def reproducir_archivo(self, archivo):\n        self.reproductor_audio.reproducir(archivo)\n# Uso del sistema con ambos adaptadores\nif __name__ == \"__main__\":\n    # Servicio de MP3\n    servicio_mp3 = ServicioMP3()",
+        "detail": "codes.adapter.AdapterCicle",
+        "documentation": {}
+    },
+    {
+        "label": "IFormat",
+        "kind": 6,
+        "importPath": "codes.bridge.bridge",
+        "description": "codes.bridge.bridge",
+        "peekOfCode": "class IFormat(ABC):\n    @abstractmethod\n    def play(self, file_path: str) -> None:\n        pass\nclass MusicPlayer( ABC ):\n    def __init__(self, format:IFormat):\n        self.format = format \n    @abstractmethod\n    def play(self, file_path: str) -> None:\n        pass",
+        "detail": "codes.bridge.bridge",
+        "documentation": {}
+    },
+    {
+        "label": "MusicPlayer",
+        "kind": 6,
+        "importPath": "codes.bridge.bridge",
+        "description": "codes.bridge.bridge",
+        "peekOfCode": "class MusicPlayer( ABC ):\n    def __init__(self, format:IFormat):\n        self.format = format \n    @abstractmethod\n    def play(self, file_path: str) -> None:\n        pass\nclass DesktopPlayer(MusicPlayer):\n    def play(self, file_path:str) -> None:\n        print(\"Using Mobile player\")\n        self.format.play( file_path )",
+        "detail": "codes.bridge.bridge",
+        "documentation": {}
+    },
+    {
+        "label": "DesktopPlayer",
+        "kind": 6,
+        "importPath": "codes.bridge.bridge",
+        "description": "codes.bridge.bridge",
+        "peekOfCode": "class DesktopPlayer(MusicPlayer):\n    def play(self, file_path:str) -> None:\n        print(\"Using Mobile player\")\n        self.format.play( file_path )\nclass MobilPlayer(MusicPlayer):\n    def play(self, file_path:str) -> None:\n        print(\"Using Mobile player\")\n        self.format.play( file_path )\nclass MP3(IFormat):\n    def play(self, file_path: str) -> None:",
+        "detail": "codes.bridge.bridge",
+        "documentation": {}
+    },
+    {
+        "label": "MobilPlayer",
+        "kind": 6,
+        "importPath": "codes.bridge.bridge",
+        "description": "codes.bridge.bridge",
+        "peekOfCode": "class MobilPlayer(MusicPlayer):\n    def play(self, file_path:str) -> None:\n        print(\"Using Mobile player\")\n        self.format.play( file_path )\nclass MP3(IFormat):\n    def play(self, file_path: str) -> None:\n        print(f\"PLaying WAV FILE {file_path}\")\nclass WAV(IFormat):\n    def play(self, file_path: str) -> None:\n        print(f\"PLaying WAV FILE {file_path}\")",
+        "detail": "codes.bridge.bridge",
+        "documentation": {}
+    },
+    {
+        "label": "MP3",
+        "kind": 6,
+        "importPath": "codes.bridge.bridge",
+        "description": "codes.bridge.bridge",
+        "peekOfCode": "class MP3(IFormat):\n    def play(self, file_path: str) -> None:\n        print(f\"PLaying WAV FILE {file_path}\")\nclass WAV(IFormat):\n    def play(self, file_path: str) -> None:\n        print(f\"PLaying WAV FILE {file_path}\")\nmp3_format = MP3()\nplayer = DesktopPlayer(mp3_format)\nplayer.play(\"song mp3\")\nwav_format = WAV()",
+        "detail": "codes.bridge.bridge",
+        "documentation": {}
+    },
+    {
+        "label": "WAV",
+        "kind": 6,
+        "importPath": "codes.bridge.bridge",
+        "description": "codes.bridge.bridge",
+        "peekOfCode": "class WAV(IFormat):\n    def play(self, file_path: str) -> None:\n        print(f\"PLaying WAV FILE {file_path}\")\nmp3_format = MP3()\nplayer = DesktopPlayer(mp3_format)\nplayer.play(\"song mp3\")\nwav_format = WAV()\nplayer2 = DesktopPlayer(wav_format)\nplayer2.play(\"song wab\")",
+        "detail": "codes.bridge.bridge",
+        "documentation": {}
+    },
+    {
+        "label": "mp3_format",
+        "kind": 5,
+        "importPath": "codes.bridge.bridge",
+        "description": "codes.bridge.bridge",
+        "peekOfCode": "mp3_format = MP3()\nplayer = DesktopPlayer(mp3_format)\nplayer.play(\"song mp3\")\nwav_format = WAV()\nplayer2 = DesktopPlayer(wav_format)\nplayer2.play(\"song wab\")",
+        "detail": "codes.bridge.bridge",
+        "documentation": {}
+    },
+    {
+        "label": "player",
+        "kind": 5,
+        "importPath": "codes.bridge.bridge",
+        "description": "codes.bridge.bridge",
+        "peekOfCode": "player = DesktopPlayer(mp3_format)\nplayer.play(\"song mp3\")\nwav_format = WAV()\nplayer2 = DesktopPlayer(wav_format)\nplayer2.play(\"song wab\")",
+        "detail": "codes.bridge.bridge",
+        "documentation": {}
+    },
+    {
+        "label": "wav_format",
+        "kind": 5,
+        "importPath": "codes.bridge.bridge",
+        "description": "codes.bridge.bridge",
+        "peekOfCode": "wav_format = WAV()\nplayer2 = DesktopPlayer(wav_format)\nplayer2.play(\"song wab\")",
+        "detail": "codes.bridge.bridge",
+        "documentation": {}
+    },
+    {
+        "label": "player2",
+        "kind": 5,
+        "importPath": "codes.bridge.bridge",
+        "description": "codes.bridge.bridge",
+        "peekOfCode": "player2 = DesktopPlayer(wav_format)\nplayer2.play(\"song wab\")",
+        "detail": "codes.bridge.bridge",
+        "documentation": {}
+    },
+    {
+        "label": "IRobotBuilder",
+        "kind": 6,
+        "importPath": "codes.builder.buillder",
+        "description": "codes.builder.buillder",
+        "peekOfCode": "class IRobotBuilder(ABC):\n    # Método abstracto para construir la cabeza del robot.\n    @abstractmethod\n    def build_head(self, head): pass\n    # Método abstracto para construir el cuerpo del robot.\n    @abstractmethod\n    def build_body(self, body): pass\n    # Método abstracto para construir las piernas del robot.\n    @abstractmethod\n    def build_legs(self, legs): pass",
+        "detail": "codes.builder.buillder",
+        "documentation": {}
+    },
+    {
+        "label": "RobotBuilder",
+        "kind": 6,
+        "importPath": "codes.builder.buillder",
+        "description": "codes.builder.buillder",
+        "peekOfCode": "class RobotBuilder(IRobotBuilder):\n    # Constructor: inicializa un nuevo objeto Robot vacío.\n    def __init__(self):\n        self.robot = Robot()\n    # Implementa la construcción de la cabeza.\n    def build_head(self, head):\n        self.robot.head = head\n    # Implementa la construcción del cuerpo.\n    def build_body(self, body):\n        self.robot.body = body",
+        "detail": "codes.builder.buillder",
+        "documentation": {}
+    },
+    {
+        "label": "RobotDirector",
+        "kind": 6,
+        "importPath": "codes.builder.buillder",
+        "description": "codes.builder.buillder",
+        "peekOfCode": "class RobotDirector:\n    # Inicializa el director con un builder de robots.\n    def __init__(self, robot_builder) -> None:\n        self.robot_builder = robot_builder\n    # Controla el proceso de construcción del robot, especificando las partes.\n    def construct_robot(self):\n        self.robot_builder.build_head(\"chasis\")  # Construye la cabeza con valor \"chasis\".\n        self.robot_builder.build_body(\"metal\")   # Construye el cuerpo con valor \"metal\".\n        self.robot_builder.build_legs(\"ruedas\")  # Construye las piernas con valor \"ruedas\".\n        self.robot_builder.build_arms(\"arma\")    # Construye los brazos con valor \"arma\".",
+        "detail": "codes.builder.buillder",
+        "documentation": {}
+    },
+    {
+        "label": "Robot",
+        "kind": 6,
+        "importPath": "codes.builder.buillder",
+        "description": "codes.builder.buillder",
+        "peekOfCode": "class Robot:\n    # Método para mostrar la información del robot (sus partes).\n    def display_robot_info(self):\n        print(\"robot info\")\n        print(f\"... {self.head}\")   # Muestra la cabeza del robot.\n        print(f\"... {self.body}\")   # Muestra el cuerpo del robot.\n        print(f\"... {self.arms}\")   # Muestra los brazos del robot.\n        print(f\"... {self.legs}\")   # Muestra las piernas del robot.\n# Cliente: este código utiliza el director y el builder para construir el robot.\n# Crea una instancia del builder concreto de robots.",
+        "detail": "codes.builder.buillder",
+        "documentation": {}
+    },
+    {
+        "label": "robot_builder",
+        "kind": 5,
+        "importPath": "codes.builder.buillder",
+        "description": "codes.builder.buillder",
+        "peekOfCode": "robot_builder = RobotBuilder()\n# Crea una instancia del director que usará el builder.\nrobot_director = RobotDirector(robot_builder)\n# El director construye el robot especificando los componentes.\nrobot_director.construct_robot()\n# El cliente obtiene el robot construido a través del builder.\nrobot = robot_builder.get_robot()\n# El cliente muestra la información del robot construido.\nrobot.display_robot_info()",
+        "detail": "codes.builder.buillder",
+        "documentation": {}
+    },
+    {
+        "label": "robot_director",
+        "kind": 5,
+        "importPath": "codes.builder.buillder",
+        "description": "codes.builder.buillder",
+        "peekOfCode": "robot_director = RobotDirector(robot_builder)\n# El director construye el robot especificando los componentes.\nrobot_director.construct_robot()\n# El cliente obtiene el robot construido a través del builder.\nrobot = robot_builder.get_robot()\n# El cliente muestra la información del robot construido.\nrobot.display_robot_info()",
+        "detail": "codes.builder.buillder",
+        "documentation": {}
+    },
+    {
+        "label": "robot",
+        "kind": 5,
+        "importPath": "codes.builder.buillder",
+        "description": "codes.builder.buillder",
+        "peekOfCode": "robot = robot_builder.get_robot()\n# El cliente muestra la información del robot construido.\nrobot.display_robot_info()",
+        "detail": "codes.builder.buillder",
+        "documentation": {}
+    },
+    {
+        "label": "IClonable",
+        "kind": 6,
+        "importPath": "codes.prototype.Prototype",
+        "description": "codes.prototype.Prototype",
+        "peekOfCode": "class IClonable(ABC):\n    @abstractmethod\n    def clone(self):\n        pass\nclass Shape(IClonable, ABC):\n    def __init__(self) -> None:\n        self.id = None\n        self.name = None\n    @abstractmethod\n    def draw(self):",
+        "detail": "codes.prototype.Prototype",
+        "documentation": {}
+    },
+    {
+        "label": "Shape",
+        "kind": 6,
+        "importPath": "codes.prototype.Prototype",
+        "description": "codes.prototype.Prototype",
+        "peekOfCode": "class Shape(IClonable, ABC):\n    def __init__(self) -> None:\n        self.id = None\n        self.name = None\n    @abstractmethod\n    def draw(self):\n        pass\n    def clone(self):\n        cp = copy.copy(self)\n        cp.id = cp.id * -1",
+        "detail": "codes.prototype.Prototype",
+        "documentation": {}
+    },
+    {
+        "label": "Circle",
+        "kind": 6,
+        "importPath": "codes.prototype.Prototype",
+        "description": "codes.prototype.Prototype",
+        "peekOfCode": "class Circle(Shape):\n    def __init__(self) -> None:\n        super().__init__()\n        self.name = \"CIRLCE\"\n    def draw(self):\n        print(f\"Drwa {self.id }\")\nclass Rectangle(Shape):\n    def __init__(self) -> None:\n        super().__init__()\n        self.name = \"RECTANGLE\"",
+        "detail": "codes.prototype.Prototype",
+        "documentation": {}
+    },
+    {
+        "label": "Rectangle",
+        "kind": 6,
+        "importPath": "codes.prototype.Prototype",
+        "description": "codes.prototype.Prototype",
+        "peekOfCode": "class Rectangle(Shape):\n    def __init__(self) -> None:\n        super().__init__()\n        self.name = \"RECTANGLE\"\n    def draw(self):\n        print(f\"Drwa {self.id }\")\nclass Rectangle(Shape):\n    def __init__(self) -> None:\n        super().__init__()\n        self.name = \"SQUEARE\"",
+        "detail": "codes.prototype.Prototype",
+        "documentation": {}
+    },
+    {
+        "label": "Rectangle",
+        "kind": 6,
+        "importPath": "codes.prototype.Prototype",
+        "description": "codes.prototype.Prototype",
+        "peekOfCode": "class Rectangle(Shape):\n    def __init__(self) -> None:\n        super().__init__()\n        self.name = \"SQUEARE\"\n    def draw(self):\n        print(f\"Drwa {self.id }\")\ncircle = Circle()\ncircle.id = 1\nrectangle = Rectangle()\nrectangle.id = 2",
+        "detail": "codes.prototype.Prototype",
+        "documentation": {}
+    },
+    {
+        "label": "circle",
+        "kind": 5,
+        "importPath": "codes.prototype.Prototype",
+        "description": "codes.prototype.Prototype",
+        "peekOfCode": "circle = Circle()\ncircle.id = 1\nrectangle = Rectangle()\nrectangle.id = 2\nclone_circle = circle.clone()\nclone_rectangle = rectangle.clone()\ncircle.draw()\nrectangle.draw()\nclone_circle.draw()\nclone_rectangle.draw()",
+        "detail": "codes.prototype.Prototype",
+        "documentation": {}
+    },
+    {
+        "label": "circle.id",
+        "kind": 5,
+        "importPath": "codes.prototype.Prototype",
+        "description": "codes.prototype.Prototype",
+        "peekOfCode": "circle.id = 1\nrectangle = Rectangle()\nrectangle.id = 2\nclone_circle = circle.clone()\nclone_rectangle = rectangle.clone()\ncircle.draw()\nrectangle.draw()\nclone_circle.draw()\nclone_rectangle.draw()",
+        "detail": "codes.prototype.Prototype",
+        "documentation": {}
+    },
+    {
+        "label": "rectangle",
+        "kind": 5,
+        "importPath": "codes.prototype.Prototype",
+        "description": "codes.prototype.Prototype",
+        "peekOfCode": "rectangle = Rectangle()\nrectangle.id = 2\nclone_circle = circle.clone()\nclone_rectangle = rectangle.clone()\ncircle.draw()\nrectangle.draw()\nclone_circle.draw()\nclone_rectangle.draw()",
+        "detail": "codes.prototype.Prototype",
+        "documentation": {}
+    },
+    {
+        "label": "rectangle.id",
+        "kind": 5,
+        "importPath": "codes.prototype.Prototype",
+        "description": "codes.prototype.Prototype",
+        "peekOfCode": "rectangle.id = 2\nclone_circle = circle.clone()\nclone_rectangle = rectangle.clone()\ncircle.draw()\nrectangle.draw()\nclone_circle.draw()\nclone_rectangle.draw()",
+        "detail": "codes.prototype.Prototype",
+        "documentation": {}
+    },
+    {
+        "label": "clone_circle",
+        "kind": 5,
+        "importPath": "codes.prototype.Prototype",
+        "description": "codes.prototype.Prototype",
+        "peekOfCode": "clone_circle = circle.clone()\nclone_rectangle = rectangle.clone()\ncircle.draw()\nrectangle.draw()\nclone_circle.draw()\nclone_rectangle.draw()",
+        "detail": "codes.prototype.Prototype",
+        "documentation": {}
+    },
+    {
+        "label": "clone_rectangle",
+        "kind": 5,
+        "importPath": "codes.prototype.Prototype",
+        "description": "codes.prototype.Prototype",
+        "peekOfCode": "clone_rectangle = rectangle.clone()\ncircle.draw()\nrectangle.draw()\nclone_circle.draw()\nclone_rectangle.draw()",
+        "detail": "codes.prototype.Prototype",
+        "documentation": {}
+    },
+    {
+        "label": "Singleton_class",
+        "kind": 6,
+        "importPath": "codes.singleton",
+        "description": "codes.singleton",
+        "peekOfCode": "class Singleton_class:\n    _instance = None\n    id = None\n    def __new__(cls):\n        if cls._instance is None:\n            print(\"creando..\")\n            cls._instance = super(Singleton_class, cls).__new__(cls)\n            cls.id = uuid.uuid4()\n        return cls._instance\nsingle = Singleton_class()",
+        "detail": "codes.singleton",
+        "documentation": {}
+    },
+    {
+        "label": "single",
+        "kind": 5,
+        "importPath": "codes.singleton",
+        "description": "codes.singleton",
+        "peekOfCode": "single = Singleton_class()\nprint( single.id )\nsingle2 = Singleton_class()\nprint( single2.id )",
+        "detail": "codes.singleton",
+        "documentation": {}
+    },
+    {
+        "label": "single2",
+        "kind": 5,
+        "importPath": "codes.singleton",
+        "description": "codes.singleton",
+        "peekOfCode": "single2 = Singleton_class()\nprint( single2.id )",
+        "detail": "codes.singleton",
+        "documentation": {}
+    }
+]
