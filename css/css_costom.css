@@ -1,0 +1,11 @@
+
+.text_left{
+    text-align: left;
+}
+
+.alinear-izquierda {
+    display: inline-block;
+    float: left;
+    margin-left: 0; /* Asegura que no haya espacio adicional a la izquierda */
+  }
+  

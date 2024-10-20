@@ -19,6 +19,7 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="css/css_costom.css" rel="stylesheet">
 
 </head>
 
@@ -33,20 +34,13 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                 <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
+                    <i class="fas fa-cogs"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+                <div class="sidebar-brand-text mx-3">Portafolio 1<sup></sup></div>
             </a>
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
-
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" href="index.html">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
-            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider">
@@ -61,11 +55,11 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
-                    <span>Components</span>
+                    <span>Patrones de diseño</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Components:</h6>
+                        <h6 class="collapse-header">Items</h6>
                         <a class="collapse-item" href="buttons.html">Buttons</a>
                         <a class="collapse-item" href="cards.html">Cards</a>
                     </div>
@@ -127,6 +121,7 @@
                     <span>Charts</span></a>
             </li>
 
+
             <!-- Nav Item - Tables -->
             <li class="nav-item">
                 <a class="nav-link" href="tables.html">
@@ -151,6 +146,10 @@
 
         </ul>
         <!-- End of Sidebar -->
+
+
+
+
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
@@ -362,57 +361,309 @@
                 </nav>
                 <!-- End of Topbar -->
 
-                <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                    <!-- Page Heading -->
+                    <!-- 
+                        SINGLETON
+                    -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+                        <div class="col-md-6 col-xl-6">
+                            <h1 class="h3 mb-0 text-gray-800">SINGLETON</h1>
+                        </div>
+                        <div class="col-md-6 col-xl-6">
+                      
+
+                            <a href="https://colab.research.google.com/drive/1KuZyrZ-BbzIJ3zrxdZDZGT9P4zrs8ySB#scrollTo=8gN_9byIewuR&line=16&uniqifier=1" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+                                <i class="fas fa-code fa-sm text-white-50"></i> Ver código
+                            </a>
+                        </div>
                     </div>
-
-                    <!-- Content Row -->
                     <div class="row">
-
                         <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="col-xl-12 col-md-12 mb-12">
                             <div class="card border-left-primary shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Earnings (Monthly)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+                                                Singleton - Instancia única</div>
+                                            <!--div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div-->
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-calendar fa-2x text-gray-300"></i>
                                         </div>
+                                      
+                                    </div>
+                                    <div class="row">
+                                        <div class="text-center col-xl-6 col-md-6 mb-6">
+                                            <p class="text_left">
+                                                El patrón <strong>Singleton</strong> en programación orientada a objetos es un patrón de diseño que garantiza que una clase solo tenga una única instancia y proporciona un punto de acceso global a esa instancia. 
+                                                Esto es útil cuando se necesita un control único sobre ciertos recursos, como el acceso a una base de datos, configuración de la aplicación o una conexión de red.
+                                            </p>
+                                        
+                                            <h2>Características del patrón Singleton:</h2>
+                                            <ul class="text_left">
+                                                <li>
+                                                    <strong>Una única instancia:</strong> La clase controla la creación de su única instancia mediante un método que verifica si ya existe una instancia. Si no existe, la crea.
+                                                </li>
+                                                <li>
+                                                    <strong>Acceso controlado:</strong> Proporciona un punto de acceso global a esa instancia, generalmente a través de un método público o una propiedad.
+                                                </li>
+                                                <li>
+                                                    <strong>Evita la creación directa:</strong> El constructor de la clase es privado o protegido, lo que impide que se creen instancias adicionales fuera del control de la clase.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="text-center col-xl-6 col-md-6 mb-6">
+                                            <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;" src="images/singleton.png" alt="...">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="text-center col-xl-6 col-md-6 mb-6">
+                                            <h2>Desventajas del patrón Singleton:</h2>
+                                            <ul class="text_left">
+                                                <li>
+                                                    <strong>Dificultad en la prueba:</strong> La naturaleza global del Singleton puede complicar las pruebas unitarias, ya que puede ser difícil restablecer el estado entre las pruebas, lo que puede llevar a resultados inconsistentes.
+                                                </li>
+                                                <li>
+                                                    <strong>Acoplamiento fuerte:</strong> Los objetos que dependen de un Singleton están acoplados a él, lo que puede dificultar la reutilización de código y la modificación de clases sin afectar a otras partes del sistema.
+                                                </li>
+                                                <li>
+                                                    <strong>Problemas de concurrencia:</strong> En entornos multihilo, la implementación del Singleton puede requerir medidas adicionales para garantizar la seguridad de los hilos, lo que puede añadir complejidad y afectar el rendimiento.
+                                                </li>
+                                                <li>
+                                                    <strong>Inflexibilidad:</strong> El patrón puede llevar a un diseño rígido que dificulte la extensión o modificación del comportamiento de la clase, ya que se espera que siempre haya una única instancia.
+                                                </li>
+                                                <li>
+                                                    <strong>Uso inadecuado de recursos:</strong> Si un Singleton mantiene una gran cantidad de estado o recursos, puede causar un uso ineficiente de la memoria si la instancia no se necesita durante toda la vida de la aplicación.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="text-center col-xl-6 col-md-6 mb-6">
+                                            <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 50rem;" src="images/singleton2.png" alt="...">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="text-center col-xl-6 col-md-6 mb-6">
+                                            <h2>Ejemplos de uso del patrón Singleton:</h2>
+                                            <ul class="text_left">
+                                                <li>
+                                                    <strong>Manejo de conexión a base de datos:</strong> Un Singleton puede ser utilizado para manejar una única conexión a la base de datos, asegurando que todas las operaciones se realicen a través de esta conexión y evitando la sobrecarga de múltiples conexiones.
+                                                </li>
+                                                <li>
+                                                    <strong>Configuración de la aplicación:</strong> Un Singleton puede contener la configuración de la aplicación, permitiendo que diferentes partes del sistema accedan a los mismos parámetros de configuración sin necesidad de crear múltiples instancias.
+                                                </li>
+                                                <li>
+                                                    <strong>Registro (Logger):</strong> Un Singleton puede implementarse para gestionar un sistema de registro, garantizando que todos los mensajes de log se envíen a la misma instancia, lo que facilita el seguimiento y la gestión de logs a lo largo de la aplicación.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="text-center col-xl-6 col-md-6 mb-6">
+                                            <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 50rem;" src="images/singleton3.png" alt="...">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
 
+                    <div class="col-xl-12 col-md-12 mb-12">
+                        <h6 class="text-uppercase"></h6>
+                        <!-- Solid divider -->
+                        <hr class="solid">
+                    </div>
+
+                    <!-- 
+                        BUILDER
+                    -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">BUILDER</h1>
+                        <a href="https://colab.research.google.com/drive/1KuZyrZ-BbzIJ3zrxdZDZGT9P4zrs8ySB#scrollTo=KVuJsY9Yh1ka&line=96&uniqifier=1" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+                            <i class="fas fa-download fa-sm text-white-50"></i> Ver código</a>
+                    </div>
+                    <div class="row">
                         <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
+                        <div class="col-xl-12 col-md-12 mb-12">
+                            <div class="card border-left-primary shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Earnings (Annual)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                Builder - Patrón de Construcción</div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                            <i class="fas fa-cogs fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="text-center col-xl-6 col-md-6 mb-6">
+                                            <p class="text_left">
+                                                El patrón <strong>Builder</strong> es un patrón de diseño creacional que permite construir objetos complejos paso a paso. 
+                                                Separa la construcción de un objeto de su representación, lo que permite crear diferentes representaciones del mismo tipo de objeto.
+                                            </p>
+                    
+                                            <h2>Características:</h2>
+                                            <ul class="text_left">
+                                                <li>
+                                                    <strong>Construcción paso a paso:</strong> El patrón permite construir un objeto de manera incremental, facilitando la creación de diferentes configuraciones.
+                                                </li>
+                                                <li>
+                                                    <strong>Separación de la representación:</strong> La lógica de construcción se separa de la representación final del objeto, lo que permite crear diferentes variaciones.
+                                                </li>
+                                                <li>
+                                                    <strong>Flexibilidad:</strong> Se pueden usar diferentes implementaciones de un mismo builder para crear distintas configuraciones del objeto sin modificar su código.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="text-center col-xl-6 col-md-6 mb-6">
+                                            <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 50rem;" src="images/builder.png" alt="...">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="text-center col-xl-6 col-md-6 mb-6">
+                                            <h2>Desventajas:</h2>
+                                            <ul class="text_left">
+                                                <li>
+                                                    <strong>Complejidad adicional:</strong> La implementación del patrón Builder puede añadir complejidad al código, especialmente si el objeto a construir es simple.
+                                                </li>
+                                                <li>
+                                                    <strong>Aumento en el número de clases:</strong> Puede requerir la creación de múltiples clases para los builders, lo que puede resultar en una mayor cantidad de código.
+                                                </li>
+                                                <li>
+                                                    <strong>Dependencia de la implementación:</strong> Los cambios en el objeto a construir pueden requerir modificaciones en todos los builders asociados.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="text-center col-xl-6 col-md-6 mb-6">
+                                            <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 50rem;" src="images/builder1.png" alt="...">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="text-center col-xl-6 col-md-6 mb-6">
+                                            <h2>Ejemplos:</h2>
+                                            <ul class="text_left">
+                                                <li>
+                                                    <strong>Construcción de objetos complejos:</strong> Se utiliza para construir objetos como configuraciones de ventanas, documentos HTML, o cualquier objeto que requiera varios pasos para su creación.
+                                                </li>
+                                                <li>
+                                                    <strong>Crear productos de diferentes configuraciones:</strong> Ideal para crear productos en un sistema de pedidos, donde los clientes pueden personalizar su pedido.
+                                                </li>
+                                                <li>
+                                                    <strong>Formularios de entrada:</strong> Para construir formularios donde se pueden agregar campos opcionales de manera flexible.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="text-center col-xl-6 col-md-6 mb-6">
+                                            <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 50rem;" src="images/builder2.png" alt="...">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    
+                        <div class="col-xl-12 col-md-12 mb-12">
+                            <h6 class="text-uppercase"></h6>
+                            <!-- Solid divider -->
+                            <hr class="solid">
+                        </div>
+                    </div>
 
+                    <!-- 
+                        ABSTRACTFACTORY
+                    -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">ABSTRACT FACTORY</h1>
+                        <a href="https://colab.research.google.com/drive/1KuZyrZ-BbzIJ3zrxdZDZGT9P4zrs8ySB#scrollTo=KVuJsY9Yh1ka&line=96&uniqifier=1" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+                            <i class="fas fa-download fa-sm text-white-50"></i> Ver código</a>
+                    </div>
+                    <div class="row">
                         <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="col-xl-12 col-md-12 mb-12">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                Abstract Factory - Fábrica Abstracta</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-cogs fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="text-center col-xl-6 col-md-6 mb-6">
+                                            <p class="text_left">
+                                                El patrón <strong>Abstract Factory</strong> es un patrón de diseño creacional que proporciona una interfaz para crear familias de objetos relacionados sin especificar sus clases concretas. 
+                                                Permite que un sistema sea independiente de cómo se crean, componen y representan los productos.
+                                            </p>
+                        
+                                            <h2>Características:</h2>
+                                            <ul class="text_left">
+                                                <li>
+                                                    <strong>Familias de productos:</strong> Facilita la creación de familias de productos que están relacionados o dependen entre sí.
+                                                </li>
+                                                <li>
+                                                    <strong>Desacoplamiento:</strong> Separa la lógica de creación de los productos del código cliente, promoviendo el principio de inversión de dependencias.
+                                                </li>
+                                                <li>
+                                                    <strong>Flexibilidad:</strong> Permite que el cliente trabaje con cualquier fábrica concreta sin conocer su implementación.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="text-center col-xl-6 col-md-6 mb-6">
+                                            <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 50rem;" src="images/abstractFactory1.png" alt="...">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="text-center col-xl-6 col-md-6 mb-6">
+                                            <h2>Desventajas:</h2>
+                                            <ul class="text_left">
+                                                <li>
+                                                    <strong>Complejidad:</strong> El uso del patrón Abstract Factory puede aumentar la complejidad del código debido al número de clases e interfaces involucradas.
+                                                </li>
+                                                <li>
+                                                    <strong>Dificultad en cambios:</strong> Agregar nuevos productos a la familia puede requerir modificar todas las fábricas abstractas y concretas.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="text-center col-xl-6 col-md-6 mb-6">
+                                            <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 50rem;" src="images/AbstractFactory2.png" alt="...">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="text-center col-xl-6 col-md-6 mb-6">
+                                            <h2>Ejemplos:</h2>
+                                            <ul class="text_left">
+                                                <li>
+                                                    <strong>Sistemas de interfaz gráfica (GUI):</strong> Usado para crear diferentes tipos de interfaces (Windows, macOS, Linux) sin que el código del cliente dependa de una plataforma específica.
+                                                </li>
+                                                <li>
+                                                    <strong>Creación de objetos relacionados:</strong> Aplicable cuando se necesita asegurarse de que los productos creados pertenecen a la misma familia y pueden funcionar bien juntos.
+                                                </li>
+                                                <li>
+                                                    <strong>Sistemas de bases de datos:</strong> Permite crear diferentes objetos de conexión a bases de datos sin depender de una implementación específica.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="text-center col-xl-6 col-md-6 mb-6">
+                                            <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 50rem;" src="images/abstractFactory4.webp" alt="...">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                        
+
+                        <div class="col-xl-12 col-md-12 mb-12">
+                            <h6 class="text-uppercase"></h6>
+                            <!-- Solid divider -->
+                            <hr class="solid">
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-12 col-md-12 mb-12">
                             <div class="card border-left-info shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
@@ -439,9 +690,9 @@
                                 </div>
                             </div>
                         </div>
-
+                    
                         <!-- Pending Requests Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="col-xl-12 col-md-12 mb-12">
                             <div class="card border-left-warning shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
@@ -458,237 +709,9 @@
                             </div>
                         </div>
                     </div>
+                    
 
-                    <!-- Content Row -->
-
-                    <div class="row">
-
-                        <!-- Area Chart -->
-                        <div class="col-xl-8 col-lg-7">
-                            <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
-                                <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
-                                    <div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                            aria-labelledby="dropdownMenuLink">
-                                            <div class="dropdown-header">Dropdown Header:</div>
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Card Body -->
-                                <div class="card-body">
-                                    <div class="chart-area">
-                                        <canvas id="myAreaChart"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Pie Chart -->
-                        <div class="col-xl-4 col-lg-5">
-                            <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
-                                <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
-                                    <div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                            aria-labelledby="dropdownMenuLink">
-                                            <div class="dropdown-header">Dropdown Header:</div>
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Card Body -->
-                                <div class="card-body">
-                                    <div class="chart-pie pt-4 pb-2">
-                                        <canvas id="myPieChart"></canvas>
-                                    </div>
-                                    <div class="mt-4 text-center small">
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-primary"></i> Direct
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-success"></i> Social
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-info"></i> Referral
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Content Row -->
-                    <div class="row">
-
-                        <!-- Content Column -->
-                        <div class="col-lg-6 mb-4">
-
-                            <!-- Project Card Example -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Projects</h6>
-                                </div>
-                                <div class="card-body">
-                                    <h4 class="small font-weight-bold">Server Migration <span
-                                            class="float-right">20%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 20%"
-                                            aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Sales Tracking <span
-                                            class="float-right">40%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 40%"
-                                            aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Customer Database <span
-                                            class="float-right">60%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar" role="progressbar" style="width: 60%"
-                                            aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Payout Details <span
-                                            class="float-right">80%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar bg-info" role="progressbar" style="width: 80%"
-                                            aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Account Setup <span
-                                            class="float-right">Complete!</span></h4>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%"
-                                            aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Color System -->
-                            <div class="row">
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-primary text-white shadow">
-                                        <div class="card-body">
-                                            Primary
-                                            <div class="text-white-50 small">#4e73df</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-success text-white shadow">
-                                        <div class="card-body">
-                                            Success
-                                            <div class="text-white-50 small">#1cc88a</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-info text-white shadow">
-                                        <div class="card-body">
-                                            Info
-                                            <div class="text-white-50 small">#36b9cc</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-warning text-white shadow">
-                                        <div class="card-body">
-                                            Warning
-                                            <div class="text-white-50 small">#f6c23e</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-danger text-white shadow">
-                                        <div class="card-body">
-                                            Danger
-                                            <div class="text-white-50 small">#e74a3b</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-secondary text-white shadow">
-                                        <div class="card-body">
-                                            Secondary
-                                            <div class="text-white-50 small">#858796</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-light text-black shadow">
-                                        <div class="card-body">
-                                            Light
-                                            <div class="text-black-50 small">#f8f9fc</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-dark text-white shadow">
-                                        <div class="card-body">
-                                            Dark
-                                            <div class="text-white-50 small">#5a5c69</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="col-lg-6 mb-4">
-
-                            <!-- Illustrations -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Illustrations</h6>
-                                </div>
-                                <div class="card-body">
-                                    <div class="text-center">
-                                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
-                                            src="img/undraw_posting_photo.svg" alt="...">
-                                    </div>
-                                    <p>Add some quality, svg illustrations to your project courtesy of <a
-                                            target="_blank" rel="nofollow" href="https://undraw.co/">unDraw</a>, a
-                                        constantly updated collection of beautiful svg images that you can use
-                                        completely free and without attribution!</p>
-                                    <a target="_blank" rel="nofollow" href="https://undraw.co/">Browse Illustrations on
-                                        unDraw &rarr;</a>
-                                </div>
-                            </div>
-
-                            <!-- Approach -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Development Approach</h6>
-                                </div>
-                                <div class="card-body">
-                                    <p>SB Admin 2 makes extensive use of Bootstrap 4 utility classes in order to reduce
-                                        CSS bloat and poor page performance. Custom CSS classes are used to create
-                                        custom components and custom utility classes.</p>
-                                    <p class="mb-0">Before working with this theme, you should become familiar with the
-                                        Bootstrap framework, especially the utility classes.</p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
+            
 
                 </div>
                 <!-- /.container-fluid -->

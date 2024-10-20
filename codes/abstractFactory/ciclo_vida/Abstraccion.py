@@ -6,7 +6,6 @@ class FactoryVehicle(ABC, live):
     @abstractmethod
     def create_vehicle(self):
         pass
-
     def order_vehicle(self):
         vehicle = self.create_vehicle()
         print(f"Vehículo {vehicle.__class__.__name__} creado.")
@@ -14,6 +13,7 @@ class FactoryVehicle(ABC, live):
         vehicle.drive()
         vehicle.stop()
         return vehicle
+    
 
 class FactoryBike(FactoryVehicle, live):
     def create_vehicle(self):
@@ -26,6 +26,8 @@ class FactoryCar(FactoryVehicle, live):
 class FactoryMotorcycle(FactoryVehicle, live):
     def create_vehicle(self):
         return Motorcycle()
+    
+    
 
 # Usando la fábrica de bicicletas como ejemplo
 vehicle_factory = FactoryBike()

@@ -886,7 +886,7 @@
         "kind": 6,
         "importPath": "codes.builder.buillder",
         "description": "codes.builder.buillder",
-        "peekOfCode": "class IRobotBuilder(ABC):\n    # Método abstracto para construir la cabeza del robot.\n    @abstractmethod\n    def build_head(self, head): pass\n    # Método abstracto para construir el cuerpo del robot.\n    @abstractmethod\n    def build_body(self, body): pass\n    # Método abstracto para construir las piernas del robot.\n    @abstractmethod\n    def build_legs(self, legs): pass",
+        "peekOfCode": "class IRobotBuilder(ABC):\n    @abstractmethod\n    def build_head(self, head): pass\n    @abstractmethod\n    def build_body(self, body): pass\n    @abstractmethod\n    def build_legs(self, legs): pass\n    @abstractmethod\n    def build_arms(self, arms): pass\n    @abstractmethod",
         "detail": "codes.builder.buillder",
         "documentation": {}
     },
@@ -895,7 +895,7 @@
         "kind": 6,
         "importPath": "codes.builder.buillder",
         "description": "codes.builder.buillder",
-        "peekOfCode": "class RobotBuilder(IRobotBuilder):\n    # Constructor: inicializa un nuevo objeto Robot vacío.\n    def __init__(self):\n        self.robot = Robot()\n    # Implementa la construcción de la cabeza.\n    def build_head(self, head):\n        self.robot.head = head\n    # Implementa la construcción del cuerpo.\n    def build_body(self, body):\n        self.robot.body = body",
+        "peekOfCode": "class RobotBuilder(IRobotBuilder):\n    def __init__(self):\n        self.robot = Robot()\n    def build_head(self, head):\n        self.robot.head = head\n    def build_body(self, body):\n        self.robot.body = body\n    def build_arms(self, arms):\n        self.robot.arms = arms\n    def build_legs(self, legs):",
         "detail": "codes.builder.buillder",
         "documentation": {}
     },
@@ -904,7 +904,7 @@
         "kind": 6,
         "importPath": "codes.builder.buillder",
         "description": "codes.builder.buillder",
-        "peekOfCode": "class RobotDirector:\n    # Inicializa el director con un builder de robots.\n    def __init__(self, robot_builder) -> None:\n        self.robot_builder = robot_builder\n    # Controla el proceso de construcción del robot, especificando las partes.\n    def construct_robot(self):\n        self.robot_builder.build_head(\"chasis\")  # Construye la cabeza con valor \"chasis\".\n        self.robot_builder.build_body(\"metal\")   # Construye el cuerpo con valor \"metal\".\n        self.robot_builder.build_legs(\"ruedas\")  # Construye las piernas con valor \"ruedas\".\n        self.robot_builder.build_arms(\"arma\")    # Construye los brazos con valor \"arma\".",
+        "peekOfCode": "class RobotDirector:\n    def __init__(self, robot_builder) -> None:\n        self.robot_builder = robot_builder\n    def construct_robot(self):\n        self.robot_builder.build_head(\"chasis\")  # Construye la cabeza con valor \"chasis\".\n        self.robot_builder.build_body(\"metal\")   # Construye el cuerpo con valor \"metal\".\n        self.robot_builder.build_legs(\"ruedas\")  # Construye las piernas con valor \"ruedas\".\n        self.robot_builder.build_arms(\"arma\")    # Construye los brazos con valor \"arma\".\n# Clase Robot: representa el producto final construido.\nclass Robot:",
         "detail": "codes.builder.buillder",
         "documentation": {}
     },
@@ -913,7 +913,7 @@
         "kind": 6,
         "importPath": "codes.builder.buillder",
         "description": "codes.builder.buillder",
-        "peekOfCode": "class Robot:\n    # Método para mostrar la información del robot (sus partes).\n    def display_robot_info(self):\n        print(\"robot info\")\n        print(f\"... {self.head}\")   # Muestra la cabeza del robot.\n        print(f\"... {self.body}\")   # Muestra el cuerpo del robot.\n        print(f\"... {self.arms}\")   # Muestra los brazos del robot.\n        print(f\"... {self.legs}\")   # Muestra las piernas del robot.\n# Cliente: este código utiliza el director y el builder para construir el robot.\n# Crea una instancia del builder concreto de robots.",
+        "peekOfCode": "class Robot:\n    # Método para mostrar la información del robot (sus partes).\n    def display_robot_info(self):\n        print(\"robot info\")\n        print(f\"... {self.head}\")   # Muestra la cabeza del robot.\n        print(f\"... {self.body}\")   # Muestra el cuerpo del robot.\n        print(f\"... {self.arms}\")   # Muestra los brazos del robot.\n        print(f\"... {self.legs}\")   # Muestra las piernas del robot.\n# Cliente: este código utiliza el director y el builder para construir el robot.\nrobot_builder = RobotBuilder()",
         "detail": "codes.builder.buillder",
         "documentation": {}
     },
@@ -922,7 +922,7 @@
         "kind": 5,
         "importPath": "codes.builder.buillder",
         "description": "codes.builder.buillder",
-        "peekOfCode": "robot_builder = RobotBuilder()\n# Crea una instancia del director que usará el builder.\nrobot_director = RobotDirector(robot_builder)\n# El director construye el robot especificando los componentes.\nrobot_director.construct_robot()\n# El cliente obtiene el robot construido a través del builder.\nrobot = robot_builder.get_robot()\n# El cliente muestra la información del robot construido.\nrobot.display_robot_info()",
+        "peekOfCode": "robot_builder = RobotBuilder()\nrobot_director = RobotDirector(robot_builder)\n# El director construye el robot especificando los componentes.\nrobot_director.construct_robot()\nrobot = robot_builder.get_robot()\nrobot.display_robot_info()",
         "detail": "codes.builder.buillder",
         "documentation": {}
     },
@@ -931,7 +931,7 @@
         "kind": 5,
         "importPath": "codes.builder.buillder",
         "description": "codes.builder.buillder",
-        "peekOfCode": "robot_director = RobotDirector(robot_builder)\n# El director construye el robot especificando los componentes.\nrobot_director.construct_robot()\n# El cliente obtiene el robot construido a través del builder.\nrobot = robot_builder.get_robot()\n# El cliente muestra la información del robot construido.\nrobot.display_robot_info()",
+        "peekOfCode": "robot_director = RobotDirector(robot_builder)\n# El director construye el robot especificando los componentes.\nrobot_director.construct_robot()\nrobot = robot_builder.get_robot()\nrobot.display_robot_info()",
         "detail": "codes.builder.buillder",
         "documentation": {}
     },
@@ -940,7 +940,7 @@
         "kind": 5,
         "importPath": "codes.builder.buillder",
         "description": "codes.builder.buillder",
-        "peekOfCode": "robot = robot_builder.get_robot()\n# El cliente muestra la información del robot construido.\nrobot.display_robot_info()",
+        "peekOfCode": "robot = robot_builder.get_robot()\nrobot.display_robot_info()",
         "detail": "codes.builder.buillder",
         "documentation": {}
     },
