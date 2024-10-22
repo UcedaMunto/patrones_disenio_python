@@ -706,7 +706,7 @@
         "kind": 6,
         "importPath": "codes.bridge.bridge",
         "description": "codes.bridge.bridge",
-        "peekOfCode": "class IFormat(ABC):\n    @abstractmethod\n    def play(self, file_path: str) -> None:\n        pass\nclass MusicPlayer( ABC ):\n    def __init__(self, format:IFormat):\n        self.format = format \n    @abstractmethod\n    def play(self, file_path: str) -> None:\n        pass",
+        "peekOfCode": "class IFormat(ABC):\n    @abstractmethod\n    def play(self, file_path: str) -> None:\n        pass\n# ________________ CLASE ABSTRACTA\nclass MusicPlayer( ABC ):\n    def __init__(self, format:IFormat): # IFormat se utiliza como un contrato que permite conectar las clases  \n        self.format = format \n    @abstractmethod\n    def play(self, file_path: str) -> None:",
         "detail": "codes.bridge.bridge",
         "documentation": {}
     },
@@ -715,25 +715,7 @@
         "kind": 6,
         "importPath": "codes.bridge.bridge",
         "description": "codes.bridge.bridge",
-        "peekOfCode": "class MusicPlayer( ABC ):\n    def __init__(self, format:IFormat):\n        self.format = format \n    @abstractmethod\n    def play(self, file_path: str) -> None:\n        pass\nclass DesktopPlayer(MusicPlayer):\n    def play(self, file_path:str) -> None:\n        print(\"Using Mobile player\")\n        self.format.play( file_path )",
-        "detail": "codes.bridge.bridge",
-        "documentation": {}
-    },
-    {
-        "label": "DesktopPlayer",
-        "kind": 6,
-        "importPath": "codes.bridge.bridge",
-        "description": "codes.bridge.bridge",
-        "peekOfCode": "class DesktopPlayer(MusicPlayer):\n    def play(self, file_path:str) -> None:\n        print(\"Using Mobile player\")\n        self.format.play( file_path )\nclass MobilPlayer(MusicPlayer):\n    def play(self, file_path:str) -> None:\n        print(\"Using Mobile player\")\n        self.format.play( file_path )\nclass MP3(IFormat):\n    def play(self, file_path: str) -> None:",
-        "detail": "codes.bridge.bridge",
-        "documentation": {}
-    },
-    {
-        "label": "MobilPlayer",
-        "kind": 6,
-        "importPath": "codes.bridge.bridge",
-        "description": "codes.bridge.bridge",
-        "peekOfCode": "class MobilPlayer(MusicPlayer):\n    def play(self, file_path:str) -> None:\n        print(\"Using Mobile player\")\n        self.format.play( file_path )\nclass MP3(IFormat):\n    def play(self, file_path: str) -> None:\n        print(f\"PLaying WAV FILE {file_path}\")\nclass WAV(IFormat):\n    def play(self, file_path: str) -> None:\n        print(f\"PLaying WAV FILE {file_path}\")",
+        "peekOfCode": "class MusicPlayer( ABC ):\n    def __init__(self, format:IFormat): # IFormat se utiliza como un contrato que permite conectar las clases  \n        self.format = format \n    @abstractmethod\n    def play(self, file_path: str) -> None:\n        pass\n#__________________ORIGEN\nclass MP3(IFormat): \n    print(f\"MP3 Implementa la interfaz IFormat\")\n    def play(self, file_path: str) -> None:",
         "detail": "codes.bridge.bridge",
         "documentation": {}
     },
@@ -742,7 +724,7 @@
         "kind": 6,
         "importPath": "codes.bridge.bridge",
         "description": "codes.bridge.bridge",
-        "peekOfCode": "class MP3(IFormat):\n    def play(self, file_path: str) -> None:\n        print(f\"PLaying WAV FILE {file_path}\")\nclass WAV(IFormat):\n    def play(self, file_path: str) -> None:\n        print(f\"PLaying WAV FILE {file_path}\")\nmp3_format = MP3()\nplayer = DesktopPlayer(mp3_format)\nplayer.play(\"song mp3\")\nwav_format = WAV()",
+        "peekOfCode": "class MP3(IFormat): \n    print(f\"MP3 Implementa la interfaz IFormat\")\n    def play(self, file_path: str) -> None:\n        print(f\"PLaying WAV FILE {file_path}\")\nclass WAV(IFormat):\n    print(f\"WAV Implementa la interfaz IFormat\")\n    def play(self, file_path: str) -> None:\n        print(f\"PLaying WAV FILE {file_path}\")\n#__________________DESTINO\nclass DesktopPlayer(MusicPlayer):",
         "detail": "codes.bridge.bridge",
         "documentation": {}
     },
@@ -751,7 +733,25 @@
         "kind": 6,
         "importPath": "codes.bridge.bridge",
         "description": "codes.bridge.bridge",
-        "peekOfCode": "class WAV(IFormat):\n    def play(self, file_path: str) -> None:\n        print(f\"PLaying WAV FILE {file_path}\")\nmp3_format = MP3()\nplayer = DesktopPlayer(mp3_format)\nplayer.play(\"song mp3\")\nwav_format = WAV()\nplayer2 = DesktopPlayer(wav_format)\nplayer2.play(\"song wab\")",
+        "peekOfCode": "class WAV(IFormat):\n    print(f\"WAV Implementa la interfaz IFormat\")\n    def play(self, file_path: str) -> None:\n        print(f\"PLaying WAV FILE {file_path}\")\n#__________________DESTINO\nclass DesktopPlayer(MusicPlayer):\n    def play(self, file_path:str) -> None:\n        print(\"Using Mobile player\")\n        self.format.play( file_path )\nclass MobilPlayer(MusicPlayer):",
+        "detail": "codes.bridge.bridge",
+        "documentation": {}
+    },
+    {
+        "label": "DesktopPlayer",
+        "kind": 6,
+        "importPath": "codes.bridge.bridge",
+        "description": "codes.bridge.bridge",
+        "peekOfCode": "class DesktopPlayer(MusicPlayer):\n    def play(self, file_path:str) -> None:\n        print(\"Using Mobile player\")\n        self.format.play( file_path )\nclass MobilPlayer(MusicPlayer):\n    def play(self, file_path:str) -> None:\n        print(\"Using Mobile player\")\n        self.format.play( file_path )\n#__________________EJECUCION\nmp3_format = MP3()",
+        "detail": "codes.bridge.bridge",
+        "documentation": {}
+    },
+    {
+        "label": "MobilPlayer",
+        "kind": 6,
+        "importPath": "codes.bridge.bridge",
+        "description": "codes.bridge.bridge",
+        "peekOfCode": "class MobilPlayer(MusicPlayer):\n    def play(self, file_path:str) -> None:\n        print(\"Using Mobile player\")\n        self.format.play( file_path )\n#__________________EJECUCION\nmp3_format = MP3()\nplayer = DesktopPlayer(mp3_format)\nplayer.play(\"song mp3\")\nwav_format = WAV()\nplayer2 = DesktopPlayer(wav_format)",
         "detail": "codes.bridge.bridge",
         "documentation": {}
     },
