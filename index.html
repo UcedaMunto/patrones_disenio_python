@@ -60,11 +60,38 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Items</h6>
-                        <a class="collapse-item" href="buttons.html">Buttons</a>
-                        <a class="collapse-item" href="cards.html">Cards</a>
+                        <a class="collapse-item" href="#singleton">Singleton</a>
+                        <a class="collapse-item" href="#builder">Builder</a>
+                        <a class="collapse-item" href="#abstract_factory">Abstract Factory</a>
+                        <a class="collapse-item" href="#bridge">Bridge</a>
                     </div>
                 </div>
             </li>
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Dockers
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDockers"
+                    aria-expanded="true" aria-controls="collapseDockers">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Mis Dockers</span>
+                </a>
+                <div id="collapseDockers" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item"  target="blank" href="buttons.html">Introducción</a>
+                        <h6 class="collapse-header">Contenedores <br> con Frameworks</h6>
+                        <a class="collapse-item"  target="blank" href="https://github.com/UcedaMunto/docker_django">Django</a>
+                        <a class="collapse-item"  target="blank" href="cards.html">Symfony</a>
+                        <h6 class="collapse-header">Sitios </h6>
+                        <a class="collapse-item"  target="blank" href="https://github.com/UcedaMunto/patrones_disenio_python">Esta web</a>
+                    </div>
+                </div>
+            </li>
+            
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
@@ -77,12 +104,12 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Utilidades:</h6>
-                        <a class="collapse-item" href="https://app.diagrams.net">Diagramas</a>
-                        <a class="collapse-item" href="https://www.gradient-animator.com">CSS</a>
-                        <a class="collapse-item" href="utilities-animation.html">Plantillas</a>
-                        <a class="collapse-item" href="https://colab.research.google.com">Compartir y ejecutar códigos</a>
-                        <a class="collapse-item" href="https://grid.layoutit.com">Grids</a>
-                        <a class="collapse-item" href="https://app.tango.us">Creación de manuales</a>
+                        <a class="collapse-item"  target="blank" href="https://app.diagrams.net">Diagramas</a>
+                        <a class="collapse-item"  target="blank" href="https://www.gradient-animator.com">CSS</a>
+                        <a class="collapse-item"  target="blank" href="utilities-animation.html">Plantillas</a>
+                        <a class="collapse-item"  target="blank" href="https://colab.research.google.com">Compartir y ejecutar códigos</a>
+                        <a class="collapse-item"  target="blank" href="https://grid.layoutit.com">Grids</a>
+                        <a class="collapse-item"  target="blank" href="https://app.tango.us">Creación de manuales</a>
                         
                     </div>
                 </div>
@@ -99,10 +126,10 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Utilidades:</h6>
-                        <a class="collapse-item" href="https://securityheaders.com">Seguridad básica</a>
-                        <a class="collapse-item" href="https://www.mail-tester.com">Reputación de correos</a>
-                        <a class="collapse-item" href="https://pagespeed.web.dev">Performance pagespeed</a>
-                        <a class="collapse-item" href="https://gtmetrix.com">Performance gtmetrix</a>
+                        <a class="collapse-item"  target="blank" href="https://securityheaders.com">Seguridad básica</a>
+                        <a class="collapse-item"  target="blank" href="https://www.mail-tester.com">Reputación de correos</a>
+                        <a class="collapse-item"  target="blank" href="https://pagespeed.web.dev">Performance pagespeed</a>
+                        <a class="collapse-item"  target="blank" href="https://gtmetrix.com">Performance gtmetrix</a>
                         
                     </div>
                 </div>
@@ -125,10 +152,10 @@
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="https://css-tricks.com/auto-growing-inputs-textareas">Tips CSS</a>
-                        <a class="collapse-item" href="https://refactoring.guru">Patrones</a>
-                        <a class="collapse-item" href="https://sourcemaking.com">Patrones 2</a>
-                        <a class="collapse-item" href="https://www.oodesign.com">Patrones 3</a>
+                        <a class="collapse-item"  target="blank" href="https://css-tricks.com/auto-growing-inputs-textareas">Tips CSS</a>
+                        <a class="collapse-item"  target="blank" href="https://refactoring.guru">Patrones</a>
+                        <a class="collapse-item"  target="blank" href="https://sourcemaking.com">Patrones 2</a>
+                        <a class="collapse-item"  target="blank" href="https://www.oodesign.com">Patrones 3</a>
                     </div>
                 </div>
             </li>
@@ -331,7 +358,7 @@
                     -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <div class="col-md-6 col-xl-6">
-                            <h1 class="h3 mb-0 text-gray-800">SINGLETON</h1>
+                            <h1 name="singleton" class="h3 mb-0 text-gray-800" id="singleton">SINGLETON</h1>
                         </div>
                         <div class="col-md-6 col-xl-6">
                             <a href="https://colab.research.google.com/drive/1KuZyrZ-BbzIJ3zrxdZDZGT9P4zrs8ySB#scrollTo=8gN_9byIewuR&line=16&uniqifier=1" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"  target="_blank">
@@ -439,10 +466,15 @@
                         BUILDER
                     -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">BUILDER</h1>
-                        <a href="https://colab.research.google.com/drive/1KuZyrZ-BbzIJ3zrxdZDZGT9P4zrs8ySB#scrollTo=KVuJsY9Yh1ka&line=96&uniqifier=1" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"  target="_blank">
-                            <i class="fas fa-download fa-sm text-white-50"></i> Ver código</a>
+                        <div class="col-md-6 col-xl-6">
+                            <h1 class="h3 mb-0 text-gray-800" id="builder">BUILDER</h1>
+                        </div>
+                        <div class="col-md-6 col-xl-6">
+                            <a href="https://colab.research.google.com/drive/1KuZyrZ-BbzIJ3zrxdZDZGT9P4zrs8ySB#scrollTo=KVuJsY9Yh1ka&line=96&uniqifier=1" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"  target="_blank">
+                                <i class="fas fa-download fa-sm text-white-50"></i> Ver código</a>
+                        </div>
                     </div>
+
                     <div class="row">
                         <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-12 col-md-12 mb-12">
@@ -534,11 +566,17 @@
                     <!-- 
                         ABSTRACTFACTORY
                     -->
+
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">ABSTRACT FACTORY</h1>
-                        <a href="https://colab.research.google.com/drive/1KuZyrZ-BbzIJ3zrxdZDZGT9P4zrs8ySB#scrollTo=KVuJsY9Yh1ka&line=96&uniqifier=1" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"  target="_blank">
-                            <i class="fas fa-download fa-sm text-white-50"></i> Ver código</a>
+                        <div class="col-md-6 col-xl-6">
+                            <h1 class="h3 mb-0 text-gray-800" id="abstract_factory">ABSTRACT FACTORY</h1>
+                        </div>
+                        <div class="col-md-6 col-xl-6">
+                            <a href="https://colab.research.google.com/drive/1KuZyrZ-BbzIJ3zrxdZDZGT9P4zrs8ySB#scrollTo=KVuJsY9Yh1ka&line=96&uniqifier=1" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"  target="_blank">
+                                <i class="fas fa-download fa-sm text-white-50"></i> Ver código</a>
+                        </div>
                     </div>
+
                     <div class="row">
                         <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-12 col-md-12 mb-12">
@@ -650,7 +688,7 @@
                         BRIDGE
                     -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">BRIDGE</h1>
+                        <h1 class="h3 mb-0 text-gray-800" id="bridge">BRIDGE</h1>
                         <a href="https://colab.research.google.com/drive/1KuZyrZ-BbzIJ3zrxdZDZGT9P4zrs8ySB#scrollTo=7QiMr__GCF7H&line=3&uniqifier=1" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"  target="_blank">
                             <i class="fas fa-download fa-sm text-white-50"></i> Ver código</a>
                     </div>
