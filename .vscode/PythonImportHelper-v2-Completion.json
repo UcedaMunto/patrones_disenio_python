@@ -201,6 +201,22 @@
         "documentation": {}
     },
     {
+        "label": "ABC",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
         "label": "Motorcycle",
         "importPath": "Implementacion",
         "description": "Implementacion",
@@ -961,6 +977,78 @@
         "documentation": {}
     },
     {
+        "label": "IConffee",
+        "kind": 6,
+        "importPath": "codes.component.component",
+        "description": "codes.component.component",
+        "peekOfCode": "class IConffee(ABC):\n    @abstractmethod\n    def get_cost(self):\n        pass\n    @abstractmethod\n    def get_description(self):\n        pass\nclass SimpleCoffee(IConffee):\n    def get_cost(self):\n        return 1.0",
+        "detail": "codes.component.component",
+        "documentation": {}
+    },
+    {
+        "label": "SimpleCoffee",
+        "kind": 6,
+        "importPath": "codes.component.component",
+        "description": "codes.component.component",
+        "peekOfCode": "class SimpleCoffee(IConffee):\n    def get_cost(self):\n        return 1.0\n    def get_description(self):\n        return \"Café simple\"\nclass CoffeDecorator(IConffee):\n    def __init__(self, coffe):\n        self._coffee = coffe\n    def get_cost(self):\n        return self._coffee.get_cost()",
+        "detail": "codes.component.component",
+        "documentation": {}
+    },
+    {
+        "label": "CoffeDecorator",
+        "kind": 6,
+        "importPath": "codes.component.component",
+        "description": "codes.component.component",
+        "peekOfCode": "class CoffeDecorator(IConffee):\n    def __init__(self, coffe):\n        self._coffee = coffe\n    def get_cost(self):\n        return self._coffee.get_cost()\n    def get__description(self):\n        return self._coffee.get_description()\nclass MilkDecorator(CoffeDecorator):\n    def __init__(self, coffe):\n        super().__init__(coffe)",
+        "detail": "codes.component.component",
+        "documentation": {}
+    },
+    {
+        "label": "MilkDecorator",
+        "kind": 6,
+        "importPath": "codes.component.component",
+        "description": "codes.component.component",
+        "peekOfCode": "class MilkDecorator(CoffeDecorator):\n    def __init__(self, coffe):\n        super().__init__(coffe)\n    def get_cost(self):\n        return self._coffee.get_cost() + 0.5\n    def get_description(self):\n        return self._coffee.get_description() + \"+ leche\"\nclass WhippedCreamDecorator(CoffeDecorator):\n    def __init__(self, coffe):\n        super().__init__(coffe)",
+        "detail": "codes.component.component",
+        "documentation": {}
+    },
+    {
+        "label": "WhippedCreamDecorator",
+        "kind": 6,
+        "importPath": "codes.component.component",
+        "description": "codes.component.component",
+        "peekOfCode": "class WhippedCreamDecorator(CoffeDecorator):\n    def __init__(self, coffe):\n        super().__init__(coffe)\n    def get_cost(self):\n        return super().get_cost() + 0.7\n    def get_description(self):\n        return super().get_description() + \", con crema\"\ncoffee = SimpleCoffee()\nprint( f\"{ coffee.get_description() } : ${ coffee.get_cost()} \")\ncoffee = MilkDecorator( coffee )    ",
+        "detail": "codes.component.component",
+        "documentation": {}
+    },
+    {
+        "label": "coffee",
+        "kind": 5,
+        "importPath": "codes.component.component",
+        "description": "codes.component.component",
+        "peekOfCode": "coffee = SimpleCoffee()\nprint( f\"{ coffee.get_description() } : ${ coffee.get_cost()} \")\ncoffee = MilkDecorator( coffee )    \nprint( f\"{ coffee.get_description() } : ${ coffee.get_cost()} \")\ncoffe = WhippedCreamDecorator(coffee)\nprint( f\"{ coffee.get_description() } : ${ coffee.get_cost()} \")",
+        "detail": "codes.component.component",
+        "documentation": {}
+    },
+    {
+        "label": "coffee",
+        "kind": 5,
+        "importPath": "codes.component.component",
+        "description": "codes.component.component",
+        "peekOfCode": "coffee = MilkDecorator( coffee )    \nprint( f\"{ coffee.get_description() } : ${ coffee.get_cost()} \")\ncoffe = WhippedCreamDecorator(coffee)\nprint( f\"{ coffee.get_description() } : ${ coffee.get_cost()} \")",
+        "detail": "codes.component.component",
+        "documentation": {}
+    },
+    {
+        "label": "coffe",
+        "kind": 5,
+        "importPath": "codes.component.component",
+        "description": "codes.component.component",
+        "peekOfCode": "coffe = WhippedCreamDecorator(coffee)\nprint( f\"{ coffee.get_description() } : ${ coffee.get_cost()} \")",
+        "detail": "codes.component.component",
+        "documentation": {}
+    },
+    {
         "label": "IFileSystemItem",
         "kind": 6,
         "importPath": "codes.composite.composite",
@@ -983,7 +1071,7 @@
         "kind": 6,
         "importPath": "codes.composite.composite",
         "description": "codes.composite.composite",
-        "peekOfCode": "class Folder(IFileSystemItem): # objeto implementa y por tanto define display y ademas mantiene un array de objetos\n    def __init__(self, name) -> None:\n        self._name = name \n        self._items = []\n    def add_item(self, item):\n        self._items.append(item)\n    def display(self, ident=\"\"):\n        print(f\"|{ident} - {self.__class__.__name__} : {self._name}\")\n        for item in self._items:\n            item.display( ident + \"     \" )",
+        "peekOfCode": "class Folder(IFileSystemItem): # objeto implementa y por tanto define display y ademas mantiene un array de objetos\n    def __init__(self, name) -> None:\n        self._name = name \n        self._items = []\n    def add_item(self, item):\n        self._items.append(item)\n    def display(self, ident=\"\"):\n        print(f\"|{ident} - {self.__class__.__name__} : {self._name}\")\n        for item in self._items:  # recorrer y mostrar \n            item.display( ident + \"     \" )",
         "detail": "codes.composite.composite",
         "documentation": {}
     },
@@ -992,7 +1080,7 @@
         "kind": 5,
         "importPath": "codes.composite.composite",
         "description": "codes.composite.composite",
-        "peekOfCode": "file1 = AppFile(\"File1\") # construye y agrega el nombre a los archivos\nfile2 = AppFile(\"File2\")\nfile3 = AppFile(\"File3\")\nfolder1 = Folder(\"Folder1\" #construye los folders\nfolder2 = Folder(\"Folder2\")\nfolder1.add_item(file1) \nfolder1.add_item(file2)\nfolder2.add_item(file3)\nroot = Folder(\"root\")\nroot.add_item(folder1)",
+        "peekOfCode": "file1 = AppFile(\"File1\") # construye y agrega el nombre a los archivos\nfile2 = AppFile(\"File2\")\nfile3 = AppFile(\"File3\")\nfolder1 = Folder(\"Folder1\") #construye los folders\nfolder2 = Folder(\"Folder2\")\nfolder1.add_item(file1) \nfolder1.add_item(file2)\nfolder2.add_item(file3)\nroot = Folder(\"root\")\nroot.add_item(folder1)",
         "detail": "codes.composite.composite",
         "documentation": {}
     },
@@ -1001,7 +1089,7 @@
         "kind": 5,
         "importPath": "codes.composite.composite",
         "description": "codes.composite.composite",
-        "peekOfCode": "file2 = AppFile(\"File2\")\nfile3 = AppFile(\"File3\")\nfolder1 = Folder(\"Folder1\" #construye los folders\nfolder2 = Folder(\"Folder2\")\nfolder1.add_item(file1) \nfolder1.add_item(file2)\nfolder2.add_item(file3)\nroot = Folder(\"root\")\nroot.add_item(folder1)\nroot.add_item(folder2)",
+        "peekOfCode": "file2 = AppFile(\"File2\")\nfile3 = AppFile(\"File3\")\nfolder1 = Folder(\"Folder1\") #construye los folders\nfolder2 = Folder(\"Folder2\")\nfolder1.add_item(file1) \nfolder1.add_item(file2)\nfolder2.add_item(file3)\nroot = Folder(\"root\")\nroot.add_item(folder1)\nroot.add_item(folder2)",
         "detail": "codes.composite.composite",
         "documentation": {}
     },
@@ -1010,7 +1098,7 @@
         "kind": 5,
         "importPath": "codes.composite.composite",
         "description": "codes.composite.composite",
-        "peekOfCode": "file3 = AppFile(\"File3\")\nfolder1 = Folder(\"Folder1\" #construye los folders\nfolder2 = Folder(\"Folder2\")\nfolder1.add_item(file1) \nfolder1.add_item(file2)\nfolder2.add_item(file3)\nroot = Folder(\"root\")\nroot.add_item(folder1)\nroot.add_item(folder2)\nroot.display() # muestra los elementos",
+        "peekOfCode": "file3 = AppFile(\"File3\")\nfolder1 = Folder(\"Folder1\") #construye los folders\nfolder2 = Folder(\"Folder2\")\nfolder1.add_item(file1) \nfolder1.add_item(file2)\nfolder2.add_item(file3)\nroot = Folder(\"root\")\nroot.add_item(folder1)\nroot.add_item(folder2)\nroot.display() # muestra los elementos",
         "detail": "codes.composite.composite",
         "documentation": {}
     },
@@ -1019,7 +1107,7 @@
         "kind": 5,
         "importPath": "codes.composite.composite",
         "description": "codes.composite.composite",
-        "peekOfCode": "folder1 = Folder(\"Folder1\" #construye los folders\nfolder2 = Folder(\"Folder2\")\nfolder1.add_item(file1) \nfolder1.add_item(file2)\nfolder2.add_item(file3)\nroot = Folder(\"root\")\nroot.add_item(folder1)\nroot.add_item(folder2)\nroot.display() # muestra los elementos",
+        "peekOfCode": "folder1 = Folder(\"Folder1\") #construye los folders\nfolder2 = Folder(\"Folder2\")\nfolder1.add_item(file1) \nfolder1.add_item(file2)\nfolder2.add_item(file3)\nroot = Folder(\"root\")\nroot.add_item(folder1)\nroot.add_item(folder2)\nroot.display() # muestra los elementos",
         "detail": "codes.composite.composite",
         "documentation": {}
     },

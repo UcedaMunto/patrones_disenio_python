@@ -19,14 +19,14 @@ class Folder(IFileSystemItem): # objeto implementa y por tanto define display y 
         self._items.append(item)
     def display(self, ident=""):
         print(f"|{ident} - {self.__class__.__name__} : {self._name}")
-        for item in self._items:
+        for item in self._items:  # recorrer y mostrar 
             item.display( ident + "     " )
 
 file1 = AppFile("File1") # construye y agrega el nombre a los archivos
 file2 = AppFile("File2")
 file3 = AppFile("File3")
 
-folder1 = Folder("Folder1" #construye los folders
+folder1 = Folder("Folder1") #construye los folders
 folder2 = Folder("Folder2")
 
 folder1.add_item(file1) 

@@ -792,7 +792,7 @@
                     -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800" id="composite">COMPOSITE</h1>
-                        <a href="https://colab.research.google.com/drive/1KuZyrZ-BbzIJ3zrxdZDZGT9P4zrs8ySB#scrollTo=7QiMr__GCF7H&line=3&uniqifier=1" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"  target="_blank">
+                        <a href="https://colab.research.google.com/drive/1KuZyrZ-BbzIJ3zrxdZDZGT9P4zrs8ySB#scrollTo=SkCbbCj0Z8vr&line=8&uniqifier=1" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"  target="_blank">
                             <i class="fas fa-download fa-sm text-white-50"></i> Ver código</a>
                     </div>
                     <div class="row">
@@ -841,7 +841,7 @@
 
                                         </div>
                                         <div class="text-center col-xl-6 col-md-6 mb-6">
-                                            <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 50rem;" src="images/composite1.png" alt="Patrón Composite">
+                                            <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 50rem;" src="images/composite1.jpg" alt="Patrón Composite">
                                         </div>
                                     </div>
                            
@@ -854,7 +854,7 @@
                                             </ul>
                                         </div>
                                         <div class="text-center col-xl-6 col-md-6 mb-6">
-                                            <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 50rem;" src="images/composite2.png" alt="Ejemplo del Patrón Composite">
+                                            <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 50rem;" src="images/composite.png" alt="Ejemplo del Patrón Composite">
                                         </div>
                                     </div>
                                     <div class="row">
@@ -867,7 +867,96 @@
                                             </ul>
                                         </div>
                                         <div class="text-center col-xl-6 col-md-6 mb-6">
-                                            <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 50rem;" src="images/composite3.png" alt="Estructura del Patrón Composite">
+                                            <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 50rem;" src="images/spf14.png" alt="Estructura del Patrón Composite">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 
+                        DECORATOR
+                    -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800" id="decorator">DECORATOR</h1>
+                        <a href="https://colab.research.google.com/drive/1KuZyrZ-BbzIJ3zrxdZDZGT9P4zrs8ySB#scrollTo=7QiMr__GCF7H&line=3&uniqifier=1" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" target="_blank">
+                            <i class="fas fa-download fa-sm text-white-50"></i> Ver código</a>
+                    </div>
+                    <div class="row">
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-12 col-md-12 mb-12">
+                            <div class="card border-left-danger shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                Decorator - Decorador</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-paint-brush fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="text-center col-xl-6 col-md-6 mb-6 text_left">
+                                            <p class="text_left">
+                                                El patrón Decorator es un patrón estructural que permite agregar comportamientos adicionales a objetos de forma dinámica, 
+                                                sin modificar su código fuente. Esto se logra mediante la envoltura de los objetos originales en decoradores.
+                                            </p>
+                                            <strong>¿Por qué usar Decorator?</strong>
+                                            <ul class="text_left">
+                                                <li><strong>Flexibilidad:</strong> Agrega funcionalidades a un objeto de manera dinámica sin afectar a otros objetos.</li>
+                                                <li><strong>Reutilización de código:</strong> Permite componer comportamientos reutilizables.</li>
+                                                <li><strong>Separación de responsabilidades:</strong> Divide las responsabilidades en diferentes decoradores en lugar de usar herencia.</li>
+                                            </ul>
+
+                                            <strong>Estructura del Patrón</strong>
+                                            <p class="text_left">
+                                                El patrón Decorator consta de los siguientes elementos:
+                                            </p>
+                                            <ul class="text_left">
+                                                <li><strong>Component:</strong> Define la interfaz que implementarán tanto los objetos reales como los decoradores.</li>
+                                                <li><strong>ConcreteComponent:</strong> Clase que define el objeto principal al que se pueden agregar funcionalidades.</li>
+                                                <li><strong>Decorator:</strong> Clase abstracta que implementa la misma interfaz que Component y contiene una referencia al Component que envuelve.</li>
+                                                <li><strong>ConcreteDecorator:</strong> Agrega comportamientos específicos al objeto que envuelve.
+                                            </ul>
+
+                                            <strong>Características:</strong>
+                                            <ul class="text_left">
+                                                <li><strong>Composición dinámica:</strong> Permite agregar y combinar comportamientos sin modificar el código existente.</li>
+                                                <li><strong>Desacoplamiento:</strong> Separa las funcionalidades adicionales de la lógica principal del objeto.</li>
+                                                <li><strong>Facilidad de extensión:</strong> Facilita la adición de nuevas funcionalidades sin alterar el código base.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="text-center col-xl-6 col-md-6 mb-6">
+                                            <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 50rem;" src="images/decorator.webp" alt="Patrón Decorator">
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="text-center col-xl-6 col-md-6 mb-6">
+                                            <h2>Desventajas:</h2>
+                                            <ul class="text_left">
+                                                <li><strong>Complejidad adicional:</strong> Puede incrementar el número de clases y objetos, haciendo el sistema más complejo.</li>
+                                                <li><strong>Orden de aplicación:</strong> Los resultados pueden depender del orden en que se aplican los decoradores.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="text-center col-xl-6 col-md-6 mb-6">
+                                            <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 50rem;" src="images/decorator2.png" alt="Ejemplo del Patrón Decorator">
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="text-center col-xl-6 col-md-6 mb-6">
+                                            <h2>Ejemplos:</h2>
+                                            <ul class="text_left">
+                                                <li><strong>Interfaz de usuario:</strong> Agregar estilos o comportamientos a elementos gráficos de forma dinámica.</li>
+                                                <li><strong>Archivos:</strong> Lectura y escritura de datos con filtros o transformaciones dinámicas.</li>
+                                                <li><strong>Seguridad:</strong> Aplicar validaciones adicionales o verificaciones de acceso a datos.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="text-center col-xl-6 col-md-6 mb-6">
+                                            <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 50rem;" src="images/decorator3.png" alt="Estructura del Patrón Decorator">
                                         </div>
                                     </div>
                                 </div>
@@ -876,10 +965,6 @@
                     </div>
 
 
-
-                    
-
-            
 
                 </div>
                 <!-- /.container-fluid -->
