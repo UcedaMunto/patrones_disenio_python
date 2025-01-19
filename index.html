@@ -454,7 +454,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="col-xl-12 col-md-12 mb-12">
                         <h6 class="text-uppercase"></h6>
                         <!-- Solid divider -->
@@ -474,7 +473,6 @@
                                 <i class="fas fa-download fa-sm text-white-50"></i> Ver código</a>
                         </div>
                     </div>
-
                     <div class="row">
                         <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-12 col-md-12 mb-12">
@@ -538,6 +536,22 @@
                                     </div>
                                     <div class="row">
                                         <div class="text-center col-xl-6 col-md-6 mb-6">
+                                            <h2>Lista de clases</h2>
+                                            <ul class="text_left">
+                                                <li>
+                                                    Una clase modelo - contrato para cada tipo de objeto (Los objetos comparten muchas propiedades en comun)<br>
+                                                </li>
+                                                <li>
+                                                N clases builder que heredan he implementan los metodos del contrato utilizados<br>
+                                                </li>
+                                                <li>
+                                                Un método o clase que utiliza los builders<br>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="text-center col-xl-6 col-md-6 mb-6">
                                             <h2>Ejemplos:</h2>
                                             <ul class="text_left">
                                                 <li>
@@ -566,7 +580,6 @@
                     <!-- 
                         ABSTRACTFACTORY
                     -->
-
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <div class="col-md-6 col-xl-6">
                             <h1 class="h3 mb-0 text-gray-800" id="abstract_factory">ABSTRACT FACTORY</h1>
@@ -773,6 +786,97 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- 
+                        COMPOSITE
+                    -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800" id="composite">COMPOSITE</h1>
+                        <a href="https://colab.research.google.com/drive/1KuZyrZ-BbzIJ3zrxdZDZGT9P4zrs8ySB#scrollTo=7QiMr__GCF7H&line=3&uniqifier=1" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"  target="_blank">
+                            <i class="fas fa-download fa-sm text-white-50"></i> Ver código</a>
+                    </div>
+                    <div class="row">
+                        <!-- Composite Card -->
+                        <div class="col-xl-12 col-md-12 mb-12">
+                            <div class="card border-left-success shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                Composite - Composición</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-sitemap fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="text-center col-xl-6 col-md-6 mb-6 text_left">
+                                            <p class="text_left">
+                                                El patrón Composite es un patrón estructural que permite tratar a los objetos individuales y a las composiciones de objetos de manera uniforme. Este patrón se utiliza para representar jerarquías de objetos de forma que los clientes puedan interactuar con ellos sin preocuparse por las diferencias entre objetos simples y compuestos.
+                                            </p>
+                                            <strong>¿Por qué usar Composite?</strong>
+                                            <ul class="text_left">
+                                                <li><strong>Simplificación:</strong> Permite trabajar con estructuras jerárquicas como si fueran objetos individuales.</li>
+                                                <li><strong>Escalabilidad:</strong> Facilita el manejo de estructuras de datos complejas al permitir la composición recursiva.</li>
+                                                <li><strong>Consistencia:</strong> Proporciona una interfaz común para trabajar con objetos simples y compuestos.</li>
+                                            </ul>
+
+                                            <strong>Estructura del Patrón</strong>
+                                            <p class="text_left">
+                                                El patrón Composite consta de los siguientes elementos:
+                                            </p>
+                                            <ul class="text_left">
+                                                <li><strong>Component:</strong> Define la interfaz común para los objetos de la composición.</li>
+                                                <li><strong>Leaf:</strong> Representa los objetos individuales que no tienen hijos.</li>
+                                                <li><strong>Composite:</strong> Representa los objetos compuestos que pueden contener otros objetos (tanto hojas como otros compuestos).</li>
+                                                <li><strong>Client:</strong> Interactúa con los objetos a través de la interfaz Component.</li>
+                                            </ul>
+
+                                            <strong>Características:</strong>
+                                            <ul class="text_left">
+                                                <li><strong>Jerarquía uniforme:</strong> Simplifica las operaciones al tratar objetos simples y compuestos de la misma manera.</li>
+                                                <li><strong>Flexibilidad:</strong> Permite construir estructuras complejas a partir de componentes más simples.</li>
+                                                <li><strong>Reutilización:</strong> Facilita la reutilización de componentes y subestructuras dentro de la composición.</li>
+                                            </ul>
+
+                                        </div>
+                                        <div class="text-center col-xl-6 col-md-6 mb-6">
+                                            <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 50rem;" src="images/composite1.png" alt="Patrón Composite">
+                                        </div>
+                                    </div>
+                           
+                                    <div class="row">
+                                        <div class="text-center col-xl-6 col-md-6 mb-6">
+                                            <h2>Desventajas:</h2>
+                                            <ul class="text_left">
+                                                <li><strong>Complejidad:</strong> Puede añadir complejidad si las operaciones sobre la jerarquía no están bien definidas.</li>
+                                                <li><strong>Dificultad en la implementación:</strong> El manejo de las relaciones entre objetos puede ser desafiante.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="text-center col-xl-6 col-md-6 mb-6">
+                                            <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 50rem;" src="images/composite2.png" alt="Ejemplo del Patrón Composite">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="text-center col-xl-6 col-md-6 mb-6">
+                                            <h2>Ejemplos:</h2>
+                                            <ul class="text_left">
+                                                <li><strong>Sistemas de archivos:</strong> Donde los archivos y carpetas se tratan de manera uniforme como nodos de una jerarquía.</li>
+                                                <li><strong>Interfaces gráficas:</strong> Componentes de UI como paneles, botones y textos organizados jerárquicamente.</li>
+                                                <li><strong>Organización empresarial:</strong> Representar jerarquías como departamentos, equipos y empleados.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="text-center col-xl-6 col-md-6 mb-6">
+                                            <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 50rem;" src="images/composite3.png" alt="Estructura del Patrón Composite">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
                     
 
             

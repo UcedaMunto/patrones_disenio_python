@@ -1,0 +1,97 @@
+
+
+from abc import ABC, abstractmethod
+
+#------------------------------------------------------------------------
+# -------- Productos abstraidos - Objetos finales
+#------------------------------------------------------------------------
+class Coche(ABC):
+    @abstractmethod
+    def drive(self):
+        pass
+
+class Moto(ABC):
+    @abstractmethod
+    def ride(self):
+        pass
+
+
+#------------------------------------------------------------------------
+# -------- Productos concretos - definen comportamiento baja una serie de parametros
+#------------------------------------------------------------------------
+class CocheCiudad(Coche):
+    def drive(self):
+        return "Conduciendo un coche pequeño por la ciudad."
+
+class MotoCiudad(Moto):
+    def ride(self):
+        return "Conduciendo una moto scooter por la ciudad."
+
+# Productos concretos: Montaña
+class CocheMontaña(Coche):
+    def drive(self):
+        return "Conduciendo un todoterreno por la montaña."
+
+class MotoMontaña(Moto):
+    def ride(self):
+        return "Conduciendo una moto de cross por la montaña."
+
+#------------------------------------------------------------------------
+# -------- Define el contrato de las fabricas
+#------------------------------------------------------------------------
+class VehiculoFactory(ABC):
+    @abstractmethod
+    def create_coche(self):
+        pass
+
+    @abstractmethod
+    def create_moto(self):
+        pass
+
+#------------------------------------------------------------------------
+# -------- Define las fabricas implementando el contrato
+#------------------------------------------------------------------------
+class CiudadFactory(VehiculoFactory):
+    def create_coche(self):
+        return CocheCiudad()
+
+    def create_moto(self):
+        return MotoCiudad()
+
+class MontañaFactory(VehiculoFactory):
+    def create_coche(self):
+        return CocheMontaña()
+
+    def create_moto(self):
+        return MotoMontaña()
+
+class Aplicacion:
+    def __init__(self, factory: VehiculoFactory):
+        self.factory = factory
+
+    def conducir(self):
+        coche = self.factory.create_coche()
+        moto = self.factory.create_moto()
+        return f"{coche.drive()}\n{moto.ride()}"
+
+
+def main():
+    terreno = input("Seleccione el tipo de terreno (ciudad/montaña): ").strip().lower()
+
+    if terreno == "ciudad":
+        factory = CiudadFactory()
+    elif terreno == "montaña":
+        factory = MontañaFactory()
+    else:
+        print("Terreno no soportado.")
+        return
+
+    app = Aplicacion(factory)
+    print(app.conducir())
+
+if __name__ == "__main__":
+    main()
+
+
+
+

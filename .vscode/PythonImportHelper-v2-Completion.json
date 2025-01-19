@@ -185,6 +185,22 @@
         "documentation": {}
     },
     {
+        "label": "ABC",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
         "label": "Motorcycle",
         "importPath": "Implementacion",
         "description": "Implementacion",
@@ -949,7 +965,7 @@
         "kind": 6,
         "importPath": "codes.composite.composite",
         "description": "codes.composite.composite",
-        "peekOfCode": "class IFileSystemItem(ABC): # Interfaz del patron\n    @abstractmethod\n    def display(self, ident = \" \"):\n        pass\nclass AppFile(IFileSystemItem): # objeto para archivos que tiene nombre he implementa display\n    def __init__(self, name) -> None:\n        self._name = name \n    def display(self, ident=\"   \"):\n        print(f\"{ident} - {self.__class__.__name__} : {self._name}\")\nclass Folder(IFileSystemItem): # objeto para folers define su display y add item ",
+        "peekOfCode": "class IFileSystemItem(ABC): # Interfaz del patron\n    @abstractmethod\n    def display(self, ident = \" \"): #obliga a definir un metodo dispĺay comun para las clases\n        pass\nclass AppFile(IFileSystemItem): # el objeto archivo imlementa y por tanto define a display para su caso concreto\n    def __init__(self, name) -> None: # define un parametro para la construccion de este objeto\n        self._name = name \n    def display(self, ident=\"   \"):\n        print(f\"{ident} - {self.__class__.__name__} : {self._name}\")\nclass Folder(IFileSystemItem): # objeto implementa y por tanto define display y ademas mantiene un array de objetos",
         "detail": "codes.composite.composite",
         "documentation": {}
     },
@@ -958,7 +974,7 @@
         "kind": 6,
         "importPath": "codes.composite.composite",
         "description": "codes.composite.composite",
-        "peekOfCode": "class AppFile(IFileSystemItem): # objeto para archivos que tiene nombre he implementa display\n    def __init__(self, name) -> None:\n        self._name = name \n    def display(self, ident=\"   \"):\n        print(f\"{ident} - {self.__class__.__name__} : {self._name}\")\nclass Folder(IFileSystemItem): # objeto para folers define su display y add item \n    def __init__(self, name) -> None:\n        self._name = name \n        self._items = []\n    def add_item(self, item):",
+        "peekOfCode": "class AppFile(IFileSystemItem): # el objeto archivo imlementa y por tanto define a display para su caso concreto\n    def __init__(self, name) -> None: # define un parametro para la construccion de este objeto\n        self._name = name \n    def display(self, ident=\"   \"):\n        print(f\"{ident} - {self.__class__.__name__} : {self._name}\")\nclass Folder(IFileSystemItem): # objeto implementa y por tanto define display y ademas mantiene un array de objetos\n    def __init__(self, name) -> None:\n        self._name = name \n        self._items = []\n    def add_item(self, item):",
         "detail": "codes.composite.composite",
         "documentation": {}
     },
@@ -967,7 +983,7 @@
         "kind": 6,
         "importPath": "codes.composite.composite",
         "description": "codes.composite.composite",
-        "peekOfCode": "class Folder(IFileSystemItem): # objeto para folers define su display y add item \n    def __init__(self, name) -> None:\n        self._name = name \n        self._items = []\n    def add_item(self, item):\n        self._items.append(item)\n    def display(self, ident=\"\"):\n        print(f\"|{ident} - {self.__class__.__name__} : {self._name}\")\n        for item in self._items:\n            item.display( ident + \"     \" )",
+        "peekOfCode": "class Folder(IFileSystemItem): # objeto implementa y por tanto define display y ademas mantiene un array de objetos\n    def __init__(self, name) -> None:\n        self._name = name \n        self._items = []\n    def add_item(self, item):\n        self._items.append(item)\n    def display(self, ident=\"\"):\n        print(f\"|{ident} - {self.__class__.__name__} : {self._name}\")\n        for item in self._items:\n            item.display( ident + \"     \" )",
         "detail": "codes.composite.composite",
         "documentation": {}
     },
@@ -976,7 +992,7 @@
         "kind": 5,
         "importPath": "codes.composite.composite",
         "description": "codes.composite.composite",
-        "peekOfCode": "file1 = AppFile(\"File1\")\nfile2 = AppFile(\"File2\")\nfile3 = AppFile(\"File3\")\nfolder1 = Folder(\"Folder1\")\nfolder2 = Folder(\"Folder2\")\nfolder1.add_item(file1)\nfolder1.add_item(file2)\nfolder2.add_item(file3)\nroot = Folder(\"root\")\nroot.add_item(folder1)",
+        "peekOfCode": "file1 = AppFile(\"File1\") # construye y agrega el nombre a los archivos\nfile2 = AppFile(\"File2\")\nfile3 = AppFile(\"File3\")\nfolder1 = Folder(\"Folder1\" #construye los folders\nfolder2 = Folder(\"Folder2\")\nfolder1.add_item(file1) \nfolder1.add_item(file2)\nfolder2.add_item(file3)\nroot = Folder(\"root\")\nroot.add_item(folder1)",
         "detail": "codes.composite.composite",
         "documentation": {}
     },
@@ -985,7 +1001,7 @@
         "kind": 5,
         "importPath": "codes.composite.composite",
         "description": "codes.composite.composite",
-        "peekOfCode": "file2 = AppFile(\"File2\")\nfile3 = AppFile(\"File3\")\nfolder1 = Folder(\"Folder1\")\nfolder2 = Folder(\"Folder2\")\nfolder1.add_item(file1)\nfolder1.add_item(file2)\nfolder2.add_item(file3)\nroot = Folder(\"root\")\nroot.add_item(folder1)\nroot.add_item(folder2)",
+        "peekOfCode": "file2 = AppFile(\"File2\")\nfile3 = AppFile(\"File3\")\nfolder1 = Folder(\"Folder1\" #construye los folders\nfolder2 = Folder(\"Folder2\")\nfolder1.add_item(file1) \nfolder1.add_item(file2)\nfolder2.add_item(file3)\nroot = Folder(\"root\")\nroot.add_item(folder1)\nroot.add_item(folder2)",
         "detail": "codes.composite.composite",
         "documentation": {}
     },
@@ -994,7 +1010,7 @@
         "kind": 5,
         "importPath": "codes.composite.composite",
         "description": "codes.composite.composite",
-        "peekOfCode": "file3 = AppFile(\"File3\")\nfolder1 = Folder(\"Folder1\")\nfolder2 = Folder(\"Folder2\")\nfolder1.add_item(file1)\nfolder1.add_item(file2)\nfolder2.add_item(file3)\nroot = Folder(\"root\")\nroot.add_item(folder1)\nroot.add_item(folder2)\nroot.display()",
+        "peekOfCode": "file3 = AppFile(\"File3\")\nfolder1 = Folder(\"Folder1\" #construye los folders\nfolder2 = Folder(\"Folder2\")\nfolder1.add_item(file1) \nfolder1.add_item(file2)\nfolder2.add_item(file3)\nroot = Folder(\"root\")\nroot.add_item(folder1)\nroot.add_item(folder2)\nroot.display() # muestra los elementos",
         "detail": "codes.composite.composite",
         "documentation": {}
     },
@@ -1003,7 +1019,7 @@
         "kind": 5,
         "importPath": "codes.composite.composite",
         "description": "codes.composite.composite",
-        "peekOfCode": "folder1 = Folder(\"Folder1\")\nfolder2 = Folder(\"Folder2\")\nfolder1.add_item(file1)\nfolder1.add_item(file2)\nfolder2.add_item(file3)\nroot = Folder(\"root\")\nroot.add_item(folder1)\nroot.add_item(folder2)\nroot.display()",
+        "peekOfCode": "folder1 = Folder(\"Folder1\" #construye los folders\nfolder2 = Folder(\"Folder2\")\nfolder1.add_item(file1) \nfolder1.add_item(file2)\nfolder2.add_item(file3)\nroot = Folder(\"root\")\nroot.add_item(folder1)\nroot.add_item(folder2)\nroot.display() # muestra los elementos",
         "detail": "codes.composite.composite",
         "documentation": {}
     },
@@ -1012,7 +1028,7 @@
         "kind": 5,
         "importPath": "codes.composite.composite",
         "description": "codes.composite.composite",
-        "peekOfCode": "folder2 = Folder(\"Folder2\")\nfolder1.add_item(file1)\nfolder1.add_item(file2)\nfolder2.add_item(file3)\nroot = Folder(\"root\")\nroot.add_item(folder1)\nroot.add_item(folder2)\nroot.display()",
+        "peekOfCode": "folder2 = Folder(\"Folder2\")\nfolder1.add_item(file1) \nfolder1.add_item(file2)\nfolder2.add_item(file3)\nroot = Folder(\"root\")\nroot.add_item(folder1)\nroot.add_item(folder2)\nroot.display() # muestra los elementos",
         "detail": "codes.composite.composite",
         "documentation": {}
     },
@@ -1021,7 +1037,7 @@
         "kind": 5,
         "importPath": "codes.composite.composite",
         "description": "codes.composite.composite",
-        "peekOfCode": "root = Folder(\"root\")\nroot.add_item(folder1)\nroot.add_item(folder2)\nroot.display()",
+        "peekOfCode": "root = Folder(\"root\")\nroot.add_item(folder1)\nroot.add_item(folder2)\nroot.display() # muestra los elementos",
         "detail": "codes.composite.composite",
         "documentation": {}
     },
@@ -1149,6 +1165,51 @@
         "description": "codes.singleton",
         "peekOfCode": "single2 = Singleton_class()\nprint( single2.id )",
         "detail": "codes.singleton",
+        "documentation": {}
+    },
+    {
+        "label": "Vehiculo",
+        "kind": 6,
+        "importPath": "factories_2",
+        "description": "factories_2",
+        "peekOfCode": "class Vehiculo:\n    def __init__(self):\n        self.tipo = None\n        self.partes = []\n    def agregar_parte(self, parte):\n        self.partes.append(parte)\n    def mostrar_partes(self):\n        return f\"Vehículo: {self.tipo}, Partes: {', '.join(self.partes)}\"\n#------------------------------------------------------------------------\n# -------- Contrato general - define los metodos comunes",
+        "detail": "factories_2",
+        "documentation": {}
+    },
+    {
+        "label": "BuilderVehiculo",
+        "kind": 6,
+        "importPath": "factories_2",
+        "description": "factories_2",
+        "peekOfCode": "class BuilderVehiculo:\n    def __init__(self):\n        self.vehiculo = Vehiculo()\n    def reset(self):\n        self.vehiculo = Vehiculo()\n    def set_tipo(self):\n        pass\n    def agregar_ruedas(self):\n        pass\n    def agregar_motor(self):",
+        "detail": "factories_2",
+        "documentation": {}
+    },
+    {
+        "label": "BuilderCarro",
+        "kind": 6,
+        "importPath": "factories_2",
+        "description": "factories_2",
+        "peekOfCode": "class BuilderCarro(BuilderVehiculo):\n    def set_tipo(self):\n        self.vehiculo.tipo = \"Carro\"\n    def agregar_ruedas(self):\n        self.vehiculo.agregar_parte(\"4 ruedas\")\n    def agregar_motor(self):\n        self.vehiculo.agregar_parte(\"Motor de gasolina\")\n    def agregar_puertas(self):\n        self.vehiculo.agregar_parte(\"4 puertas\")\n# Builder concreto: Motocicleta",
+        "detail": "factories_2",
+        "documentation": {}
+    },
+    {
+        "label": "BuilderMotocicleta",
+        "kind": 6,
+        "importPath": "factories_2",
+        "description": "factories_2",
+        "peekOfCode": "class BuilderMotocicleta(BuilderVehiculo):\n    def set_tipo(self):\n        self.vehiculo.tipo = \"Motocicleta\"\n    def agregar_ruedas(self):\n        self.vehiculo.agregar_parte(\"2 ruedas\")\n    def agregar_motor(self):\n        self.vehiculo.agregar_parte(\"Motor pequeño\")\n    def agregar_puertas(self):\n        self.vehiculo.agregar_parte(\"Sin puertas\")\n# Director",
+        "detail": "factories_2",
+        "documentation": {}
+    },
+    {
+        "label": "Director",
+        "kind": 6,
+        "importPath": "factories_2",
+        "description": "factories_2",
+        "peekOfCode": "class Director:\n    def __init__(self, builder):\n        self.builder = builder\n    def construir_vehiculo_completo(self):\n        self.builder.reset()\n        self.builder.set_tipo()\n        self.builder.agregar_ruedas()\n        self.builder.agregar_motor()\n        self.builder.agregar_puertas()\n        return self.builder.obtener_vehiculo()",
+        "detail": "factories_2",
         "documentation": {}
     }
 ]
