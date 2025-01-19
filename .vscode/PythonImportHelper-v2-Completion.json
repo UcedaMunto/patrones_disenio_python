@@ -1130,6 +1130,78 @@
         "documentation": {}
     },
     {
+        "label": "DvdPlayer",
+        "kind": 6,
+        "importPath": "codes.facade.facade",
+        "description": "codes.facade.facade",
+        "peekOfCode": "class DvdPlayer:\n    def on(self):\n        print(\"DVD Player on\")\n    def play_movie(self, movie):\n        print(f\"paying '{movie}'\")\n    def off(self):\n        print(\"Dvd apagado\")\nclass Projector:\n    def on(self):\n        print(\"projector on\")",
+        "detail": "codes.facade.facade",
+        "documentation": {}
+    },
+    {
+        "label": "Projector",
+        "kind": 6,
+        "importPath": "codes.facade.facade",
+        "description": "codes.facade.facade",
+        "peekOfCode": "class Projector:\n    def on(self):\n        print(\"projector on\")\n    def off(self):\n        print(\"projector off\")\nclass Speaker:\n    def on(self):\n        print(\"Speaker on\")\n    def off(self):\n        print(\"Speaker off\")",
+        "detail": "codes.facade.facade",
+        "documentation": {}
+    },
+    {
+        "label": "Speaker",
+        "kind": 6,
+        "importPath": "codes.facade.facade",
+        "description": "codes.facade.facade",
+        "peekOfCode": "class Speaker:\n    def on(self):\n        print(\"Speaker on\")\n    def off(self):\n        print(\"Speaker off\")\nclass TeatroCasa:\n    def __init__(self, dvd, projector, spaker):\n        self.Speaker = spaker\n        self.DvdPlayer = dvd \n        self.Projector = projector",
+        "detail": "codes.facade.facade",
+        "documentation": {}
+    },
+    {
+        "label": "TeatroCasa",
+        "kind": 6,
+        "importPath": "codes.facade.facade",
+        "description": "codes.facade.facade",
+        "peekOfCode": "class TeatroCasa:\n    def __init__(self, dvd, projector, spaker):\n        self.Speaker = spaker\n        self.DvdPlayer = dvd \n        self.Projector = projector\n    def whatch(self, movie):\n        self.Speaker.on()\n        self.DvdPlayer.on()\n        self.Projector.on()\n        print(\"Treatro reproduciendo...\")",
+        "detail": "codes.facade.facade",
+        "documentation": {}
+    },
+    {
+        "label": "dvdplayer",
+        "kind": 5,
+        "importPath": "codes.facade.facade",
+        "description": "codes.facade.facade",
+        "peekOfCode": "dvdplayer = DvdPlayer()\nprojector = Projector()\nspeaker = Speaker()\nteatro = TeatroCasa( dvdplayer, projector, speaker)\nteatro.whatch(\"PELUCILA\")\nteatro.end_movie()",
+        "detail": "codes.facade.facade",
+        "documentation": {}
+    },
+    {
+        "label": "projector",
+        "kind": 5,
+        "importPath": "codes.facade.facade",
+        "description": "codes.facade.facade",
+        "peekOfCode": "projector = Projector()\nspeaker = Speaker()\nteatro = TeatroCasa( dvdplayer, projector, speaker)\nteatro.whatch(\"PELUCILA\")\nteatro.end_movie()",
+        "detail": "codes.facade.facade",
+        "documentation": {}
+    },
+    {
+        "label": "speaker",
+        "kind": 5,
+        "importPath": "codes.facade.facade",
+        "description": "codes.facade.facade",
+        "peekOfCode": "speaker = Speaker()\nteatro = TeatroCasa( dvdplayer, projector, speaker)\nteatro.whatch(\"PELUCILA\")\nteatro.end_movie()",
+        "detail": "codes.facade.facade",
+        "documentation": {}
+    },
+    {
+        "label": "teatro",
+        "kind": 5,
+        "importPath": "codes.facade.facade",
+        "description": "codes.facade.facade",
+        "peekOfCode": "teatro = TeatroCasa( dvdplayer, projector, speaker)\nteatro.whatch(\"PELUCILA\")\nteatro.end_movie()",
+        "detail": "codes.facade.facade",
+        "documentation": {}
+    },
+    {
         "label": "IClonable",
         "kind": 6,
         "importPath": "codes.prototype.Prototype",
