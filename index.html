@@ -65,14 +65,15 @@
                         <a class="collapse-item" href="#abstract_factory">Abstract Factory</a>
                         <a class="collapse-item" href="#bridge">Bridge</a>
                         <a class="collapse-item" href="#composite">Composite</a>
-                        
+                        <a class="collapse-item" href="#decorator">Decorator</a>
+                        <a class="collapse-item" href="#facade">Facade</a>
                     </div>
                 </div>
             </li>
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Dockers
+                Portafolio
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
@@ -87,11 +88,10 @@
                         <a class="collapse-item"  target="blank" href="buttons.html">Introducción</a>
                         <h6 class="collapse-header">Contenedores <br> con Frameworks</h6>
                         <a class="collapse-item"  target="blank" href="https://github.com/UcedaMunto/docker_django">Django</a>
-                        <a class="collapse-item"  target="blank" href="#symfony-docker">Symfony</a>
-                        <h6 class="collapse-header">Sitios </h6>
+                        
+                        <h6 class="collapse-header">Proyectos en git </h6>
                         <a class="collapse-item"  target="blank" href="https://github.com/UcedaMunto/patrones_disenio_python">Esta web</a>
-                        <h6 class="collapse-header">Instalaciones </h6>
-                        <a class="collapse-item"  target="blank" href="#symfony-instalacion">Esta web</a>
+                        <a class="collapse-item"  target="blank" href="#symfony-docker">Symfony</a>
                     </div>
                 </div>
             </li>
@@ -144,7 +144,7 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Addons
+                Herramientas para el desarrollo
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
@@ -164,20 +164,6 @@
                 </div>
             </li>
 
-            <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="charts.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
-            </li>
-
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span></a>
-            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -187,12 +173,7 @@
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
 
-            <!-- Sidebar Message -->
-            <div class="sidebar-card d-none d-lg-flex">
-                <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="...">
-                <p class="text-center mb-2"><strong>...</strong> ... </p>
-                <a class="btn btn-success btn-sm" href="">...</a>
-            </div>
+        
 
         </ul>
         <!-- End of Sidebar -->
@@ -267,7 +248,7 @@
                                 <h6 class="dropdown-header">
                                     Proyectos de ejemplo
                                 </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="https://github.com/UcedaMunto/patrones_disenio_python">
+                                <a class="dropdown-item d-flex align-items-center" href="https://github.com/UcedaMunto">
                                     <div class="mr-3">
                                         <div class="icon-circle bg-primary">
                                             <i class="fas fa-file-alt text-white"></i>
@@ -1053,8 +1034,7 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- End of Main Content -->
+                    
                     <hr>
                     <div class="col-xl-12 col-md-12 mb-12" id="symofny">
                         <h1 id="symfony-docker">Symfony con docker</h1>
@@ -1163,12 +1143,118 @@
                             </div>
                         </div> 
                     </div>
+
+                    <hr>
+                    <div class="col-xl-12 col-md-12 mb-12" id="symofny">
+                        <h1 id="symfony-docker">Symfony con docker</h1>
+                        <p>
+                            Symfony al igual de muchos otros frameworks de trabajo puede ser levantado usando docker o directamente en el sistema operativo, dejo una guia para la instalación local al final del post. 
+                        </p>
+            
+            
+                        <div class="card border-left-secondary shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                            Instalación con docker</div>
+                                    </div>
+                                    <hr>
+                                    <div class="col-auto">
+                                        <i class="fas fa-cogs fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p>
+                                            Para levantar el proyecto vacio solo es necesario tener docker y docker compose y ejecutar:
+                                        </p>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <pre class="command">docker compose up --build</pre>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <p>
+                                            Adjunto el código en git pueden copiarlo con: 
+                                        </p>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <pre class="command">git clone git@github.com:UcedaMunto/presupuestos.git</pre>
+                                    </div>
+            
+                                    <div class="text-left col-xl-12 col-md-12 mb-12">
+                                        <div class="text-center col-xl-12 col-md-12 mb-12">
+                                            <img class="img-fluid" style="width: 50rem;" src="images/symfony/symfony2.png" alt="configuración"><hr>
+                                        </div>
+                                        <div class="text-center col-xl-12 col-md-12 mb-12">
+                                            <img class="img-fluid" style="width: 50rem;" src="images/symfony/symfony.png" alt="Servidor corriendo"><hr>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="card border-left-primary shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1" id="symfony-presupuesto">Sistena de presupuestos</div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-cogs fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p>
+                                            Pequeño sistema de presupuestos y consumos, hecho con symfony con MVC, permite llevar un control de las compras realizadas y el exceso sobre este además de archivos relacionados a las compras.
+                                        </p>
+
+                                        <p>
+                                            Se ha utilizado docker para levantar el proyecto y se proporciona una base de datos inicial para montar y probar el proyecto
+                                        </p>
+
+                                    </div>
+                                    <div class="text-left col-xl-12 col-md-12 mb-12">
+                                    
+                                        <div class="text-left col-xl-12 col-md-12 mb-12">
+                                            <div class="text-center col-xl-12 col-md-12 mb-12">
+                                                <img class="img-fluid" style="width: 100rem;" src="images/symfony/PRESUPUESTO 1.png" alt="..."><hr>
+                                            </div>
+                                            <div class="text-center col-xl-12 col-md-12 mb-12">
+                                                <img class="img-fluid" style="width: 100rem;" src="images/symfony/PRESUPUESTO 2.png" alt="..."><hr>
+                                            </div> 
+                                        </div>
+                                        <div class="text-left col-xl-12 col-md-12 mb-12">
+                                            <div class="text-center col-xl-12 col-md-12 mb-12">
+                                                <img class="img-fluid" style="width: 100rem;" src="images/symfony/PRESUPUESTO 3.png" alt="..."><hr>
+                                            </div>
+                                            <div class="text-center col-xl-12 col-md-12 mb-12">
+                                                <img class="img-fluid" style="width: 100rem;" src="images/symfony/PRESUPUESTO_4.png" alt="..."><hr>
+                                            </div> 
+                                        </div>
+                                        <div class="text-left col-xl-12 col-md-12 mb-12">
+                                            <div class="text-center col-xl-12 col-md-12 mb-12">
+                                                <img class="img-fluid" style="width: 100rem;" src="images/symfony/database presupuesto.png" alt="Diagrama de la base de datos"><hr>
+                                            </div>
+                                            <div class="text-center col-xl-12 col-md-12 mb-12">
+                                                <img class="img-fluid" style="width: 100rem;" src="images/symfony/PRESUPUESTO_4.png" alt="..."><hr>
+                                            </div> 
+                                        </div>
+
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+
                 </div>
                 <!-- /.container-fluid -->
             </div>
             
 
-            <!-- Footer -->
+            <!-- End of Main Content -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
