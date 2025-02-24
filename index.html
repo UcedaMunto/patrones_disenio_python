@@ -58,12 +58,10 @@
                 </a>
                 <div id="collapseProyects" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item"  target="blank" href="buttons.html">Introducción</a>
-                        <h6 class="collapse-header">Contenedores <br> con Frameworks</h6>
-                        <a class="collapse-item"  target="blank" href="https://github.com/UcedaMunto/docker_django">Django</a>
-                        
                         <h6 class="collapse-header">Proyectos en git </h6>
+                        <a class="collapse-item"  target="blank" href="https://github.com/UcedaMunto/docker_django">Django</a>
                         <a class="collapse-item"  target="blank" href="https://github.com/UcedaMunto/patrones_disenio_python">Esta web</a>
+                        <h6 class="collapse-header">Proyectos </h6>
                         <a class="collapse-item"  target="blank" href="#symfony-docker">Symfony</a>
                     </div>
                 </div>
@@ -102,14 +100,15 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDockers"
-                    aria-expanded="true" aria-controls="collapseDockers">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#herramientas_utilidades"
+                    aria-expanded="true" aria-controls="herramientas_utilidades">
                     <i class="fas fa-fw fa-cog"></i>
-                    <span>Mis Dockers</span>
+                    <span>Docker</span>
                 </a>
-                <div id="collapseDockers" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div id="herramientas_utilidades" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        
+                        <h6 class="collapse-header">...</h6>
+                        <a class="collapse-item"  target="blank" href="#redmine">REDMINE</a>
                     </div>
                 </div>
             </li>
@@ -347,7 +346,7 @@
                 <div class="container-fluid">
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <div class="col-md-6 col-xl-6">
-                            <h1 name="singleton" class="h3 mb-0 text-gray-800" id="presentacion">PRESENTACIÓN</h1>
+                            <h1 class="h3 mb-0 text-gray-800" id="presentacion">PRESENTACIÓN</h1>
                         </div>
                     </div>
                     <div class="row">
@@ -1105,7 +1104,7 @@
             
 
                     <hr>
-                    <div class="col-xl-12 col-md-12 mb-12" id="symofny">
+                    <div class="col-xl-12 col-md-12 mb-12">
                         <h1 id="symfony-docker">Symfony con docker</h1>
                         <p>
                             Symfony al igual de muchos otros frameworks de trabajo puede ser levantado usando docker o directamente en el sistema operativo, dejo una guia para la instalación local al final del post. 
@@ -1212,10 +1211,10 @@
 
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <div class="col-md-6 col-xl-6">
-                            <h1 name="singleton" class="h3 mb-0 text-gray-800" id="REDMAIN">REDMAIN - Gestor de proyectos</h1>
+                            <h1 name="redmain" class="h3 mb-0 text-gray-800" >REDMAIN - Gestor de proyectos</h1>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" id="redmine" name="redmine">
                         <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-12 col-md-12 mb-12">
                             <div class="card border-left-success shadow h-100 py-2">
@@ -1259,18 +1258,13 @@
                                                 - mysql_data:/var/lib/mysql
 
                                             volumes:
-                                            redmine_data:
-                                            mysql_data:
+                                                redmine_data:
+                                                mysql_data:
                                     </pre>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-
-
-
-
 
 
 
