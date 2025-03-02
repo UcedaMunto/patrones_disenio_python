@@ -54,7 +54,7 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProyects"
                     aria-expanded="true" aria-controls="collapseProyects">
                     <i class="fas fa-fw fa-cog"></i>
-                    <span>Mis Dockers</span>
+                    <span>Proyectos con Dockers</span>
                 </a>
                 <div id="collapseProyects" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
@@ -65,6 +65,20 @@
                         <a class="collapse-item"  target="blank" href="#symfony-docker">Symfony</a>
                     </div>
                 </div>
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAWS"
+                    aria-expanded="true" aria-controls="collapseAWS">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Despliegues de proyecto</span>
+                </a>
+                <div id="collapseAWS" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">AWS </h6>
+                        <a class="collapse-item"  target="blank" href="#aws_server">Configuración de EC2</a>
+                        <a class="collapse-item"  target="blank" href="#aws_apache">Apache con Symfony</a>
+                    </div>
+                </div>
+
+                
             </li>
 
             <!-- Heading -->
@@ -103,7 +117,7 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#herramientas_utilidades"
                     aria-expanded="true" aria-controls="herramientas_utilidades">
                     <i class="fas fa-fw fa-cog"></i>
-                    <span>Docker</span>
+                    <span>Dockers</span>
                 </a>
                 <div id="herramientas_utilidades" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
@@ -1095,118 +1109,387 @@
                         </div>
                     </div>
                     
-                    <hr>
-                    <div class="col-xl-12 col-md-12 mb-12" id="symofny">
-                        <h1 id="symfony-docker">Symfony con docker</h1>
-                        <p>
-                            Symfony al igual de muchos otros frameworks de trabajo puede ser levantado usando docker o directamente en el sistema operativo, dejo una guia para la instalación local al final del post. 
-                        </p>
-            
-
-                    <hr>
+                 
                     <div class="col-xl-12 col-md-12 mb-12">
                         <h1 id="symfony-docker">Symfony con docker</h1>
                         <p>
                             Symfony al igual de muchos otros frameworks de trabajo puede ser levantado usando docker o directamente en el sistema operativo, dejo una guia para la instalación local al final del post. 
                         </p>
             
-            
-                        <div class="card border-left-secondary shadow h-100 py-2">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">
-                                    <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                            Instalación con docker</div>
-                                    </div>
-                                    <hr>
-                                    <div class="col-auto">
-                                        <i class="fas fa-cogs fa-2x text-gray-300"></i>
-                                    </div>
+                    </div>
+                    <div class="card border-left-secondary shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                        Instalación con docker</div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p>
-                                            Para levantar el proyecto vacio solo es necesario tener docker y docker compose y ejecutar:
-                                        </p>
+                                <hr>
+                                <div class="col-auto">
+                                    <i class="fas fa-cogs fa-2x text-gray-300"></i>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        Para levantar el proyecto vacio solo es necesario tener docker y docker compose y ejecutar:
+                                    </p>
+                                </div>
+                                <div class="col-md-12">
+                                    <pre class="command">docker compose up --build</pre>
+                                </div>
+                                <div class="col-md-12">
+                                    <p>
+                                        Adjunto el código en git pueden copiarlo con: 
+                                    </p>
+                                </div>
+                                <div class="col-md-12">
+                                    <pre class="command">git clone git@github.com:UcedaMunto/presupuestos.git</pre>
+                                </div>
+        
+                                <div class="text-left col-xl-12 col-md-12 mb-12">
+                                    <div class="text-center col-xl-12 col-md-12 mb-12">
+                                        <img class="img-fluid" style="width: 50rem;" src="images/symfony/symfony2.png" alt="configuración"><hr>
                                     </div>
-                                    <div class="col-md-12">
-                                        <pre class="command">docker compose up --build</pre>
+                                    <div class="text-center col-xl-12 col-md-12 mb-12">
+                                        <img class="img-fluid" style="width: 50rem;" src="images/symfony/symfony.png" alt="Servidor corriendo"><hr>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-12 col-md-12 mb-12">
+                        <h1 id="aws_server">Configuración de server gratuito con AWS</h1>
+                        <p>
+                            Configuraremos un server para montar nuestra web usando Apache y Symfony todo esto hasta con una ip publica, este server no tiene interfaz gráfica de esta forma mantendremos el performace del sitio y mantener los costos al mínimo
+                            Asumiremos de entrada que ya tienen una cuenta de AWS, solo necesitan una tarjeta de crédito o débito, si deben tener cuidado si el sitio que publican tiene demasiado transito y sobrepasan los limites gratuitos podrían tener algun cobro
+                            asi que les recomiendo configurar alertas de costos o dejar apagado el server cuando no lo ocupen.
+                        </p>
+                    </div>
+                    <div class="card border-left-secondary shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                        Configuración de server gratuito con AWS</div>
+                                </div>
+                                <hr>
+                                <div class="col-auto">
+                                    <i class="fas fa-cogs fa-2x text-gray-300"></i>
+                                </div>
+                            </div>
+                            <div class="row">
+                                
+                                <div class="text-left col-xl-12 col-md-12 mb-12">
+                                    <p>
+                                        IMPORTANTE!! MANTENER t2.micro apto para capa gratuita y no agregar ninguna mejora fuera de lo comun
+                                    </p>
+                                    <div class="text-center col-xl-12 col-md-12 mb-12">
+                                        <img class="img-fluid" style="width: 50rem;" src="images/amazon/ec2 1.0.png" alt="configuración"><hr>
                                     </div>
-                                    <div class="col-md-12">
-                                        <p>
-                                            Adjunto el código en git pueden copiarlo con: 
-                                        </p>
+                                    <p>
+                                        IMPORTANTE!! generar una llave pem para podernos conectar por medio de SSH mediante consola
+                                    </p>
+                                    <div class="text-center col-xl-12 col-md-12 mb-12">
+                                        <img class="img-fluid" style="width: 50rem;" src="images/amazon/ec2 2.0.png" alt="Servidor corriendo"><hr>
+                                    </div> 
+                                    <div class="text-center col-xl-12 col-md-12 mb-12">
+                                        <img class="img-fluid" style="width: 50rem;" src="images/amazon/ec2 2.1.png" alt="Servidor corriendo"><hr>
                                     </div>
-                                    <div class="col-md-12">
-                                        <pre class="command">git clone git@github.com:UcedaMunto/presupuestos.git</pre>
-                                    </div>
-            
+                                    <p>
+                                        Permitir trafico HTTP, HTTPS y SSH en el server
+                                    </p>
+                                    <div class="text-center col-xl-12 col-md-12 mb-12">
+                                        <img class="img-fluid" style="width: 50rem;" src="images/amazon/ec2 2.2.png" alt="Servidor corriendo"><hr>
+                                    </div> 
+                                    <p>
+                                        Para conectarnos por medio de SSH utilizar la llave .pem de esta forma
+                                    </p>
+                                    <div class="text-center col-xl-12 col-md-12 mb-12">
+                                        <img class="img-fluid" style="width: 50rem;" src="images/amazon/ec2 3.0.png" alt="Servidor corriendo"><hr>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-12 col-md-12 mb-12">
+                        <h1 id="aws_apache">Configuración de server apache con Symfony Framework</h1>
+                        <p>
+                            Primeramente partimos de que ya tenemos clonado el repositorio de git, y empezaremos con la instalación de apache, php y symfony
+                        </p>
+                    </div>
+                    <div class="card border-left-secondary shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row">
+                                
+                                <div class="text-left col-xl-12 col-md-12 mb-12">
+                                    <p>
+                                        1- Cambiar los permisos de los archivos del proyecto, en mi caso use Docker por lo que las carpetas del proyecto estan más internas, la carpeta public es normalmente en Symfony la carpeta raiz para el proyecto
+                                    </p>
                                     <div class="text-left col-xl-12 col-md-12 mb-12">
-                                        <div class="text-center col-xl-12 col-md-12 mb-12">
-                                            <img class="img-fluid" style="width: 50rem;" src="images/symfony/symfony2.png" alt="configuración"><hr>
+                                        <div class="col-md-12">
+                                            <pre class="command text-start">sudo chown -R www-data:www-data /home/admin/presupuestos/php/presupuesto/public</pre>
+                                            <pre class="command text-start">sudo chmod -R 755 /home/admin/presupuestos/php/presupuesto/public</pre>
                                         </div>
-                                        <div class="text-center col-xl-12 col-md-12 mb-12">
-                                            <img class="img-fluid" style="width: 50rem;" src="images/symfony/symfony.png" alt="Servidor corriendo"><hr>
-                                        </div> 
+                                    </div>
+                                    <p>
+                                        2- Verificar instalación de php
+                                    </p>
+                                    <div class="text-left col-xl-12 col-md-12 mb-12">
+                                        <div class="col-md-12">
+                                            <pre class="command text-start">php -v </pre>
+                                            <p>2.1 Salida esperada</p>
+                                                <pre class="command text-start">
+                                                PHP 8.2.27 (cli) (built: Dec 24 2024 06:13:38) (NTS)
+                                                Copyright (c) The PHP Group
+                                                Zend Engine v4.2.27, Copyright (c) Zend Technologies
+                                                with Zend OPcache v8.2.27, Copyright (c), by Zend Technologies</pre>
+                                           
+                                            <p>2.1.0 En caso de que php no este instalado proceder a instalar la versión que necesite tu proyecto</p>
+                                                <pre class="command text-start">
+                                                sudo apt update
+                                                sudo apt install -y software-properties-common
+                                                sudo add-apt-repository -y ppa:ondrej/php
+                                                sudo apt update</pre>
+                                        </div>
+                                    </div>
+                                    <p>
+                                        3- Intalar composer
+                                    </p>
+                                    <div class="text-left col-xl-12 col-md-12 mb-12">
+                                        <div class="col-md-12">
+                                            <pre class="command text-start">curl -sS https://getcomposer.org/installer | php</pre>
+
+                                            <pre class="command text-start">sudo mv composer.phar /usr/local/bin/composer</pre>
+                                            <p>
+                                                3.1 - composer -v muestra la versión instalada
+                                            </p>
+                                            <pre class="command text-start">composer -V</pre>
+                                            <pre class="command text-start">
+                                                Composer version 2.8.6 2025-02-25 13:03:50
+                                                PHP version 8.2.27 (/usr/bin/php8.2)</pre>
+                                        </div>
+                                    </div>
+                                    
+                                    <p>
+                                        3- Intalar las dependencias del proyecto usando el siguiente comando
+                                    </p>
+                                    <div class="text-left col-xl-12 col-md-12 mb-12">
+                                        <div class="col-md-12">
+                                            <pre class="command text-start">composer install</pre>
+
+                                            <pre class="command text-start">sudo mv composer.phar /usr/local/bin/composer</pre>
+                                            <p>
+                                                3.1 - composer -v muestra la versión instalada
+                                            </p>
+                                            <pre class="command text-start">composer -V</pre>
+                                            <pre class="command text-start">
+                                                Composer version 2.8.6 2025-02-25 13:03:50
+                                                PHP version 8.2.27 (/usr/bin/php8.2)</pre>
+                                            <p>
+                                                3.2 - Instalar apache
+                                            </p>
+                                            <pre class="command text-start">sudo apt install apache2 -y</pre>
+                                            <p>
+                                                3.3 - Verificar status
+                                            </p>
+                                            <pre class="command text-start">systemctl status apache2</pre>
+                                            <p>
+                                                3.4 -Instalar Dependencias Básicas
+                                            </p>
+                                            <pre class="command text-start">sudo apt update && sudo apt install -y curl unzip php-cli apache2</pre>
+
+
+                                            <p>
+                                                3.5 - Extensiones Necesarias
+                                            </p>
+                                            <pre class="command text-start">
+                                                sudo add-apt-repository ppa:ondrej/php -y
+                                                sudo apt update
+                                                sudo apt install -y php8.2 php8.2-cli php8.2-common php8.2-mbstring php8.2-xml php8.2-zip php8.2-curl php8.2-gd php8.2-bcmath php8.2-intl php8.2-readline php8.2-soap php8.2-fpm libapache2-mod-php8.2 php8.2-pgsql
+                                                </pre>
+
+                                            <p>
+                                                3.6 - Configurar Apache para Symfony
+                                            </p>
+                                            <pre class="command text-start">
+                                                sudo a2enmod rewrite headers proxy_fcgi setenvif ssl expires
+                                                sudo systemctl restart apache2
+                                            </pre>
+
+                                            <p>
+                                                3.7 - sudo nano /etc/apache2/sites-available/symfony.conf
+                                            </p>
+                                            <pre class="command text-start">
+                                                sudo nano /etc/apache2/sites-available/symfony.conf
+                                            </pre>
+
+                                            <p>
+                                                3.8 - Configurar el archivo de virtual host
+                                            </p>
+                                            <pre class="command text-start">
+                                                <VirtualHost *:80>
+                                                    ServerName ec2-3-80-189-57.compute-1.amazonaws.com
+                                                    DocumentRoot /home/admin/presupuestos/php/presupuesto/public
+                                                
+                                                    <Directory /home/admin/presupuestos/php/presupuesto/public>
+                                                        AllowOverride All
+                                                        Require all granted
+                                                       # Options FollowSymLinks
+                                                    </Directory>
+                                                
+                                                      # Habilitar caché en Apache
+                                                    <IfModule mod_expires.c>
+                                                        ExpiresActive On
+                                                        ExpiresByType text/css "access plus 8 hours"
+                                                        ExpiresByType text/javascript "access plus 8 hours"
+                                                        ExpiresByType application/javascript "access plus 8 hours"
+                                                        ExpiresByType image/jpeg "access plus 8 hours"
+                                                        ExpiresByType image/png "access plus 8 hours"
+                                                        ExpiresByType image/gif "access plus 8 hours"
+                                                        ExpiresByType image/webp "access plus 8 hours"
+                                                        ExpiresByType image/svg+xml "access plus 8 hours"
+                                                    </IfModule>
+                                                
+                                                    <IfModule mod_headers.c>
+                                                        <FilesMatch "\.(css|js|jpg|jpeg|png|gif|webp|svg)$">
+                                                            Header set Cache-Control "max-age=28800, public"
+                                                        </FilesMatch>
+                                                    </IfModule>
+                                                    #<IfModule mod_rewrite.c>
+                                                    #    RewriteEngine On
+                                                    #    RewriteCond %{REQUEST_FILENAME} !-f
+                                                    #    RewriteCond %{REQUEST_FILENAME} !-d
+                                                    #    RewriteRule ^ /index.php [QSA,L]
+                                                    #</IfModule>
+                                                
+                                                    <FilesMatch "\.php$">
+                                                        SetHandler "proxy:unix:/run/php/php8.2-fpm.sock|fcgi://localhost/"
+                                                    </FilesMatch>
+                                                
+                                                    ErrorLog ${APACHE_LOG_DIR}/symfony_error.log
+                                                    CustomLog ${APACHE_LOG_DIR}/symfony_access.log combined
+                                                </VirtualHost>
+                                            </pre>
+
+                                            <p>
+                                                3.8 - Habilitar el sitio y reiniciar apache
+                                            </p>
+                                            <pre class="command text-start">
+                                                sudo a2ensite symfony.conf
+                                                sudo systemctl restart apache2
+                                            </pre>
+
+                                            <p>
+                                                3.9 -  Ejecutar composer para producción, recordemos configurar antes el csv para producción
+                                            </p>
+                                            <pre class="command text-start">
+                                                composer install --no-dev --optimize-autoloader
+                                            </pre>
+
+                                            <p>
+                                                3.10 - Instalar assets
+                                            </p>
+                                            <pre class="command text-start">
+                                                php bin/console assets:install --symlink --relative
+                                            </pre>
+
+                                            <p>
+                                                3.11 - Limpiar cache
+                                            </p>
+                                            <pre class="command text-start">
+                                                php bin/console cache:clear --env=prod
+                                                php bin/console cache:warmup --env=prod
+                                            </pre>
+                                            
+
+                                            <p>
+                                                3.12 - Como sujerencia seria bueno volver ajustar los permisos para www-data
+                                            </p>
+                                            <pre class="command text-start">
+                                                sudo chown -R www-data:www-data /home/admin/presupuestos/php/presupuesto
+                                                sudo chmod -R 755 /home/admin/presupuestos/php/presupuesto
+                                                sudo chmod -R 775 /home/admin/presupuestos/php/presupuesto/var
+                                            </pre>
+
+                                            <p>
+                                                3.13 - Reiniciar apache
+                                            </p>
+                                            <pre class="command text-start">
+                                                sudo systemctl restart apache2
+                                            </pre>
+                                            
+                                            <strong><p>
+                                                FIN! ahora ya podrias ir al dominio de tu servidor o apuntar el dominio a la ip del server para ver como esta tu proyecto, omitimos la configuraciónde la base de datos pero deberia funcionar bien si se tienen instalados los modulos de php correctos
+                                            </p></strong>
+
+                                            <a href="http://ec2-3-80-189-57.compute-1.amazonaws.com/">http://ec2-3-80-189-57.compute-1.amazonaws.com/</a>
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <hr>
-                        <div class="card border-left-primary shadow h-100 py-2">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">
-                                    <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1" id="symfony-presupuesto">Sistena de presupuestos</div>
-                                    </div>
-                                    <div class="col-auto">
-                                        <i class="fas fa-cogs fa-2x text-gray-300"></i>
-                                    </div>
+                    </div>
+
+                
+
+                    <hr>
+                    <div class="card border-left-primary shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1" id="symfony-presupuesto">Sistema de presupuestos</div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p>
-                                            Pequeño sistema de presupuestos y consumos, hecho con symfony con MVC, permite llevar un control de las compras realizadas y el exceso sobre este además de archivos relacionados a las compras.
-                                        </p>
-
-                                        <p>
-                                            Se ha utilizado docker para levantar el proyecto y se proporciona una base de datos inicial para montar y probar el proyecto
-                                        </p>
-
-                                    </div>
-                                    <div class="text-left col-xl-12 col-md-12 mb-12">
-                                    
-                                        <div class="text-left col-xl-12 col-md-12 mb-12">
-                                            <div class="text-center col-xl-12 col-md-12 mb-12">
-                                                <img class="img-fluid" style="width: 100rem;" src="images/symfony/PRESUPUESTO 1.png" alt="..."><hr>
-                                            </div>
-                                            <div class="text-center col-xl-12 col-md-12 mb-12">
-                                                <img class="img-fluid" style="width: 100rem;" src="images/symfony/PRESUPUESTO 2.png" alt="..."><hr>
-                                            </div> 
-                                        </div>
-                                        <div class="text-left col-xl-12 col-md-12 mb-12">
-                                            <div class="text-center col-xl-12 col-md-12 mb-12">
-                                                <img class="img-fluid" style="width: 100rem;" src="images/symfony/PRESUPUESTO 3.png" alt="..."><hr>
-                                            </div>
-                                            <div class="text-center col-xl-12 col-md-12 mb-12">
-                                                <img class="img-fluid" style="width: 100rem;" src="images/symfony/PRESUPUESTO_4.png" alt="..."><hr>
-                                            </div> 
-                                        </div>
-                                        <div class="text-left col-xl-12 col-md-12 mb-12">
-                                            <div class="text-center col-xl-12 col-md-12 mb-12">
-                                                <img class="img-fluid" style="width: 100rem;" src="images/symfony/database presupuesto.png" alt="Diagrama de la base de datos"><hr>
-                                            </div>
-                                            <div class="text-center col-xl-12 col-md-12 mb-12">
-                                                <img class="img-fluid" style="width: 100rem;" src="images/symfony/PRESUPUESTO_4.png" alt="..."><hr>
-                                            </div> 
-                                        </div>
-
-                                        
-                                    </div>
+                                <div class="col-auto">
+                                    <i class="fas fa-cogs fa-2x text-gray-300"></i>
                                 </div>
                             </div>
-                        </div> 
-                    </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        Pequeño sistema de presupuestos y consumos, hecho con symfony con MVC, permite llevar un control de las compras realizadas y el exceso sobre este además de archivos relacionados a las compras.
+                                    </p>
+
+                                    <p>
+                                        Se ha utilizado docker para levantar el proyecto y se proporciona una base de datos inicial para montar y probar el proyecto
+                                    </p>
+
+                                </div>
+                                <div class="text-left col-xl-12 col-md-12 mb-12">
+                                
+                                    <div class="text-left col-xl-12 col-md-12 mb-12">
+                                        <div class="text-center col-xl-12 col-md-12 mb-12">
+                                            <img class="img-fluid" style="width: 100rem;" src="images/symfony/PRESUPUESTO 1.png" alt="..."><hr>
+                                        </div>
+                                        <div class="text-center col-xl-12 col-md-12 mb-12">
+                                            <img class="img-fluid" style="width: 100rem;" src="images/symfony/PRESUPUESTO 2.png" alt="..."><hr>
+                                        </div> 
+                                    </div>
+                                    <div class="text-left col-xl-12 col-md-12 mb-12">
+                                        <div class="text-center col-xl-12 col-md-12 mb-12">
+                                            <img class="img-fluid" style="width: 100rem;" src="images/symfony/PRESUPUESTO 3.png" alt="..."><hr>
+                                        </div>
+                                        <div class="text-center col-xl-12 col-md-12 mb-12">
+                                            <img class="img-fluid" style="width: 100rem;" src="images/symfony/PRESUPUESTO_4.png" alt="..."><hr>
+                                        </div> 
+                                    </div>
+                                    <div class="text-left col-xl-12 col-md-12 mb-12">
+                                        <div class="text-center col-xl-12 col-md-12 mb-12">
+                                            <img class="img-fluid" style="width: 100rem;" src="images/symfony/database presupuesto.png" alt="Diagrama de la base de datos"><hr>
+                                        </div>
+                                        <div class="text-center col-xl-12 col-md-12 mb-12">
+                                            <img class="img-fluid" style="width: 100rem;" src="images/symfony/PRESUPUESTO_4.png" alt="..."><hr>
+                                        </div> 
+                                    </div>
+
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
 
 
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
