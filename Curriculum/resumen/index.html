@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Currículum Vitae — Alex Uceda</title>
+  <style>
+    /* ===== Variables y base (reducidas) ===== */
+    :root{
+      --bg:#ffffff;--ink:#1a1a1a;--muted:#5c6670;--accent:#0f766e;--chip:#eef2f7;--rule:#e5e7eb;
+      --h1:24px;--h2:16px;--h3:13px;--text:12px;--small:11px;
+    }
+    html,body{height:100%}
+    body{
+      margin:0; background:var(--bg); color:var(--ink);
+      font:var(--text)/1.45 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
+      -webkit-print-color-adjust: exact; print-color-adjust: exact;
+    }
+    .page{
+      width:8.5in; min-height:11in; margin:0 auto; background:#fff; box-shadow:0 6px 18px rgba(0,0,0,.06);
+      display:grid; grid-template-columns: 1fr 240px; gap:16px; padding:0.5in; box-sizing:border-box;
+    }
+    header{grid-column:1/-1; display:flex; align-items:flex-end; justify-content:space-between; gap:12px; border-bottom:1px solid var(--rule); padding-bottom:10px;}
+    h1{font-size:var(--h1); line-height:1.1; margin:0; letter-spacing:.2px}
+    .tagline{color:var(--muted); margin-top:4px}
+    .actions{display:flex; gap:8px}
+    .btn{appearance:none; border:1px solid var(--rule); background:#fff; padding:6px 8px; border-radius:10px; font-size:11px; cursor:pointer}
+    .btn:hover{border-color:#cbd5e1}
+
+    /* Layout columnas (compacto) */
+    main{display:flex; flex-direction:column; gap:12px}
+    aside{display:flex; flex-direction:column; gap:12px}
+
+    h2{font-size:var(--h2); margin:0 0 6px 0; letter-spacing:.2px}
+    h3{font-size:var(--h3); margin:0 0 4px 0}
+    p{margin:0 0 6px 0}
+    ul{margin:4px 0 0 18px}
+    li{margin:2px 0}
+    .muted{color:var(--muted)}
+    .chips{display:flex; flex-wrap:wrap; gap:4px}
+    .chip{background:var(--chip); border:1px solid var(--rule); padding:2px 6px; border-radius:999px; font-size:11px}
+    .rule{border-top:1px solid var(--rule); margin:6px 0}
+
+    /* Tarjetas de experiencia (compactas) */
+    .card{border:1px solid var(--rule);border-radius:12px;padding:10px 12px;margin-bottom:8px}
+    .card-header{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+    .card-header img{height:40px;object-fit:contain}
+    .when{font-size:var(--small);color:var(--muted)}
+    .employer{font-weight:600}
+    .role{font-weight:600;color:var(--accent)}
+    .stack{margin-top:6px; font-size:var(--small)}
+    .loc{font-size:var(--small); color:var(--muted)}
+
+    /* Cabecera contacto */
+    .contact{display:flex; flex-wrap:wrap; gap:10px; align-items:center}
+    .contact a{color:var(--accent); text-decoration:none}
+    .contact a:hover{text-decoration:underline}
+
+    /* Secciones laterales */
+    .box{border:1px solid var(--rule); border-radius:12px; padding:10px 12px}
+
+    /* Tamaño de página: Carta */
+    @page { size: Letter; margin: 0; }
+
+    /* Impresión: layout exacto y colores */
+    @media print{
+      html,body{height:auto}
+      body{background:transparent; -webkit-print-color-adjust: exact; print-color-adjust: exact;}
+      .page{
+        width:8.5in; min-height:11in; margin:0 auto; padding:0.45in; box-shadow:none;
+      }
+      .actions{display:none !important}
+      a{color:var(--accent) !important; text-decoration:none}
+      header, .card, .box, h2, h3 { break-inside: avoid; page-break-inside: avoid; }
+      ul, p { orphans:3; widows:3; }
+    }
+
+    /* Responsivo */
+    @media (max-width:900px){
+      .page{grid-template-columns:1fr; gap:12px; padding:20px}
+      aside{order:2}
+    }
+  </style>
+</head>
+<body>
+  <section class="page" role="document" aria-label="Currículum de Alex Uceda">
+
+    <header>
+      <div>
+        <h1>Alex Uceda</h1>
+        <div class="tagline">Jefe de desarrollo de software | Implementación y configuración de servidores</div>
+        <div class="contact" aria-label="Contacto">
+          <span>El Salvador</span> <span>·</span>
+          <a href="tel:+50373659816">+503 7365 9816</a> <span>·</span>
+          <a href="mailto:alex.uceda@hotmail.com">alex.uceda@hotmail.com</a> <span>·</span>
+          <a href="https://api.whatsapp.com/send/?phone=50373659816&text=Hola&type=phone_number&app_absent=0">WhatsApp</a>
+        </div>
+      </div>
+      <div class="actions">
+        <button class="btn" onclick="window.print()">Imprimir / Guardar en PDF</button>
+      </div>
+    </header>
+
+    <main>
+      <!-- Resumen profesional (resumido) -->
+      <section>
+        <h2>Resumen</h2>
+        <p>
+          Ingeniero de software con enfoque en <strong>arquitecturas distribuidas</strong>, <strong>rendimiento</strong> y <strong>despliegues con Docker</strong>. 
+          Experiencia liderando equipos, integrando <strong>APIs</strong>, automatizando servidores y manteniendo <strong>facturación electrónica</strong>.
+        </p>
+        <ul>
+          <li>Levantamiento de requerimientos y coordinación con áreas de negocio.</li>
+          <li>Despliegues, observabilidad y endurecimiento básico de seguridad.</li>
+          <li>Optimización de backend y bases de datos; buenas prácticas.</li>
+        </ul>
+      </section>
+
+      <!-- Experiencia (resumida) -->
+      <section>
+        <h2>Experiencia</h2>
+
+        <article class="card" aria-label="ALMAPA — Jefe de desarrollo de software">
+          <div class="card-header">
+            <div>
+              <div class="when">Abr 2022 — Actualidad · El Salvador</div>
+              <div class="employer">ALMAPA S.A. de C.V.</div>
+              <div class="role">Jefe de desarrollo de software</div>
+            </div>
+            <img src="https://almacenesbomba.com/img/logos/Logoweb.png" alt="Logo Almacenes Bomba" />
+          </div>
+          <ul>
+            <li>Mejoras de <strong>rendimiento</strong> en backend y BD; revisión de código y mentoría.</li>
+            <li>Integraciones con <strong>APIs</strong> y pasarelas; automatización de tareas.</li>
+            <li>Infraestructura con <strong>Docker</strong> para contabilidad, logística y facturación.</li>
+          </ul>
+          <div class="stack muted">Docker · Django REST · PostgreSQL · Nginx · Git · SEO básico</div>
+        </article>
+
+        <article class="card" aria-label="ALMAPA — Jefe de desarrollo web">
+          <div class="card-header">
+            <div>
+              <div class="when">Nov 2022 — Jun 2024 · San Salvador</div>
+              <div class="employer">ALMAPA S.A. de C.V.</div>
+              <div class="role">Jefe de Desarrollo Web</div>
+            </div>
+            <img src="https://almacenesbomba.com/img/logos/Logoweb.png" alt="Logo Almacenes Bomba" />
+          </div>
+          <ul>
+            <li>Planificación de hoja de ruta y despliegues; refactorización.</li>
+            <li>Integraciones con terceros; CI básica y documentación.</li>
+            <li>GSC, GA4 y GTM para medición de embudos.</li>
+          </ul>
+        </article>
+
+        <article class="card" aria-label="Ministerio de Salud — Técnico informático">
+          <div class="card-header">
+            <div>
+              <div class="employer">Ministerio de Salud de El Salvador</div>
+              <div class="role">Técnico Informático</div>
+              <div class="when">Jun 2021 — Jun 2022 · San Salvador</div>
+            </div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Logo_oficial_del_Ministerio_de_Salud_de_El_Salvador.png/960px-Logo_oficial_del_Ministerio_de_Salud_de_El_Salvador.png" alt="Logo Ministerio de Salud" />
+          </div>
+          <ul>
+            <li>Desarrollo en <strong>PHP</strong>; soporte a nuevos desarrolladores.</li>
+            <li>Gestión de cambios con <strong>GitLab</strong> y optimización de consultas.</li>
+          </ul>
+          <div class="stack muted">Backend PHP · GitLab · SQL</div>
+        </article>
+
+        <article class="card" aria-label="Inbakcar — Programador Full-Stack">
+          <div class="when">Feb 2019 — Jun 2021 · San Salvador</div>
+          <div class="employer">Inbakcar S.A. de C.V.</div>
+          <div class="role">Programador Full-Stack</div>
+          <ul>
+            <li><strong>Android</strong> para inventarios (código de barras) e integraciones.</li>
+            <li>Plugins y soporte en <strong>WordPress</strong>; despliegue en DigitalOcean.</li>
+          </ul>
+          <div class="stack muted">Symfony · Android · WordPress · SSL</div>
+        </article>
+
+        <article class="card" aria-label="HELPDESK — Analista programador">
+          <div class="when">2018 · El Salvador</div>
+          <div class="employer">HELPDESK El Salvador, S.A. de C.V.</div>
+          <div class="role">Analista Programador</div>
+          <ul>
+            <li>Migraciones a <strong>PostgreSQL</strong>; ETL y procedimientos en SQL Server.</li>
+            <li>Servidores en <strong>Azure</strong> (VPC).</li>
+          </ul>
+          <div class="stack muted">PostgreSQL · SQL Server · Azure</div>
+        </article>
+      </section>
+
+      <!-- Proyectos destacados (resumidos) -->
+      <section>
+        <h2>Proyectos destacados</h2>
+        <div class="card">
+          <h3>Facturación electrónica y RRHH</h3>
+          <p>Módulos con autenticación y auditoría; despliegue en Docker; monitoreo básico.</p>
+        </div>
+        <div class="card">
+          <h3>Inventarios Android</h3>
+          <p>Lector de códigos de barras; backend Symfony.</p>
+        </div>
+        <div class="card">
+          <h3>Unidades de salud</h3>
+          <p>Mejoras a sistemas de gestión con Symfony y PHP.</p>
+        </div>
+      </section>
+    </main>
+
+    <aside>
+      <section class="box">
+        <h2>Lenguajes</h2>
+        <div class="chips">
+          <span class="chip">Python · Django</span>
+          <span class="chip">PHP · Symfony</span>
+          <span class="chip">JavaScript · jQuery</span>
+          <span class="chip">HTML · CSS</span>
+          <span class="chip">SQL · Avanzado</span>
+          <span class="chip">Bash · Scripting</span>
+        </div>
+
+        <h2>Herramientas</h2>
+        <div class="chips">
+          <span class="chip">Linux</span>
+          <span class="chip">Git</span>
+          <span class="chip">Visual Studio</span>
+          <span class="chip">Patrones de diseño</span>
+          <span class="chip">PlantUML</span>
+        </div>
+
+        <h2>DevOps</h2>
+        <div class="chips">
+          <span class="chip">Sistemas distribuidos</span>
+          <span class="chip">Docker</span>
+          <span class="chip">Servidor Apache</span>
+          <span class="chip">Jira</span>
+          <span class="chip">GitLab · GitHub</span>
+        </div>
+
+        <h2>Seguridad</h2>
+        <div class="chips">
+          <span class="chip">SSH</span>
+          <span class="chip">JWT</span>
+          <span class="chip">CORS</span>
+          <span class="chip">SSL</span>
+        </div>
+
+        <h2>Otras</h2>
+        <div class="chips">
+          <span class="chip">API REST</span>
+          <span class="chip">DNS</span>
+          <span class="chip">WHM · cPanel</span>
+          <span class="chip">ETL</span>
+          <span class="chip">GA4</span>
+          <span class="chip">Scraping</span>
+          <span class="chip">EC2 · VMs</span>
+        </div>
+
+        <h2>Bases de datos</h2>
+        <div class="chips">
+          <span class="chip">PostgreSQL</span>
+          <span class="chip">MySQL</span>
+          <span class="chip">MongoDB</span>
+        </div>
+      </section>
+
+      <section class="box">
+        <h2>Educación</h2>
+        <h3>Universidad de El Salvador (UES)</h3>
+        <p class="muted">Ingeniería de Sistemas — En curso · 5.º año</p>
+        <h3>
+          <a href="https://ucedamunto.github.io/patrones_disenio_python/Curriculum/diplomas_Alex_Uceda.pdf" target="_blank">
+            Ver diplomas de cursos
+          </a>
+        </h3>
+        <ul>
+          <li>Backend con Node.js y API REST</li>
+          <li>POO · Terminal Linux · Entornos</li>
+        </ul>
+
+        <h3>Colegio San Francisco de Asís</h3>
+        <p class="muted">Bachillerato con opción Contador</p>
+      </section>
+
+      <section class="box">
+        <h2>Logros & Destrezas</h2>
+        <ul>
+          <li>Servidores DNS; web (Apache/Nginx).</li>
+          <li>Automatización Bash y despliegues Docker.</li>
+          <li>Optimización SQL y endpoints críticos.</li>
+          <li>Facturación electrónica y pasarelas.</li>
+          <li>Medición con GA4 y Tag Manager.</li>
+        </ul>
+      </section>
+
+      <section class="box">
+        <h2>Contacto</h2>
+        <p><strong>Tel:</strong> <a href="tel:+50373659816">+503 7365 9816</a></p>
+        <p><strong>WhatsApp:</strong> <a href="https://api.whatsapp.com/send/?phone=50373659816&text=Hola&type=phone_number&app_absent=0">Abrir chat</a></p>
+        <p><strong>Email:</strong> <a href="mailto:alex.uceda@hotmail.com">alex.uceda@hotmail.com</a></p>
+      </section>
+    </aside>
+
+  </section>
+</body>
+</html>
