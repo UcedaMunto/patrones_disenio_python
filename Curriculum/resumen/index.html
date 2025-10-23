@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -28,7 +27,7 @@
     .btn{appearance:none; border:1px solid var(--rule); background:#fff; padding:6px 8px; border-radius:10px; font-size:11px; cursor:pointer}
     .btn:hover{border-color:#cbd5e1}
 
-    /* Layout columnas (compacto) */
+    /* Layout columnas (fijo) */
     main{display:flex; flex-direction:column; gap:12px}
     aside{display:flex; flex-direction:column; gap:12px}
 
@@ -63,12 +62,13 @@
     /* Tamaño de página: Carta */
     @page { size: Letter; margin: 0; }
 
-    /* Impresión: layout exacto y colores */
+    /* Impresión: mantener 2 columnas fijas + layout exacto y colores */
     @media print{
       html,body{height:auto}
       body{background:transparent; -webkit-print-color-adjust: exact; print-color-adjust: exact;}
       .page{
         width:8.5in; min-height:11in; margin:0 auto; padding:0.45in; box-shadow:none;
+        grid-template-columns: 1fr 240px; /* fija columnas también al imprimir */
       }
       .actions{display:none !important}
       a{color:var(--accent) !important; text-decoration:none}
@@ -76,11 +76,7 @@
       ul, p { orphans:3; widows:3; }
     }
 
-    /* Responsivo */
-    @media (max-width:900px){
-      .page{grid-template-columns:1fr; gap:12px; padding:20px}
-      aside{order:2}
-    }
+    /* (Sin reglas responsive que cambien columnas) */
   </style>
 </head>
 <body>
