@@ -5,78 +5,82 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Currículum Vitae — Alex Uceda</title>
   <style>
-    /* ===== Variables y base (reducidas) ===== */
+    /* ===== Variables y base ===== */
     :root{
       --bg:#ffffff;--ink:#1a1a1a;--muted:#5c6670;--accent:#0f766e;--chip:#eef2f7;--rule:#e5e7eb;
-      --h1:24px;--h2:16px;--h3:13px;--text:12px;--small:11px;
+      --h1:28px;--h2:18px;--h3:15px;--text:13.5px;--small:12px;
     }
     html,body{height:100%}
     body{
       margin:0; background:var(--bg); color:var(--ink);
       font:var(--text)/1.45 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
-      -webkit-print-color-adjust: exact; print-color-adjust: exact;
+      -webkit-print-color-adjust: exact; print-color-adjust: exact; /* asegura colores/fondos en impresión */
     }
     .page{
-      width:8.5in; min-height:11in; margin:0 auto; background:#fff; box-shadow:0 6px 18px rgba(0,0,0,.06);
-      display:grid; grid-template-columns: 1fr 240px; gap:16px; padding:0.5in; box-sizing:border-box;
+      width:8.5in; min-height:11in; margin:0 auto; background:#fff; box-shadow:0 8px 24px rgba(0,0,0,.08);
+      display:grid; grid-template-columns: 1fr 280px; gap:24px; padding:0.6in; box-sizing:border-box;
     }
-    header{grid-column:1/-1; display:flex; align-items:flex-end; justify-content:space-between; gap:12px; border-bottom:1px solid var(--rule); padding-bottom:10px;}
+    header{grid-column:1/-1; display:flex; align-items:flex-end; justify-content:space-between; gap:16px; border-bottom:1px solid var(--rule); padding-bottom:14px;}
     h1{font-size:var(--h1); line-height:1.1; margin:0; letter-spacing:.2px}
-    .tagline{color:var(--muted); margin-top:4px}
+    .tagline{color:var(--muted); margin-top:6px}
     .actions{display:flex; gap:8px}
-    .btn{appearance:none; border:1px solid var(--rule); background:#fff; padding:6px 8px; border-radius:10px; font-size:11px; cursor:pointer}
+    .btn{appearance:none; border:1px solid var(--rule); background:#fff; padding:8px 10px; border-radius:10px; font-size:12px; cursor:pointer}
     .btn:hover{border-color:#cbd5e1}
 
-    /* Layout columnas (fijo) */
-    main{display:flex; flex-direction:column; gap:12px}
-    aside{display:flex; flex-direction:column; gap:12px}
+    /* Layout columnas */
+    main{display:flex; flex-direction:column; gap:18px}
+    aside{display:flex; flex-direction:column; gap:18px}
 
-    h2{font-size:var(--h2); margin:0 0 6px 0; letter-spacing:.2px}
-    h3{font-size:var(--h3); margin:0 0 4px 0}
-    p{margin:0 0 6px 0}
-    ul{margin:4px 0 0 18px}
+    h2{font-size:var(--h2); margin:0 0 8px 0; letter-spacing:.2px}
+    h3{font-size:var(--h3); margin:0 0 6px 0}
+    p{margin:0 0 8px 0}
+    ul{margin:6px 0 0 18px}
     li{margin:2px 0}
     .muted{color:var(--muted)}
-    .chips{display:flex; flex-wrap:wrap; gap:4px}
-    .chip{background:var(--chip); border:1px solid var(--rule); padding:2px 6px; border-radius:999px; font-size:11px}
-    .rule{border-top:1px solid var(--rule); margin:6px 0}
+    .chips{display:flex; flex-wrap:wrap; gap:6px}
+    .chip{background:var(--chip); border:1px solid var(--rule); padding:4px 8px; border-radius:999px; font-size:12px}
+    .rule{border-top:1px solid var(--rule); margin:8px 0}
 
-    /* Tarjetas de experiencia (compactas) */
-    .card{border:1px solid var(--rule);border-radius:12px;padding:10px 12px;margin-bottom:8px}
-    .card-header{display:flex;align-items:center;gap:10px;margin-bottom:4px}
-    .card-header img{height:40px;object-fit:contain}
+    /* Tarjetas de experiencia */
+    .card{border:1px solid var(--rule);border-radius:14px;padding:12px 14px;margin-bottom:10px}
+    .card-header{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+    .card-header img{height:50px;object-fit:contain}
     .when{font-size:var(--small);color:var(--muted)}
     .employer{font-weight:600}
     .role{font-weight:600;color:var(--accent)}
-    .stack{margin-top:6px; font-size:var(--small)}
+    .stack{margin-top:8px}
     .loc{font-size:var(--small); color:var(--muted)}
 
     /* Cabecera contacto */
-    .contact{display:flex; flex-wrap:wrap; gap:10px; align-items:center}
+    .contact{display:flex; flex-wrap:wrap; gap:12px; align-items:center}
     .contact a{color:var(--accent); text-decoration:none}
     .contact a:hover{text-decoration:underline}
 
     /* Secciones laterales */
-    .box{border:1px solid var(--rule); border-radius:12px; padding:10px 12px}
+    .box{border:1px solid var(--rule); border-radius:14px; padding:12px 14px}
 
-    /* Tamaño de página: Carta */
+    /* Tamaño de página: Carta, sin márgenes del navegador (usamos padding de .page) */
     @page { size: Letter; margin: 0; }
 
-    /* Impresión: mantener 2 columnas fijas + layout exacto y colores */
+    /* Impresión: conservar exactamente el layout y colores */
     @media print{
       html,body{height:auto}
       body{background:transparent; -webkit-print-color-adjust: exact; print-color-adjust: exact;}
       .page{
-        width:8.5in; min-height:11in; margin:0 auto; padding:0.45in; box-shadow:none;
-        grid-template-columns: 1fr 240px; /* fija columnas también al imprimir */
+        width:8.5in; min-height:11in; margin:0 auto; padding:0.6in; box-shadow:0 8px 24px rgba(0,0,0,.08);
       }
       .actions{display:none !important}
       a{color:var(--accent) !important; text-decoration:none}
+      /* evitar cortes feos */
       header, .card, .box, h2, h3 { break-inside: avoid; page-break-inside: avoid; }
       ul, p { orphans:3; widows:3; }
     }
 
-    /* (Sin reglas responsive que cambien columnas) */
+    /* Responsivo */
+    @media (max-width:900px){
+      .page{grid-template-columns:1fr; gap:16px; padding:24px}
+      aside{order:2}
+    }
   </style>
 </head>
 <body>
@@ -97,7 +101,6 @@
         <button class="btn" onclick="window.print()">Imprimir / Guardar en PDF</button>
       </div>
     </header>
-
 
     <main>
       <!-- Resumen profesional -->
