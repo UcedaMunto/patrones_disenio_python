@@ -13,7 +13,7 @@
     html,body{height:100%}
     body{
       margin:0; background:var(--bg); color:var(--ink);
-      font:var(--text)/1.45 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
+      font:var(--text)/1.45 system-ui,-apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
       -webkit-print-color-adjust: exact; print-color-adjust: exact;
     }
     .page{
@@ -27,7 +27,7 @@
     .btn{appearance:none; border:1px solid var(--rule); background:#fff; padding:6px 8px; border-radius:10px; font-size:11px; cursor:pointer}
     .btn:hover{border-color:#cbd5e1}
 
-    /* Layout columnas (fijo) */
+    /* Layout de columnas (fijo) */
     main{display:flex; flex-direction:column; gap:12px}
     aside{display:flex; flex-direction:column; gap:12px}
 
@@ -42,16 +42,16 @@
     .rule{border-top:1px solid var(--rule); margin:6px 0}
 
     /* Tarjetas de experiencia (compactas) */
-    .card{border:1px solid var(--rule);border-radius:12px;padding:10px 12px;margin-bottom:8px}
-    .card-header{display:flex;align-items:center;gap:10px;margin-bottom:4px}
-    .card-header img{height:40px;object-fit:contain}
-    .when{font-size:var(--small);color:var(--muted)}
+    .card{border:1px solid var(--rule); border-radius:12px; padding:10px 12px; margin-bottom:8px}
+    .card-header{display:flex; align-items:center; gap:10px; margin-bottom:4px}
+    .card-header img{height:40px; object-fit:contain}
+    .when{font-size:var(--small); color:var(--muted)}
     .employer{font-weight:600}
-    .role{font-weight:600;color:var(--accent)}
+    .role{font-weight:600; color:var(--accent)}
     .stack{margin-top:6px; font-size:var(--small)}
     .loc{font-size:var(--small); color:var(--muted)}
 
-    /* Cabecera contacto */
+    /* Cabecera de contacto */
     .contact{display:flex; flex-wrap:wrap; gap:10px; align-items:center}
     .contact a{color:var(--accent); text-decoration:none}
     .contact a:hover{text-decoration:underline}
@@ -59,7 +59,7 @@
     /* Secciones laterales */
     .box{border:1px solid var(--rule); border-radius:12px; padding:10px 12px}
 
-    /* Tamaño de página: Carta */
+    /* Tamaño de página: carta */
     @page { size: Letter; margin: 0; }
 
     /* Impresión: mantener 2 columnas fijas + layout exacto y colores */
@@ -76,7 +76,7 @@
       ul, p { orphans:3; widows:3; }
     }
 
-    /* (Sin reglas responsive que cambien columnas) */
+    /* (Sin reglas responsivas que cambien columnas) */
   </style>
 </head>
 <body>
@@ -85,16 +85,16 @@
     <header>
       <div>
         <h1>Alex Uceda</h1>
-        <div class="tagline">Jefe de desarrollo de software | Implementación y configuración de servidores</div>
+        <div class="tagline">Jefe de Desarrollo de Software | Implementación y Configuración de Servidores</div>
         <div class="contact" aria-label="Contacto">
           <span>El Salvador</span> <span>·</span>
           <a href="tel:+50373659816">+503 7365 9816</a> <span>·</span>
           <a href="mailto:alex.uceda@hotmail.com">alex.uceda@hotmail.com</a> <span>·</span>
-          <a href="https://api.whatsapp.com/send/?phone=50373659816&text=Hola&type=phone_number&app_absent=0">WhatsApp</a>
+          <a href="https://api.whatsapp.com/send/?phone=50373659816&text=Hola&type=phone_number&app_absent=0" rel="noopener noreferrer">WhatsApp</a>
         </div>
       </div>
       <div class="actions">
-        <button class="btn" onclick="window.print()">Imprimir / Guardar en PDF</button>
+        <button class="btn" onclick="window.print()">Imprimir/Guardar en PDF</button>
       </div>
     </header>
 
@@ -103,13 +103,13 @@
       <section>
         <h2>Resumen</h2>
         <p>
-          Ingeniero de software con enfoque en <strong>arquitecturas distribuidas</strong>, <strong>rendimiento</strong> y <strong>despliegues con Docker</strong>. 
-          Experiencia liderando equipos, integrando <strong>APIs</strong>, automatizando servidores y manteniendo <strong>facturación electrónica</strong>.
+          Ingeniero de software con enfoque en <strong>arquitecturas distribuidas</strong>, <strong>rendimiento</strong> y <strong>despliegues con Docker</strong>.
+          Experiencia liderando equipos, integrando <strong>API</strong>, automatizando servidores y manteniendo <strong>facturación electrónica</strong>.
         </p>
         <ul>
           <li>Levantamiento de requerimientos y coordinación con áreas de negocio.</li>
           <li>Despliegues, observabilidad y endurecimiento básico de seguridad.</li>
-          <li>Optimización de backend y bases de datos; buenas prácticas.</li>
+          <li>Optimización de <em>backend</em> y bases de datos; buenas prácticas.</li>
         </ul>
       </section>
 
@@ -117,31 +117,31 @@
       <section>
         <h2>Experiencia</h2>
 
-        <article class="card" aria-label="ALMAPA — Jefe de desarrollo de software">
+        <article class="card" aria-label="ALMAPA — Jefe de Desarrollo de Software">
           <div class="card-header">
             <div>
-              <div class="when">Abr 2022 — Actualidad · El Salvador</div>
+              <div class="when">Abr. 2022 — Actualidad · El Salvador</div>
               <div class="employer">ALMAPA S.A. de C.V.</div>
-              <div class="role">Jefe de desarrollo de software</div>
+              <div class="role">Jefe de Desarrollo de Software</div>
             </div>
-            <img src="https://almacenesbomba.com/img/logos/Logoweb.png" alt="Logo Almacenes Bomba" />
+            <img src="https://almacenesbomba.com/img/logos/Logoweb.png" alt="Logo de Almacenes Bomba" />
           </div>
           <ul>
-            <li>Mejoras de <strong>rendimiento</strong> en backend y BD; revisión de código y mentoría.</li>
-            <li>Integraciones con <strong>APIs</strong> y pasarelas; automatización de tareas.</li>
+            <li>Mejoras de <strong>rendimiento</strong> en <em>backend</em> y BD; revisión de código y mentoría.</li>
+            <li>Integraciones con <strong>API</strong> y pasarelas; automatización de tareas.</li>
             <li>Infraestructura con <strong>Docker</strong> para contabilidad, logística y facturación.</li>
           </ul>
           <div class="stack muted">Docker · Django REST · PostgreSQL · Nginx · Git · SEO básico</div>
         </article>
 
-        <article class="card" aria-label="ALMAPA — Jefe de desarrollo web">
+        <article class="card" aria-label="ALMAPA — Jefe de Desarrollo Web">
           <div class="card-header">
             <div>
-              <div class="when">Nov 2022 — Jun 2024 · San Salvador</div>
+              <div class="when">Nov. 2022 — Jun. 2024 · San Salvador</div>
               <div class="employer">ALMAPA S.A. de C.V.</div>
               <div class="role">Jefe de Desarrollo Web</div>
             </div>
-            <img src="https://almacenesbomba.com/img/logos/Logoweb.png" alt="Logo Almacenes Bomba" />
+            <img src="https://almacenesbomba.com/img/logos/Logoweb.png" alt="Logo de Almacenes Bomba" />
           </div>
           <ul>
             <li>Planificación de hoja de ruta y despliegues; refactorización.</li>
@@ -150,14 +150,14 @@
           </ul>
         </article>
 
-        <article class="card" aria-label="Ministerio de Salud — Técnico informático">
+        <article class="card" aria-label="Ministerio de Salud — Técnico Informático">
           <div class="card-header">
             <div>
               <div class="employer">Ministerio de Salud de El Salvador</div>
               <div class="role">Técnico Informático</div>
-              <div class="when">Jun 2021 — Jun 2022 · San Salvador</div>
+              <div class="when">Jun. 2021 — Jun. 2022 · San Salvador</div>
             </div>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Logo_oficial_del_Ministerio_de_Salud_de_El_Salvador.png/960px-Logo_oficial_del_Ministerio_de_Salud_de_El_Salvador.png" alt="Logo Ministerio de Salud" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Logo_oficial_del_Ministerio_de_Salud_de_El_Salvador.png/960px-Logo_oficial_del_Ministerio_de_Salud_de_El_Salvador.png" alt="Logo del Ministerio de Salud" />
           </div>
           <ul>
             <li>Desarrollo en <strong>PHP</strong>; soporte a nuevos desarrolladores.</li>
@@ -166,18 +166,18 @@
           <div class="stack muted">Backend PHP · GitLab · SQL</div>
         </article>
 
-        <article class="card" aria-label="Inbakcar — Programador Full-Stack">
-          <div class="when">Feb 2019 — Jun 2021 · San Salvador</div>
+        <article class="card" aria-label="Inbakcar — Programador Full‑Stack">
+          <div class="when">Feb. 2019 — Jun. 2021 · San Salvador</div>
           <div class="employer">Inbakcar S.A. de C.V.</div>
-          <div class="role">Programador Full-Stack</div>
+          <div class="role">Programador Full‑Stack</div>
           <ul>
-            <li><strong>Android</strong> para inventarios (código de barras) e integraciones.</li>
+            <li><strong>Android</strong> para inventarios (códigos de barras) e integraciones.</li>
             <li>Plugins y soporte en <strong>WordPress</strong>; despliegue en DigitalOcean.</li>
           </ul>
           <div class="stack muted">Symfony · Android · WordPress · SSL</div>
         </article>
 
-        <article class="card" aria-label="HELPDESK — Analista programador">
+        <article class="card" aria-label="HELPDESK — Analista Programador">
           <div class="when">2018 · El Salvador</div>
           <div class="employer">HELPDESK El Salvador, S.A. de C.V.</div>
           <div class="role">Analista Programador</div>
@@ -193,12 +193,12 @@
       <section>
         <h2>Proyectos destacados</h2>
         <div class="card">
-          <h3>Facturación electrónica y RRHH</h3>
+          <h3>Facturación electrónica y RR. HH.</h3>
           <p>Módulos con autenticación y auditoría; despliegue en Docker; monitoreo básico.</p>
         </div>
         <div class="card">
-          <h3>Inventarios Android</h3>
-          <p>Lector de códigos de barras; backend Symfony.</p>
+          <h3>Inventarios en Android</h3>
+          <p>Lector de códigos de barras; <em>backend</em> en Symfony.</p>
         </div>
         <div class="card">
           <h3>Unidades de salud</h3>
@@ -252,8 +252,8 @@
           <span class="chip">WHM · cPanel</span>
           <span class="chip">ETL</span>
           <span class="chip">GA4</span>
-          <span class="chip">Scraping</span>
-          <span class="chip">EC2 · VMs</span>
+          <span class="chip"><em>Scraping</em></span>
+          <span class="chip">EC2 · VM</span>
         </div>
 
         <h2>Bases de datos</h2>
@@ -269,7 +269,7 @@
         <h3>Universidad de El Salvador (UES)</h3>
         <p class="muted">Ingeniería de Sistemas — En curso · 5.º año</p>
         <h3>
-          <a href="https://ucedamunto.github.io/patrones_disenio_python/Curriculum/diplomas_Alex_Uceda.pdf" target="_blank">
+          <a href="https://ucedamunto.github.io/patrones_disenio_python/Curriculum/diplomas_Alex_Uceda.pdf" target="_blank" rel="noopener noreferrer">
             Ver diplomas de cursos
           </a>
         </h3>
@@ -283,11 +283,11 @@
       </section>
 
       <section class="box">
-        <h2>Logros & Destrezas</h2>
+        <h2>Logros y destrezas</h2>
         <ul>
           <li>Servidores DNS; web (Apache/Nginx).</li>
-          <li>Automatización Bash y despliegues Docker.</li>
-          <li>Optimización SQL y endpoints críticos.</li>
+          <li>Automatización con Bash y despliegues con Docker.</li>
+          <li>Optimización SQL y <em>endpoints</em> críticos.</li>
           <li>Facturación electrónica y pasarelas.</li>
           <li>Medición con GA4 y Tag Manager.</li>
         </ul>
@@ -295,13 +295,12 @@
 
       <section class="box">
         <h2>Contacto</h2>
-        <p><strong>Tel:</strong> <a href="tel:+50373659816">+503 7365 9816</a></p>
-        <p><strong>WhatsApp:</strong> <a href="https://api.whatsapp.com/send/?phone=50373659816&text=Hola&type=phone_number&app_absent=0">Abrir chat</a></p>
-        <p><strong>Email:</strong> <a href="mailto:alex.uceda@hotmail.com">alex.uceda@hotmail.com</a></p>
+        <p><strong>Tel.:</strong> <a href="tel:+50373659816">+503 7365 9816</a></p>
+        <p><strong>WhatsApp:</strong> <a href="https://api.whatsapp.com/send/?phone=50373659816&text=Hola&type=phone_number&app_absent=0" rel="noopener noreferrer">Abrir chat</a></p>
+        <p><strong>Correo:</strong> <a href="mailto:alex.uceda@hotmail.com">alex.uceda@hotmail.com</a></p>
       </section>
     </aside>
 
   </section>
 </body>
 </html>
-
