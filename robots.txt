@@ -1,0 +1,41 @@
+# Robots.txt for SEO - Alex Uceda Portfolio
+# Generated for optimal indexing and crawling
+
+# Allow all bots to crawl
+User-agent: *
+Allow: /
+Disallow: /vendor/
+Disallow: /node_modules/
+Disallow: /scss/
+Disallow: /less/
+Disallow: /*.json$
+Disallow: /.git/
+Disallow: /.github/
+Disallow: /.vscode/
+Disallow: /codes/
+
+# Sitemap location
+Sitemap: https://ucedamunto.github.io/patrones_disenio_python/sitemap.xml
+
+# Crawl delay for slower bots
+# Allow bots to crawl frequently for fresh content
+Crawl-delay: 0
+
+# Specific bot rules for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+# Block bad bots
+User-agent: AhrefsBot
+User-agent: SemrushBot
+User-agent: DotBot
+Disallow: /
