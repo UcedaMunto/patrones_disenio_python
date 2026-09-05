@@ -1,155 +1,102 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Currículum Vitae de Alex Uceda - Jefe de Desarrollo de Software con experiencia en Symfony, Django, Docker, DevOps e implementación de servidores en El Salvador.">
-  <meta name="keywords" content="Alex Uceda, Currículum, Desarrollo de Software, Jefe de Desarrollo, Symfony, Django, Docker, DevOps, Servidores, El Salvador">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="Currículum Vitae de Alex Uceda - Subdirector de Innovación Tecnológica, egresado de Ingeniería en Sistemas Computacionales y con especialidad en infraestructura, con experiencia en arquitectura, desarrollo de software, proyectos multitenant, DevOps, observabilidad y bases de datos.">
+  <meta name="keywords" content="Alex Uceda, Currículum, Innovación Tecnológica, Ingeniería en Sistemas Computacionales, Infraestructura, Desarrollo de Software, Django, Symfony, Docker, Kubernetes, PostgreSQL, DevOps, Multitenant, Grafana, Prometheus, Alertmanager, API REST, El Salvador">
   <meta name="author" content="Alex Uceda">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <meta name="theme-color" content="#0f766e">
-  
-  <!-- Open Graph / Facebook -->
+
   <meta property="og:type" content="profile">
   <meta property="og:url" content="https://ucedamunto.github.io/patrones_disenio_python/Curriculum/index.html">
-  <meta property="og:title" content="Alex Uceda - Currículum Vitae | Jefe de Desarrollo de Software">
-  <meta property="og:description" content="Jefe de Desarrollo de Software con experiencia en Symfony, Django, Docker, DevOps e implementación de servidores. El Salvador.">
-  <meta property="og:image" content="https://ucedamunto.github.io/patrones_disenio_python/Curriculum/foto.png">
+  <meta property="og:title" content="Alex Uceda - Currículum Vitae | Subdirector de Innovación Tecnológica">
+  <meta property="og:description" content="Perfil de liderazgo técnico con experiencia en desarrollo de software, arquitectura, infraestructura, DevOps, integraciones y automatización.">
   <meta property="profile:first_name" content="Alex">
   <meta property="profile:last_name" content="Uceda">
-  
-  <!-- Twitter / X -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:url" content="https://ucedamunto.github.io/patrones_disenio_python/Curriculum/index.html">
-  <meta name="twitter:title" content="Alex Uceda - Currículum Vitae | Jefe de Desarrollo de Software">
-  <meta name="twitter:description" content="Jefe de Desarrollo de Software con experiencia en Symfony, Django, Docker y DevOps.">
-  <meta name="twitter:image" content="https://ucedamunto.github.io/patrones_disenio_python/Curriculum/foto.png">
-  
-  <!-- Canonical URL -->
+
   <link rel="canonical" href="https://ucedamunto.github.io/patrones_disenio_python/Curriculum/index.html">
-  
-  <!-- Preconnect para mejorar velocidad -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  
-  <title>Alex Uceda - Currículum Vitae | Jefe de Desarrollo de Software</title>
+  <title>Alex Uceda - Currículum Vitae | Subdirector de Innovación Tecnológica</title>
+
   <style>
-    /* ===== Variables y base (reducidas) ===== */
+    /* ===== Variables y base: se conserva el formato del HTML original ===== */
     :root{
       --bg:#ffffff;--ink:#1a1a1a;--muted:#5c6670;--accent:#0f766e;--chip:#eef2f7;--rule:#e5e7eb;
       --h1:24px;--h2:16px;--h3:13px;--text:12px;--small:11px;
     }
     html,body{height:100%}
     body{
-      margin:0; background:var(--bg); color:var(--ink);
-      font:var(--text)/1.45 system-ui,-apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      -webkit-print-color-adjust: exact; print-color-adjust: exact;
+      margin:0;background:var(--bg);color:var(--ink);
+      font:var(--text)/1.45 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
+      -webkit-print-color-adjust:exact;print-color-adjust:exact;
     }
     .page{
-      width:8.5in; min-height:11in; margin:0 auto; background:#fff; box-shadow:0 6px 18px rgba(0,0,0,.06);
-      display:grid; grid-template-columns: 1fr 240px; gap:16px; padding:0.5in; box-sizing:border-box;
+      width:8.5in;min-height:11in;margin:0 auto;background:#fff;box-shadow:0 6px 18px rgba(0,0,0,.06);
+      display:grid;grid-template-columns:1fr 240px;gap:16px;padding:.5in;box-sizing:border-box;
     }
-    header{grid-column:1/-1; display:flex; align-items:flex-end; justify-content:space-between; gap:12px; border-bottom:1px solid var(--rule); padding-bottom:10px;}
-    h1{font-size:var(--h1); line-height:1.1; margin:0; letter-spacing:.2px}
-    .tagline{color:var(--muted); margin-top:4px}
-    .actions{display:flex; gap:8px}
-    .btn{appearance:none; border:1px solid var(--rule); background:#fff; padding:6px 8px; border-radius:10px; font-size:11px; cursor:pointer}
+    header{grid-column:1/-1;display:flex;align-items:flex-end;justify-content:space-between;gap:12px;border-bottom:1px solid var(--rule);padding-bottom:10px}
+    h1{font-size:var(--h1);line-height:1.1;margin:0;letter-spacing:.2px}
+    .tagline{color:var(--muted);margin-top:4px;font-weight:600}
+    .actions{display:flex;gap:8px}
+    .btn{appearance:none;border:1px solid var(--rule);background:#fff;padding:6px 8px;border-radius:10px;font-size:11px;cursor:pointer}
     .btn:hover{border-color:#cbd5e1}
-
-    /* Layout de columnas (fijo) */
-    main{display:flex; flex-direction:column; gap:12px}
-    aside{display:flex; flex-direction:column; gap:12px}
-
-    h2{font-size:var(--h2); margin:0 0 6px 0; letter-spacing:.2px}
-    h3{font-size:var(--h3); margin:0 0 4px 0}
+    main{display:flex;flex-direction:column;gap:12px}
+    aside{display:flex;flex-direction:column;gap:12px}
+    h2{font-size:var(--h2);margin:0 0 6px 0;letter-spacing:.2px}
+    h3{font-size:var(--h3);margin:0 0 4px 0}
     p{margin:0 0 6px 0}
-    ul{margin:4px 0 0 18px}
+    ul{margin:4px 0 0 18px;padding:0}
     li{margin:2px 0}
     .muted{color:var(--muted)}
-    .chips{display:flex; flex-wrap:wrap; gap:4px}
-    .chip{background:var(--chip); border:1px solid var(--rule); padding:2px 6px; border-radius:999px; font-size:11px}
-    .rule{border-top:1px solid var(--rule); margin:6px 0}
-
-    /* Tarjetas de experiencia (compactas) */
-    .card{border:1px solid var(--rule); border-radius:12px; padding:10px 12px; margin-bottom:8px}
-    .card-header{display:flex; align-items:center; gap:10px; margin-bottom:4px}
-    .card-header img{height:40px; object-fit:contain}
-    .when{font-size:var(--small); color:var(--muted)}
-    .employer{font-weight:600}
-    .role{font-weight:600; color:var(--accent)}
-    .stack{margin-top:6px; font-size:var(--small)}
-    .loc{font-size:var(--small); color:var(--muted)}
-
-    /* Cabecera de contacto */
-    .contact{display:flex; flex-wrap:wrap; gap:10px; align-items:center}
-    .contact a{color:var(--accent); text-decoration:none}
+    .chips{display:flex;flex-wrap:wrap;gap:4px}
+    .chip{background:var(--chip);border:1px solid var(--rule);padding:2px 6px;border-radius:999px;font-size:11px}
+    .rule{border-top:1px solid var(--rule);margin:8px 0}
+    .card{border:1px solid var(--rule);border-radius:12px;padding:10px 12px;margin-bottom:8px}
+    .card-header{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:4px}
+    .when{font-size:var(--small);color:var(--muted)}
+    .employer{font-weight:700}
+    .role{font-weight:700;color:var(--accent)}
+    .stack{margin-top:6px;font-size:var(--small)}
+    .loc{font-size:var(--small);color:var(--muted)}
+    .contact{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+    .contact a{color:var(--accent);text-decoration:none}
     .contact a:hover{text-decoration:underline}
-
-    /* Secciones laterales */
-    .box{border:1px solid var(--rule); border-radius:12px; padding:10px 12px}
-
-    /* Tamaño de página: carta */
-    @page { size: Letter; margin: 0; }
-
-    /* Impresión: mantener 2 columnas fijas + layout exacto y colores */
+    .box{border:1px solid var(--rule);border-radius:12px;padding:10px 12px}
+    .box h2:not(:first-child){margin-top:10px}
+    .logo-badge{min-width:38px;height:38px;border:1px solid var(--rule);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;color:var(--accent);background:var(--chip)}
+    .role-block + .role-block{border-top:1px solid var(--rule);padding-top:7px;margin-top:7px}
+    .compact li{margin:1px 0}
+    @page{size:Letter;margin:0}
     @media print{
       html,body{height:auto}
-      body{background:transparent; -webkit-print-color-adjust: exact; print-color-adjust: exact;}
-      .page{
-        width:8.5in; min-height:11in; margin:0 auto; padding:0.45in; box-shadow:none;
-        grid-template-columns: 1fr 240px; /* fija columnas también al imprimir */
-      }
-      .actions{display:none !important}
-      a{color:var(--accent) !important; text-decoration:none}
-      header, .card, .box, h2, h3 { break-inside: avoid; page-break-inside: avoid; }
-      ul, p { orphans:3; widows:3; }
+      body{background:transparent;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+      .page{width:8.5in;min-height:11in;margin:0 auto;padding:.45in;box-shadow:none;grid-template-columns:1fr 240px}
+      .actions{display:none!important}
+      a{color:var(--accent)!important;text-decoration:none}
+      header,.card,.box,h2,h3{break-inside:avoid;page-break-inside:avoid}
+      ul,p{orphans:3;widows:3}
     }
-
-    /* (Sin reglas responsivas que cambien columnas) */
   </style>
-  
-  <!-- JSON-LD Structured Data for SEO -->
+
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Alex Uceda",
-    "title": "Jefe de Desarrollo de Software",
-    "url": "https://ucedamunto.github.io/patrones_disenio_python/Curriculum/index.html",
-    "email": "alex.uceda@hotmail.com",
-    "telephone": "+50373659816",
-    "sameAs": [
-      "https://github.com/UcedaMunto",
-      "https://api.whatsapp.com/send/?phone=50373659816"
-    ],
-    "jobTitle": "Jefe de Desarrollo de Software",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "SV",
-      "addressLocality": "El Salvador"
-    },
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Freelance"
-    },
-    "knowsAbout": [
-      "Symfony",
-      "Django",
-      "Python",
-      "Docker",
-      "DevOps",
-      "Configuración de Servidores",
-      "Apache",
-      "AWS",
-      "Linux",
-      "Software Architecture"
-    ]
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Alex Uceda",
+    "title":"Subdirector de Innovación Tecnológica",
+    "url":"https://ucedamunto.github.io/patrones_disenio_python/Curriculum/index.html",
+    "email":"alex.uceda@hotmail.com",
+    "telephone":"+50373659816",
+    "sameAs":["https://github.com/UcedaMunto","https://www.linkedin.com/in/alex-uceda"],
+    "jobTitle":"Subdirector de Innovación Tecnológica",
+    "address":{"@type":"PostalAddress","addressCountry":"SV","addressLocality":"El Salvador"},
+    "worksFor":{"@type":"Organization","name":"ALMAPA S.A. de C.V."},
+    "knowsAbout":["Django","Python","Symfony","PHP","Laravel","React","Next.js","PostgreSQL","MongoDB","Docker","Kubernetes","Linux","Windows Server","Nginx","Ceph","KVM","REST APIs","Multitenant Architecture","Software Architecture","Design Patterns","Database Design","DevOps","Grafana","Prometheus","Alertmanager","Git","SQL"]
   }
   </script>
-  
 </head>
 <body>
   <section class="page" role="document" aria-label="Currículum de Alex Uceda">
@@ -157,270 +104,370 @@
     <header>
       <div>
         <h1>Alex Uceda</h1>
-        <div class="tagline">Jefe de Desarrollo de Software | Implementación y Configuración de Servidores</div>
+        <div class="tagline">Subdirector de Innovación Tecnológica | Arquitectura · Desarrollo de Software · Infraestructura</div>
         <div class="contact" aria-label="Contacto">
-          <span>El Salvador</span> <span>·</span>
-          <a href="tel:+50373659816">+503 7365 9816</a> <span>·</span>
-          <a href="mailto:alex.uceda@hotmail.com">alex.uceda@hotmail.com</a> <span>·</span>
-          <a href="https://api.whatsapp.com/send/?phone=50373659816&text=Hola&type=phone_number&app_absent=0" rel="noopener noreferrer">WhatsApp</a>
+          <span>El Salvador</span><span>·</span>
+          <a href="tel:+50373659816">+503 7365 9816</a><span>·</span>
+          <a href="mailto:alex.uceda@hotmail.com">alex.uceda@hotmail.com</a><span>·</span>
+          <a href="https://www.linkedin.com/in/alex-uceda" target="_blank" rel="noopener noreferrer">LinkedIn</a><span>·</span>
+          <a href="https://github.com/UcedaMunto" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
       </div>
-      <div class="actions">
-        <button class="btn" onclick="window.print()">Imprimir/Guardar en PDF</button>
-      </div>
+      <div class="actions"><button class="btn" onclick="window.print()">Imprimir / Guardar en PDF</button></div>
     </header>
 
     <main>
-      <!-- Resumen profesional (resumido) -->
       <section>
-        <h2>Resumen</h2>
+        <h2>Resumen profesional</h2>
         <p>
-          <strong>Jefe de Desarrollo de Software</strong> con 3+ años en ALMAPA S.A., liderando equipos multidisciplinarios en arquitecturas distribuidas, rendimiento y despliegues con Docker.
-          Especialista en <strong>gestión de equipos ágiles</strong>, <strong>mentoría técnica</strong>, optimización de procesos y desarrollo de software de calidad.
-          Experiencia integrando <strong>API</strong>, automatizando servidores y manteniendo <strong>facturación electrónica</strong>.
+          <strong>Subdirector de Innovación Tecnológica</strong> y <strong>egresado de Ingeniería en Sistemas Computacionales</strong>, cursando una especialidad en infraestructura, con trayectoria en desarrollo de software, liderazgo técnico y administración de plataformas empresariales.
+          Experiencia práctica en análisis y diseño de bases de datos, arquitectura de software, proyectos multiempresa bajo el patrón <strong>multitenant</strong>, integraciones mediante APIs, arquitecturas MVC y monolitos modulares, automatización, optimización del rendimiento y monitoreo de servidores.
+          Perfil <em>hands-on</em> con experiencia desde el desarrollo <em>backend/frontend</em> hasta contenedores, redes, observabilidad, bases de datos y coordinación de múltiples proyectos.
         </p>
-        <ul>
-          <li>Liderazgo de equipos de desarrollo; mentoría y evaluación de desempeño.</li>
-          <li>Levantamiento de requerimientos, planificación de sprints y coordinación con áreas de negocio.</li>
-          <li>Revisión de código, garantía de calidad y buenas prácticas de ingeniería.</li>
-          <li>Despliegues, observabilidad, CI/CD y endurecimiento básico de seguridad.</li>
-          <li>Optimización de <em>backend</em> y bases de datos; gestión de performance crítica.</li>
-          <li>Automatización de procesos y reducción de deuda técnica.</li>
+        <ul class="compact">
+          <li>Liderazgo y coordinación de equipos de desarrollo; administración de backlogs, medición de avance y seguimiento simultáneo de múltiples proyectos.</li>
+          <li>Arquitectura de aplicaciones con Django/Python, PHP/Symfony/Laravel, Go, React/Next.js, patrones de diseño y soluciones multitenant.</li>
+          <li>Infraestructura con Docker, Nginx, Linux, Windows Server y servicios en la nube.</li>
+          <li>Monitoreo y observabilidad de servidores y servicios con Grafana, Prometheus y Alertmanager.</li>
+          <li>Integraciones empresariales: facturación electrónica (implementación y mantenimiento del firmador y de correlativos), pasarelas de pago, automatizaciones y servicios de terceros.</li>
         </ul>
       </section>
 
-      <!-- Experiencia (resumida) -->
       <section>
-        <h2>Experiencia</h2>
+        <h2>Experiencia profesional</h2>
 
-        <article class="card" aria-label="ALMAPA — Jefe de Desarrollo de Software">
+        <article class="card" aria-label="ALMAPA S.A. de C.V.">
           <div class="card-header">
             <div>
-              <div class="when">Abr. 2022 — Actualidad · El Salvador</div>
               <div class="employer">ALMAPA S.A. de C.V.</div>
-              <div class="role">Jefe de Desarrollo de Software</div>
+              <div class="loc">El Salvador · Jornada completa · Presencial</div>
             </div>
-            <img src="https://almacenesbomba.com/img/logos/Logoweb.png" alt="Logo de Almacenes Bomba" />
+            <div class="logo-badge">ALMAPA</div>
           </div>
-          <ul>
-            <li><strong>Liderazgo de Equipo:</strong> Gestión y mentoría de 4-6 desarrolladores; evaluación de desempeño y planes de desarrollo.</li>
-            <li><strong>Gestión Técnica:</strong> Revisión de código exhaustiva; establecimiento de estándares y buenas prácticas de ingeniería.</li>
-            <li><strong>Planificación y Sprints:</strong> Planificación de roadmap técnico; gestión de backlog; estimación de tareas y seguimiento de velocidad.</li>
-            <li><strong>Arquitectura y Performance:</strong> Mejoras de rendimiento en backend y BD; refactorización; optimización de endpoints críticos.</li>
-            <li><strong>Integraciones:</strong> API y pasarelas de pago; automatización de tareas; integración con sistemas terceros.</li>
-            <li><strong>Infraestructura y DevOps:</strong> Docker para contabilidad, logística y facturación; CI/CD básico; monitoreo y observabilidad.</li>
-            <li><strong>Coordinación Interdepartamental:</strong> Levantamiento de requerimientos con negocio; documentación técnica; comunicación con stakeholders.</li>
-            <li><strong>Calidad y Testing:</strong> Implementación de pruebas unitarias; garantía de calidad; reducción de bugs en producción.</li>
-          </ul>
-          <div class="stack muted">Team Leadership · Code Review · Docker · Django REST · PostgreSQL · Nginx · CI/CD · Git · Scrum · Performance Optimization</div>
+
+          <div class="role-block">
+            <div class="role">Subdirector de Innovación Tecnológica</div>
+            <div class="when">Dic. 2025 — Actualidad</div>
+            <ul>
+              <li>Dirección técnica de iniciativas de innovación, infraestructura y evolución de sistemas para <strong>Almacenes Bomba, Premiumcenter e Improcasa</strong>.</li>
+              <li>Coordinación simultánea de múltiples proyectos; administración de backlogs, priorización, medición de avance y seguimiento de entregables.</li>
+              <li>Definición de arquitectura, prioridades técnicas, estándares de desarrollo, patrones de diseño y lineamientos de despliegue.</li>
+              <li>Automatización de tareas con Power Automate de Microsoft 365.</li>
+              <li>Supervisión de servicios distribuidos, contenedores, bases de datos, integraciones, monitoreo y continuidad operativa.</li>
+              <li>Participación en documentación, análisis y optimización de procesos empresariales para ALMAPA y DISMA, coordinando necesidades de negocio con soluciones tecnológicas.</li>
+              <li>Evaluación de nuevas tecnologías para virtualización, orquestación, almacenamiento distribuido e <strong>inteligencia artificial aplicada</strong>.</li>
+              <li>Administración y configuración de servidores linux y windows</li>
+            </ul>
+          </div>
+
+          <div class="role-block">
+            <div class="role">Jefe de Desarrollo de Software</div>
+            <div class="when">Abr. 2024 — Dic. 2025</div>
+            <ul>
+              <li>Gestión del equipo de desarrollo, asignación y priorización de tareas, revisión de código y seguimiento de entregables mediante backlogs.</li>
+              <li>Análisis y diseño de bases de datos; optimización de consultas SQL, procesos batch, sincronizaciones y servicios de integración.</li>
+              <li>Diseño y mantenimiento de sistemas multiempresa utilizando arquitectura <strong>multitenant</strong> para compartir una misma base de código con separación lógica de datos y configuración por empresa.</li>
+              <li>Desarrollo y mantenimiento de sistemas con Django, Python, PostgreSQL, MongoDB, Docker y Nginx.</li>
+              <li>Scraping de correos electrónicos para la extracción de DTE.</li>
+              <li>Diseño e integración de API REST para comunicación entre sistemas internos, servicios externos y plataformas empresariales.</li>
+              <li>Desarrollo del módulo de cálculo de planillas.</li>
+              <li>Coordinación técnica de módulos de RR. HH., logística, inventarios y facturación electrónica, así como seguimiento de proyectos de terceros.</li>
+            </ul>
+          </div>
+
+          <div class="role-block">
+            <div class="role">Jefe de Desarrollo Web</div>
+            <div class="when">Nov. 2022 — Jun. 2024 · San Salvador</div>
+            <ul>
+              <li>Diseño, planificación e implementación de mejoras de rendimiento y optimización en páginas web y tiendas en línea.</li>
+              <li>Integración mediante API con servicios externos y <strong>pasarelas de pago de El Salvador y Guatemala</strong>.</li>
+              <li>Análisis de rendimiento, mejoras de experiencia de usuario, SEO técnico y optimización de procesos relacionados con comercio electrónico.</li>
+              <li>Administración y ajuste de servidores; automatización de tareas y despliegues con Docker y Docker Compose.</li>
+              <li>Configuración de Google Search Console, Google Analytics y Google Tag Manager.</li>
+              <li>Implementación y mantenimiento de componentes de facturación electrónica.</li>
+            </ul>
+          </div>
+
+          <div class="stack muted">Django · Python · PostgreSQL · MongoDB · Docker · Kubernetes · Nginx · Linux · Windows Server · API REST · Multitenant · Patrones de diseño · Grafana · Prometheus · Alertmanager · Git · Arquitectura de software · Facturación electrónica · E-commerce</div>
         </article>
 
-        <article class="card" aria-label="ALMAPA — Jefe de Desarrollo Web">
-          <div class="card-header">
-            <div>
-              <div class="when">Nov. 2022 — Jun. 2024 · San Salvador</div>
-              <div class="employer">ALMAPA S.A. de C.V.</div>
-              <div class="role">Jefe de Desarrollo Web</div>
-            </div>
-            <img src="https://almacenesbomba.com/img/logos/Logoweb.png" alt="Logo de Almacenes Bomba" />
-          </div>
-          <ul>
-            <li><strong>Gestión Web:</strong> Planificación de hoja de ruta; roadmap de productos digitales; coordinación de equipo web.</li>
-            <li><strong>Arquitectura Frontend:</strong> Refactorización de código legacy; implementación de patrones de diseño; optimización de componentes.</li>
-            <li><strong>Integraciones Terceros:</strong> Integración con APIs externas; pasarelas de pago; sistemas de terceros.</li>
-            <li><strong>DevOps y Despliegues:</strong> CI/CD básico; automatización de despliegues; documentación de procesos.</li>
-            <li><strong>Analítica y Medición:</strong> Google Search Console (GSC), Google Analytics 4 (GA4), Google Tag Manager (GTM) para medición de embudos.</li>
-            <li><strong>SEO y Performance:</strong> Optimización técnica de SEO; mejora de Core Web Vitals; velocidad de carga.</li>
-          </ul>
-          <div class="stack muted">Frontend Leadership · React · Django · CI/CD · GA4 · GSC · GTM · Performance · Refactoring</div>
-        </article>
-
-        <article class="card" aria-label="Ministerio de Salud — Técnico Informático">
+        <article class="card" aria-label="Ministerio de Salud de El Salvador">
           <div class="card-header">
             <div>
               <div class="employer">Ministerio de Salud de El Salvador</div>
               <div class="role">Técnico Informático</div>
               <div class="when">Jun. 2021 — Jun. 2022 · San Salvador</div>
             </div>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Logo_oficial_del_Ministerio_de_Salud_de_El_Salvador.png/960px-Logo_oficial_del_Ministerio_de_Salud_de_El_Salvador.png" alt="Logo del Ministerio de Salud" />
+            <div class="logo-badge">MINSAL</div>
           </div>
           <ul>
-            <li>Desarrollo en <strong>PHP</strong>; soporte a nuevos desarrolladores.</li>
-            <li>Gestión de cambios con <strong>GitLab</strong> y optimización de consultas.</li>
+            <li>Desarrollo con PHP y Symfony para nuevos requerimientos de sistemas institucionales.</li>
+            <li>Apoyo y capacitación a personal de desarrollo; gestión de cambios con GitLab.</li>
+            <li>Testing de flujos de negocio, modificaciones de bases de datos, optimización de código y mejoras de seguridad.</li>
+            <li>Optimización de consultas SQL.</li>
           </ul>
-          <div class="stack muted">Backend PHP · GitLab · SQL</div>
+          <div class="stack muted">PHP · Symfony · JavaScript · SQL · GitLab · Testing · Seguridad web</div>
         </article>
 
-        <article class="card" aria-label="Inbakcar — Programador Full‑Stack">
-          <div class="when">Feb. 2019 — Jun. 2021 · San Salvador</div>
-          <div class="employer">Inbakcar S.A. de C.V.</div>
-          <div class="role">Programador Full‑Stack</div>
-          <ul>
-            <li><strong>Android</strong> para inventarios (códigos de barras) e integraciones.</li>
-            <li>Plugins y soporte en <strong>WordPress</strong>; despliegue en DigitalOcean.</li>
-          </ul>
-          <div class="stack muted">Symfony · Android · WordPress · SSL</div>
+        <article class="card" aria-label="Inbakcar S.A. de C.V.">
+          <div class="card-header">
+            <div>
+              <div class="employer">Inbakcar S.A. de C.V.</div>
+              <div class="loc">San Salvador, El Salvador</div>
+            </div>
+            <div class="logo-badge">INBAKCAR</div>
+          </div>
+
+          <div class="role-block">
+            <div class="role">Capacitación de personal · Jornada parcial</div>
+            <div class="when">Jun. 2021 — Ene. 2022</div>
+            <ul>
+              <li>Implementación de software en DigitalOcean y configuración de dominio, SSL y un entorno VPC.</li>
+              <li>Configuración de entornos de desarrollo con acceso SSH y capacitación sobre Symfony.</li>
+            </ul>
+          </div>
+
+          <div class="role-block">
+            <div class="role">Programador Full Stack · Jornada completa</div>
+            <div class="when">Feb. 2020 — Jun. 2021</div>
+            <ul>
+              <li>Desarrollo con PHP, Symfony, JavaScript y jQuery.</li>
+              <li>Aplicación para envío y redimensionamiento de fotografías e integración con servicios externos.</li>
+              <li>Aplicación Android de inventarios con lector de códigos de barras integrado.</li>
+              <li>Plugin e integraciones para WordPress; despliegue del sistema Symfony en DigitalOcean.</li>
+            </ul>
+          </div>
+          <div class="stack muted">Symfony · PHP · JavaScript · jQuery · Android · WordPress · DigitalOcean · SSL · SSH</div>
         </article>
 
-        <article class="card" aria-label="HELPDESK — Analista Programador">
-          <div class="when">2018 · El Salvador</div>
-          <div class="employer">HELPDESK El Salvador, S.A. de C.V.</div>
-          <div class="role">Analista Programador</div>
+        <article class="card" aria-label="HELPDESK El Salvador">
+          <div class="card-header">
+            <div>
+              <div class="employer">HELPDESK El Salvador, S.A. de C.V.</div>
+              <div class="role">Analista Programador</div>
+              <div class="when">2018 · El Salvador</div>
+            </div>
+            <div class="logo-badge">HELPDESK</div>
+          </div>
           <ul>
-            <li>Migraciones a <strong>PostgreSQL</strong>; ETL y procedimientos en SQL Server.</li>
-            <li>Servidores en <strong>Azure</strong> (VPC).</li>
+            <li>Programación con Symfony y SQL Server.</li>
+            <li>Migración de datos hacia una base de datos central en PostgreSQL mediante tareas programadas.</li>
+            <li>Pruebas de ETL con SQL Server Integration Services y desarrollo de procedimientos almacenados.</li>
+            <li>Configuración de servidores virtuales en Azure.</li>
           </ul>
-          <div class="stack muted">PostgreSQL · SQL Server · Azure</div>
+          <div class="stack muted">Symfony · PostgreSQL · SQL Server · SSIS/ETL · Azure</div>
         </article>
       </section>
 
-      <!-- Proyectos destacados (resumidos) -->
       <section>
-        <h2>Logros Clave en ALMAPA</h2>
-        <ul>
-          <li>📊 <strong>Liderazgo de Equipo:</strong> Gestión exitosa de 4-6 desarrolladores con mejora mensurable en productivity y retención.</li>
-          <li>🚀 <strong>Mentoría Técnica:</strong> Desarrollo profesional de 3+ junior developers; promoción y crecimiento de talento interno.</li>
-          <li>⚡ <strong>Performance:</strong> Reducción de 40% en tiempo de respuesta de endpoints críticos; optimización de queries SQL.</li>
-          <li>🏗️ <strong>Arquitectura:</strong> Diseño e implementación de sistemas distribuidos con Docker; migración de monolito a microservicios.</li>
-          <li>📈 <strong>Calidad de Código:</strong> Implementación de code review riguroso; reducción de bugs en producción en 35%.</li>
-          <li>🔒 <strong>Seguridad:</strong> Hardening de servidores; implementación de JWT; auditoría de compliance.</li>
-          <li>🛠️ <strong>DevOps:</strong> Automatización de despliegues; configuración de CI/CD; reducción de downtime.</li>
-          <li>📚 <strong>Documentación:</strong> Creación de wikis técnicas; estándares de código; guías de onboarding.</li>
-        </ul>
-      </section>
-
-      <!-- Proyectos destacados (resumidos) -->
-      <section>
-        <h2>Proyectos destacados</h2>
+        <h2>Experiencia técnica destacada</h2>
         <div class="card">
-          <h3>Facturación electrónica y RR. HH.</h3>
-          <p>Módulos con autenticación y auditoría; despliegue en Docker; monitoreo básico. <strong>Lideré equipo de 3 desarrolladores en arquitectura y ejecución.</strong></p>
+          <h3>Arquitectura, sistemas empresariales e integraciones</h3>
+          <p>Análisis, diseño y evolución de soluciones para RR. HH., presupuestos, inventarios, compras, logística y facturación electrónica. Diseño de APIs REST, aplicación de patrones de desarrollo y arquitectura multitenant para proyectos multiempresa; integración con servicios de pago, Microsoft 365 y servicios externos.</p>
         </div>
         <div class="card">
-          <h3>Sistema de Inventarios en Android</h3>
-          <p>Lector de códigos de barras; backend en Symfony; integración con ERP. <strong>Coordiné con equipo de mobile y backend para sincronización en tiempo real.</strong></p>
+          <h3>Infraestructura, contenedores, alta disponibilidad y monitoreo</h3>
+          <p>Administración de Linux y Windows Server, Docker/Docker Compose, Nginx como proxy inverso, Kubernetes, Rook/Ceph, Redis, KVM, DNS, certificados TLS/SSL, redes y automatización mediante scripts. Monitoreo y observabilidad con Grafana, Prometheus y Alertmanager.</p>
         </div>
         <div class="card">
-          <h3>Plataforma de Logística</h3>
-          <p>Sistema distribuido con seguimiento de entregas; notificaciones en tiempo real; integración GPS. <strong>Gestión técnica del proyecto; arquitectura con microservicios.</strong></p>
+          <h3>Análisis, diseño de bases de datos y rendimiento</h3>
+          <p>Modelado y diseño de bases de datos relacionales y NoSQL con PostgreSQL, MongoDB, MySQL/MariaDB y SQL Server; optimización de consultas, sincronización de datos, procesos ETL, migraciones y análisis de rendimiento.</p>
         </div>
         <div class="card">
-          <h3>Unidades de salud (Ministerio)</h3>
-          <p>Mejoras a sistemas de gestión con Symfony y PHP. <strong>Mentoría a desarrolladores junior en buenas prácticas.</strong></p>
+          <h3>IA aplicada — especialización en curso</h3>
+          <p>Experimentación y entrenamiento de modelos de visión por computadora para <em>virtual try-on</em>, incluyendo IDM-VTON y evaluación de flujos de entrenamiento en infraestructura de cómputo.</p>
         </div>
       </section>
     </main>
 
     <aside>
       <section class="box">
-        <h2>Gestión y Liderazgo</h2>
+        <h2>Gestión y liderazgo</h2>
         <div class="chips">
-          <span class="chip">Team Leadership</span>
-          <span class="chip">Mentoría Técnica</span>
+          <span class="chip">Liderazgo técnico</span>
+          <span class="chip">Gestión de equipo</span>
           <span class="chip">Code Review</span>
-          <span class="chip">Scrum · Ágil</span>
-          <span class="chip">Planificación Sprint</span>
-          <span class="chip">Gestión de Backlog</span>
-          <span class="chip">Evaluación Desempeño</span>
-          <span class="chip">Comunicación</span>
-          <span class="chip">Resolución de Conflictos</span>
-          <span class="chip">Roadmap Técnico</span>
+          <span class="chip">Backlog</span>
+          <span class="chip">Seguimiento de avances</span>
+          <span class="chip">Gestión multiproyecto</span>
+          <span class="chip">Roadmap técnico</span>
+          <span class="chip">Requerimientos</span>
+          <span class="chip">Mentoría</span>
+          <span class="chip">Arquitectura</span>
+          <span class="chip">Documentación</span>
         </div>
 
-        <h2>Lenguajes</h2>
+        <h2>Arquitectura y diseño</h2>
         <div class="chips">
-          <span class="chip">Python · Django</span>
-          <span class="chip">PHP · Symfony</span>
-          <span class="chip">JavaScript · jQuery</span>
-          <span class="chip">HTML · CSS</span>
-          <span class="chip">SQL · Avanzado</span>
-          <span class="chip">Bash · Scripting</span>
-        </div>
-
-        <h2>Herramientas</h2>
-        <div class="chips">
-          <span class="chip">Linux</span>
-          <span class="chip">Git</span>
-          <span class="chip">Visual Studio</span>
+          <span class="chip">Análisis de sistemas</span>
+          <span class="chip">Diseño de bases de datos</span>
           <span class="chip">Patrones de diseño</span>
-          <span class="chip">PlantUML</span>
-        </div>
-
-        <h2>DevOps</h2>
-        <div class="chips">
-          <span class="chip">Sistemas distribuidos</span>
-          <span class="chip">Docker</span>
-          <span class="chip">Servidor Apache</span>
-          <span class="chip">Jira</span>
-          <span class="chip">GitLab · GitHub</span>
-        </div>
-
-        <h2>Seguridad</h2>
-        <div class="chips">
-          <span class="chip">SSH</span>
-          <span class="chip">JWT</span>
-          <span class="chip">CORS</span>
-          <span class="chip">SSL</span>
-        </div>
-
-        <h2>Otras</h2>
-        <div class="chips">
+          <span class="chip">MVC</span>
+          <span class="chip">Arquitectura multitenant</span>
+          <span class="chip">Sistemas multiempresa</span>
           <span class="chip">API REST</span>
-          <span class="chip">DNS</span>
-          <span class="chip">WHM · cPanel</span>
-          <span class="chip">ETL</span>
-          <span class="chip">GA4</span>
-          <span class="chip"><em>Scraping</em></span>
-          <span class="chip">EC2 · VM</span>
+          <span class="chip">Integración de sistemas</span>
+        </div>
+
+        <h2>Backend</h2>
+        <div class="chips">
+          <span class="chip">Python</span>
+          <span class="chip">Django</span>
+          <span class="chip">Django REST</span>
+          <span class="chip">PHP</span>
+          <span class="chip">Symfony</span>
+          <span class="chip">Laravel</span>
+          <span class="chip">Node.js</span>
+          <span class="chip">API REST</span>
+        </div>
+
+        <h2>Frontend</h2>
+        <div class="chips">
+          <span class="chip">JavaScript</span>
+          <span class="chip">React</span>
+          <span class="chip">Next.js</span>
+          <span class="chip">HTML</span>
+          <span class="chip">CSS</span>
+          <span class="chip">jQuery</span>
+          <span class="chip">Bootstrap</span>
         </div>
 
         <h2>Bases de datos</h2>
         <div class="chips">
           <span class="chip">PostgreSQL</span>
-          <span class="chip">MySQL</span>
           <span class="chip">MongoDB</span>
+          <span class="chip">MySQL</span>
+          <span class="chip">MariaDB</span>
+          <span class="chip">SQL Server</span>
+          <span class="chip">Redis</span>
+          <span class="chip">SQL</span>
+          <span class="chip">ETL</span>
+        </div>
+
+        <h2>DevOps e infraestructura</h2>
+        <div class="chips">
+          <span class="chip">Linux</span>
+          <span class="chip">Docker</span>
+          <span class="chip">Docker Compose</span>
+          <span class="chip">Kubernetes</span>
+          <span class="chip">Nginx</span>
+          <span class="chip">Apache</span>
+          <span class="chip">Rook / Ceph</span>
+          <span class="chip">KVM</span>
+          <span class="chip">Git</span>
+          <span class="chip">GitHub</span>
+          <span class="chip">GitLab</span>
+          <span class="chip">Bash</span>
+        </div>
+
+        <h2>Monitoreo y observabilidad</h2>
+        <div class="chips">
+          <span class="chip">Grafana</span>
+          <span class="chip">Prometheus</span>
+          <span class="chip">Alertmanager</span>
+          <span class="chip">Métricas</span>
+          <span class="chip">Alertas</span>
+          <span class="chip">Monitoreo de servidores</span>
+        </div>
+
+        <h2>Cloud y virtualización</h2>
+        <div class="chips">
+          <span class="chip">DigitalOcean</span>
+          <span class="chip">Azure</span>
+          <span class="chip">AWS</span>
+          <span class="chip">OpenStack</span>
+          <span class="chip">VPC / VM</span>
+        </div>
+
+        <h2>Redes y seguridad</h2>
+        <div class="chips">
+          <span class="chip">SSH</span>
+          <span class="chip">DNS</span>
+          <span class="chip">TLS / SSL</span>
+          <span class="chip">JWT</span>
+          <span class="chip">CORS</span>
+          <span class="chip">CSP</span>
+          <span class="chip">Reverse Proxy</span>
+          <span class="chip">Hardening básico</span>
+        </div>
+
+        <h2>Automatización e integración</h2>
+        <div class="chips">
+          <span class="chip">Power Automate</span>
+          <span class="chip">Power Apps</span>
+          <span class="chip">SharePoint</span>
+          <span class="chip">Microsoft 365</span>
+          <span class="chip">SAP / ERP</span>
+          <span class="chip">Webhooks</span>
+          <span class="chip">Scraping</span>
+          <span class="chip">Cron</span>
+        </div>
+
+        <h2>Software y herramientas</h2>
+        <div class="chips">
+          <span class="chip">VS Code</span>
+          <span class="chip">DBeaver</span>
+          <span class="chip">Postman</span>
+          <span class="chip">Linux</span>
+          <span class="chip">Windows Server</span>
+          <span class="chip">Git</span>
+          <span class="chip">GitHub</span>
+          <span class="chip">GitLab</span>
+          <span class="chip">PlantUML</span>
+          <span class="chip">Jira</span>
+          <span class="chip">Grafana</span>
+          <span class="chip">GA4</span>
+          <span class="chip">GTM</span>
+          <span class="chip">Search Console</span>
         </div>
       </section>
 
       <section class="box">
         <h2>Educación</h2>
-        <h3>Universidad de El Salvador (UES)</h3>
-        <p class="muted">Ingeniería de Sistemas — En curso · 5.º año</p>
-        <h3>
-          <a href="https://ucedamunto.github.io/patrones_disenio_python/Curriculum/diplomas_Alex_Uceda.pdf" target="_blank" rel="noopener noreferrer">
-            Ver diplomas de cursos
-          </a>
-        </h3>
-        <ul>
-          <li>Backend con Node.js y API REST</li>
-          <li>POO · Terminal Linux · Entornos</li>
-        </ul>
+        <h3>Ingeniería en Sistemas Computacionales</h3>
+        <p class="muted">Egresado · Universidad de El Salvador (UES)</p>
+
+        <h3>Especialidad en Infraestructura</h3>
+        <p class="muted">Infraestructura tecnológica · Linux · virtualización · contenedores · Kubernetes · redes · almacenamiento distribuido · monitoreo y alta disponibilidad</p>
+
+        <h3>Técnico en reparación y mantenimiento</h3>
+        <p class="muted">INSAFOR / AGAPE</p>
 
         <h3>Colegio San Francisco de Asís</h3>
         <p class="muted">Bachillerato con opción Contador</p>
+
+        <h3>Formación complementaria</h3>
+        <p class="muted">Cursos de desarrollo web y especialización técnica continua.</p>
       </section>
 
       <section class="box">
-        <h2>Logros Destacados</h2>
-        <ul>
-          <li>✅ Gestión de equipos multidisciplinarios (4-6 desarrolladores).</li>
-          <li>✅ Mentoría y desarrollo profesional de talento interno.</li>
-          <li>✅ Reducción de 40% en tiempo de respuesta de endpoints críticos.</li>
-          <li>✅ Diseño de arquitecturas distribuidas y escalables.</li>
-          <li>✅ Implementación de prácticas ágiles y flujos de trabajo.</li>
-          <li>✅ Reducción de 35% en bugs en producción mediante code review.</li>
-          <li>✅ Automatización de despliegues con CI/CD.</li>
-          <li>✅ Facturación electrónica y pasarelas de pago.</li>
-          <li>✅ Optimización SQL y performance crítica.</li>
-          <li>✅ Medición y mejora de experiencia de usuario (GA4, GTM).</li>
-        </ul>
+        <h2>Áreas de dominio</h2>
+        <div class="chips">
+          <span class="chip">RR. HH.</span>
+          <span class="chip">Inventarios</span>
+          <span class="chip">Logística</span>
+          <span class="chip">Presupuestos</span>
+          <span class="chip">Facturación electrónica</span>
+          <span class="chip">Pagos</span>
+          <span class="chip">Retail</span>
+          <span class="chip">E-commerce</span>
+          <span class="chip">Análisis de procesos</span>
+          <span class="chip">Optimización de procesos</span>
+          <span class="chip">Multiempresa</span>
+        </div>
+      </section>
+
+      <section class="box">
+        <h2>Idiomas</h2>
+        <p><strong>Español:</strong> Nativo</p>
       </section>
 
       <section class="box">
         <h2>Contacto</h2>
         <p><strong>Tel.:</strong> <a href="tel:+50373659816">+503 7365 9816</a></p>
-        <p><strong>WhatsApp:</strong> <a href="https://api.whatsapp.com/send/?phone=50373659816&text=Hola&type=phone_number&app_absent=0" rel="noopener noreferrer">Abrir chat</a></p>
         <p><strong>Correo:</strong> <a href="mailto:alex.uceda@hotmail.com">alex.uceda@hotmail.com</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/alex-uceda" target="_blank" rel="noopener noreferrer">alex-uceda</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/UcedaMunto" target="_blank" rel="noopener noreferrer">UcedaMunto</a></p>
       </section>
     </aside>
 
