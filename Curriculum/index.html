@@ -73,10 +73,19 @@
     @media print{
       html,body{height:auto}
       body{background:transparent;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-      .page{width:8.5in;min-height:11in;margin:0 auto;padding:.45in;box-shadow:none;grid-template-columns:1fr 240px}
+      /* los floats no fragmentan bien al imprimir (Chrome empuja la columna
+         entera a otra página); una tabla sí permite que cada celda continúe
+         su contenido en la página siguiente, manteniendo las 2 columnas */
+      .page{width:8.5in;min-height:0;margin:0 auto;padding:.45in;box-shadow:none;display:table;table-layout:fixed;border-collapse:collapse}
+      header{display:table-caption;caption-side:top}
+      main{display:table-cell;width:calc(100% - 256px);box-sizing:border-box;vertical-align:top}
+      aside{display:table-cell;width:240px;padding-left:16px;box-sizing:border-box;vertical-align:top}
       .actions{display:none!important}
       a{color:var(--accent)!important;text-decoration:none}
-      header,.card,.box,h2,h3{break-inside:avoid;page-break-inside:avoid}
+      /* .card puede ser más largo que una página (ej. ALMAPA); evitar romperlo
+         entero deja huecos en blanco, así que solo se protegen sus sub-bloques */
+      header,.box,h2,h3,.card-header,.role-block{break-inside:avoid;page-break-inside:avoid}
+      .card{break-inside:auto;page-break-inside:auto}
       ul,p{orphans:3;widows:3}
     }
   </style>
@@ -100,23 +109,22 @@
 </head>
 <body>
   <section class="page" role="document" aria-label="Currículum de Alex Uceda">
-
-    <header>
+    <main>
       <div>
-        <h1>Alex Uceda</h1>
-        <div class="tagline">Subdirector de Innovación Tecnológica | Arquitectura · Desarrollo de Software · Infraestructura</div>
-        <div class="contact" aria-label="Contacto">
-          <span>El Salvador</span><span>·</span>
-          <a href="tel:+50373659816">+503 7365 9816</a><span>·</span>
-          <a href="mailto:alex.uceda@hotmail.com">alex.uceda@hotmail.com</a><span>·</span>
-          <a href="https://www.linkedin.com/in/alex-uceda" target="_blank" rel="noopener noreferrer">LinkedIn</a><span>·</span>
-          <a href="https://github.com/UcedaMunto" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <div>
+          <h1>Alex Uceda</h1>
+          <div class="tagline">Subdirector de Innovación Tecnológica | Arquitectura · Desarrollo de Software · Infraestructura</div>
+          <div class="contact" aria-label="Contacto">
+            <span>El Salvador</span><span>·</span>
+            <a href="tel:+50373659816">+503 7365 9816</a><span>·</span>
+            <a href="mailto:alex.uceda@hotmail.com">alex.uceda@hotmail.com</a><span>·</span>
+            <a href="https://www.linkedin.com/in/alex-uceda" target="_blank" rel="noopener noreferrer">LinkedIn</a><span>·</span>
+            <a href="https://github.com/UcedaMunto" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+        <div class="actions"><button class="btn" onclick="window.print()">Imprimir / Guardar en PDF</button>
         </div>
       </div>
-      <div class="actions"><button class="btn" onclick="window.print()">Imprimir / Guardar en PDF</button></div>
-    </header>
-
-    <main>
       <section>
         <h2>Resumen profesional</h2>
         <p>
@@ -307,13 +315,15 @@
           <span class="chip">Sistemas multiempresa</span>
           <span class="chip">API REST</span>
           <span class="chip">Integración de sistemas</span>
+          <span class="chip">Reverse proxy nginx</span>
         </div>
 
         <h2>Backend</h2>
         <div class="chips">
           <span class="chip">Python</span>
-          <span class="chip">Django</span>
           <span class="chip">Django REST</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">Bash linux</span>
           <span class="chip">PHP</span>
           <span class="chip">Symfony</span>
           <span class="chip">Laravel</span>
@@ -397,7 +407,6 @@
           <span class="chip">Power Apps</span>
           <span class="chip">SharePoint</span>
           <span class="chip">Microsoft 365</span>
-          <span class="chip">SAP / ERP</span>
           <span class="chip">Webhooks</span>
           <span class="chip">Scraping</span>
           <span class="chip">Cron</span>
@@ -408,6 +417,9 @@
           <span class="chip">VS Code</span>
           <span class="chip">DBeaver</span>
           <span class="chip">Postman</span>
+          <span class="chip">Copilot</span>
+          <span class="chip">chatGPT</span>
+          <span class="chip">Api Deepsek</span>
           <span class="chip">Linux</span>
           <span class="chip">Windows Server</span>
           <span class="chip">Git</span>
@@ -415,6 +427,7 @@
           <span class="chip">GitLab</span>
           <span class="chip">PlantUML</span>
           <span class="chip">Jira</span>
+          <span class="chip">Remina (Remote Desktop)</span>
           <span class="chip">Grafana</span>
           <span class="chip">GA4</span>
           <span class="chip">GTM</span>
