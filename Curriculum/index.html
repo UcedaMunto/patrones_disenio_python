@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta name="description" content="Currículum Vitae de Alex Uceda - Subdirector de Innovación Tecnológica, egresado de Ingeniería en Sistemas Computacionales y con especialidad en infraestructura, con experiencia en arquitectura, desarrollo de software, proyectos multitenant, DevOps, observabilidad y bases de datos.">
+  <meta name="description" content="Currículum Vitae de Alex Uceda - Subdirector de Innovación Tecnológica, Ingeniero en Sistemas Computacionales egresado con especialidad en infraestructura, experiencia en arquitectura, desarrollo de software, proyectos multitenant, DevOps, observabilidad y bases de datos.">
   <meta name="keywords" content="Alex Uceda, Currículum, Innovación Tecnológica, Ingeniería en Sistemas Computacionales, Infraestructura, Desarrollo de Software, Django, Symfony, Docker, Kubernetes, PostgreSQL, DevOps, Multitenant, Grafana, Prometheus, Alertmanager, API REST, El Salvador">
   <meta name="author" content="Alex Uceda">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -73,19 +73,10 @@
     @media print{
       html,body{height:auto}
       body{background:transparent;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-      /* los floats no fragmentan bien al imprimir (Chrome empuja la columna
-         entera a otra página); una tabla sí permite que cada celda continúe
-         su contenido en la página siguiente, manteniendo las 2 columnas */
-      .page{width:8.5in;min-height:0;margin:0 auto;padding:.45in;box-shadow:none;display:table;table-layout:fixed;border-collapse:collapse}
-      header{display:table-caption;caption-side:top}
-      main{display:table-cell;width:calc(100% - 256px);box-sizing:border-box;vertical-align:top}
-      aside{display:table-cell;width:240px;padding-left:16px;box-sizing:border-box;vertical-align:top}
+      .page{width:8.5in;min-height:11in;margin:0 auto;padding:.45in;box-shadow:none;grid-template-columns:1fr 240px}
       .actions{display:none!important}
       a{color:var(--accent)!important;text-decoration:none}
-      /* .card puede ser más largo que una página (ej. ALMAPA); evitar romperlo
-         entero deja huecos en blanco, así que solo se protegen sus sub-bloques */
-      header,.box,h2,h3,.card-header,.role-block{break-inside:avoid;page-break-inside:avoid}
-      .card{break-inside:auto;page-break-inside:auto}
+      header,.card,.box,h2,h3{break-inside:avoid;page-break-inside:avoid}
       ul,p{orphans:3;widows:3}
     }
   </style>
@@ -109,36 +100,77 @@
 </head>
 <body>
   <section class="page" role="document" aria-label="Currículum de Alex Uceda">
-    <main>
+
+    <header>
       <div>
-        <div>
-          <h1>Alex Uceda</h1>
-          <div class="tagline">Subdirector de Innovación Tecnológica | Arquitectura · Desarrollo de Software · Infraestructura</div>
-          <div class="contact" aria-label="Contacto">
-            <span>El Salvador</span><span>·</span>
-            <a href="tel:+50373659816">+503 7365 9816</a><span>·</span>
-            <a href="mailto:alex.uceda@hotmail.com">alex.uceda@hotmail.com</a><span>·</span>
-            <a href="https://www.linkedin.com/in/alex-uceda" target="_blank" rel="noopener noreferrer">LinkedIn</a><span>·</span>
-            <a href="https://github.com/UcedaMunto" target="_blank" rel="noopener noreferrer">GitHub</a>
-          </div>
-        </div>
-        <div class="actions"><button class="btn" onclick="window.print()">Imprimir / Guardar en PDF</button>
+        <h1>Alex Uceda</h1>
+        <div class="tagline">Subdirector de Innovación Tecnológica | 8 años de experiencia |Arquitectura · Desarrollo de Software · Infraestructura </div>
+        <div class="contact" aria-label="Contacto">
+          <span>El Salvador</span><span>·</span>
+          <a href="tel:+50373659816">+503 7365 9816</a><span>·</span>
+          <a href="mailto:alex.uceda@hotmail.com">alex.uceda@hotmail.com</a><span>·</span>
+          <a href="https://www.linkedin.com/in/alex-uceda" target="_blank" rel="noopener noreferrer">LinkedIn</a><span>·</span>
+          <a href="https://github.com/UcedaMunto" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
       </div>
+      <div class="actions"><button class="btn" onclick="window.print()">Imprimir / Guardar en PDF</button></div>
+    </header>
+
+    <main>
       <section>
         <h2>Resumen profesional</h2>
         <p>
-          <strong>Subdirector de Innovación Tecnológica</strong> y <strong>egresado de Ingeniería en Sistemas Computacionales</strong>, cursando una especialidad en infraestructura, con trayectoria en desarrollo de software, liderazgo técnico y administración de plataformas empresariales.
-          Experiencia práctica en análisis y diseño de bases de datos, arquitectura de software, proyectos multiempresa bajo el patrón <strong>multitenant</strong>, integraciones mediante APIs, arquitecturas MVC y monolitos modulares, automatización, optimización del rendimiento y monitoreo de servidores.
-          Perfil <em>hands-on</em> con experiencia desde el desarrollo <em>backend/frontend</em> hasta contenedores, redes, observabilidad, bases de datos y coordinación de múltiples proyectos.
+          <strong>Subdirector de Innovación Tecnológica</strong> e <strong>Ingeniero en Sistemas Computacionales egresado</strong>, cursando la especialidad en infraestructura, con trayectoria en desarrollo de software.
+          En mi experiencia práctica he logrado realizar una serie de tareas relacionadas con TI, entre las cuales puedo mencionar:
+          Análisis y diseño de bases de datos, arquitectura de software, proyectos multiempresa bajo patrón <strong>multitenant</strong>, integraciones mediante APIs con MVC y monolitos modulares, automatización, optimización de rendimiento y monitoreo de servidores.
+          Perfil <em>hands-on</em> con experiencia desde desarrollo <em>backend/frontend</em> hasta contenedores, redes, observabilidad, bases de datos y coordinación de múltiples proyectos.
+          <br><br>
+          Las características que he requerido para desempeñarme a lo largo de mi carrera las presento a continuación:
         </p>
         <ul class="compact">
           <li>Liderazgo y coordinación de equipos de desarrollo; administración de backlogs, medición de avance y seguimiento simultáneo de múltiples proyectos.</li>
-          <li>Arquitectura de aplicaciones con Django/Python, PHP/Symfony/Laravel, Go, React/Next.js, patrones de diseño y soluciones multitenant.</li>
-          <li>Infraestructura con Docker, Nginx, Linux, Windows Server y servicios en la nube.</li>
+          <li>Arquitectura de aplicaciones con Django/Python, PHP/Symfony/Laravel/Go, React/Next.js, API REST, patrones de diseño y soluciones multitenant.</li>
+          <li>Infraestructura con Docker, Nginx, Linux, Windows Server y servicios cloud.</li>
           <li>Monitoreo y observabilidad de servidores y servicios con Grafana, Prometheus y Alertmanager.</li>
-          <li>Integraciones empresariales: facturación electrónica (implementación y mantenimiento del firmador y de correlativos), pasarelas de pago, automatizaciones y servicios de terceros.</li>
+          <li>Integraciones empresariales: facturación electrónica (implementación y mantenimiento del firmador, correlativos), pasarelas de pago, automatizaciones y servicios de terceros.</li>
         </ul>
+        <br> <br>
+        <p>He buscado desde el inicio de mi carrera mantenerme aprendiendo nuevas tecnologías, métodos y proyectos
+          para continuar ampliando mis habilidades a pesar de que especializarse es el camino más fácil para lograr escalar en salario 
+          la variadad de conocimientos me parece el camino más estable y sólido que hasta el momento he logrado recorrer, espero seguir 
+          aprendiendo y desarrollandome y espero con ancias nuevos retos en el futuro.
+        </p>
+      </section>
+
+      <section class="box">
+        <h2>Gestión y liderazgo</h2>
+        <div class="chips">
+          <span class="chip">Liderazgo técnico</span>
+          <span class="chip">Gestión de equipo</span>
+          <span class="chip">Code Review</span>
+          <span class="chip">Backlog</span>
+          <span class="chip">Seguimiento de avances</span>
+          <span class="chip">Gestión multiproyecto</span>
+          <span class="chip">Roadmap técnico</span>
+          <span class="chip">Requerimientos</span>
+          <span class="chip">Mentoría</span>
+          <span class="chip">Arquitectura</span>
+          <span class="chip">Documentación</span>
+        </div>
+      </section>
+
+      <section class="box">
+        <h2>Arquitectura y diseño</h2>
+        <div class="chips">
+          <span class="chip">Análisis de sistemas</span>
+          <span class="chip">Diseño de bases de datos</span>
+          <span class="chip">Patrones de diseño</span>
+          <span class="chip">MVC</span>
+          <span class="chip">Arquitectura multitenant</span>
+          <span class="chip">Sistemas multiempresa</span>
+          <span class="chip">API REST</span>
+          <span class="chip">Integración de sistemas</span>
+        </div>
       </section>
 
       <section>
@@ -157,15 +189,24 @@
             <div class="role">Subdirector de Innovación Tecnológica</div>
             <div class="when">Dic. 2025 — Actualidad</div>
             <ul>
-              <li>Dirección técnica de iniciativas de innovación, infraestructura y evolución de sistemas para <strong>Almacenes Bomba, Premiumcenter e Improcasa</strong>.</li>
+              <li>Dirección técnica de iniciativas de innovación, infraestructura y evolución de sistemas para <strong>Almacenes Bomba, Premiumcenter, Improcasa</strong>.</li>
               <li>Coordinación simultánea de múltiples proyectos; administración de backlogs, priorización, medición de avance y seguimiento de entregables.</li>
               <li>Definición de arquitectura, prioridades técnicas, estándares de desarrollo, patrones de diseño y lineamientos de despliegue.</li>
-              <li>Automatización de tareas con Power Automate de Microsoft 365.</li>
+              <li>Migración e integración de sistemas heredados.</li>
+              <li>Automatización de tareas con Power Automate de Office 365.</li>
               <li>Supervisión de servicios distribuidos, contenedores, bases de datos, integraciones, monitoreo y continuidad operativa.</li>
               <li>Participación en documentación, análisis y optimización de procesos empresariales para ALMAPA y DISMA, coordinando necesidades de negocio con soluciones tecnológicas.</li>
               <li>Evaluación de nuevas tecnologías para virtualización, orquestación, almacenamiento distribuido e <strong>inteligencia artificial aplicada</strong>.</li>
-              <li>Administración y configuración de servidores linux y windows</li>
             </ul>
+          </div>
+        </article>
+
+        <article class="card" aria-label="ALMAPA S.A. de C.V.">
+          <div class="card-header">
+            <div>
+              <div class="employer">ALMAPA S.A. de C.V.</div>
+            </div>
+            <div class="logo-badge">ALMAPA</div>
           </div>
 
           <div class="role-block">
@@ -176,11 +217,21 @@
               <li>Análisis y diseño de bases de datos; optimización de consultas SQL, procesos batch, sincronizaciones y servicios de integración.</li>
               <li>Diseño y mantenimiento de sistemas multiempresa utilizando arquitectura <strong>multitenant</strong> para compartir una misma base de código con separación lógica de datos y configuración por empresa.</li>
               <li>Desarrollo y mantenimiento de sistemas con Django, Python, PostgreSQL, MongoDB, Docker y Nginx.</li>
-              <li>Scraping de correos electrónicos para la extracción de DTE.</li>
+              <li>Scraping sobre correos electrónicos para extracción de DTEs.</li>
               <li>Diseño e integración de API REST para comunicación entre sistemas internos, servicios externos y plataformas empresariales.</li>
-              <li>Desarrollo del módulo de cálculo de planillas.</li>
-              <li>Coordinación técnica de módulos de RR. HH., logística, inventarios y facturación electrónica, así como seguimiento de proyectos de terceros.</li>
+              <li>Desarrollo del módulo de cálculos de planilla.</li>
+              <li>Coordinación técnica de módulos de RR. HH., logística, inventarios y facturación electrónica, y seguimiento a proyectos de terceros.</li>
+              <li>Entrevista, búsqueda y contratación de personal.</li>
             </ul>
+          </div>
+        </article>
+
+        <article class="card" aria-label="ALMAPA S.A. de C.V.">
+          <div class="card-header">
+            <div>
+              <div class="employer">ALMAPA S.A. de C.V.</div>
+            </div>
+            <div class="logo-badge">ALMAPA</div>
           </div>
 
           <div class="role-block">
@@ -190,7 +241,7 @@
               <li>Diseño, planificación e implementación de mejoras de rendimiento y optimización en páginas web y tiendas en línea.</li>
               <li>Integración mediante API con servicios externos y <strong>pasarelas de pago de El Salvador y Guatemala</strong>.</li>
               <li>Análisis de rendimiento, mejoras de experiencia de usuario, SEO técnico y optimización de procesos relacionados con comercio electrónico.</li>
-              <li>Administración y ajuste de servidores; automatización de tareas y despliegues con Docker y Docker Compose.</li>
+              <li>Administración y ajustes de servidores; automatización de tareas y despliegues con Docker y Docker Compose.</li>
               <li>Configuración de Google Search Console, Google Analytics y Google Tag Manager.</li>
               <li>Implementación y mantenimiento de componentes de facturación electrónica.</li>
             </ul>
@@ -213,6 +264,7 @@
             <li>Apoyo y capacitación a personal de desarrollo; gestión de cambios con GitLab.</li>
             <li>Testing de flujos de negocio, modificaciones de bases de datos, optimización de código y mejoras de seguridad.</li>
             <li>Optimización de consultas SQL.</li>
+            <li>Diseño de interfaces para aplicaciones móviles y de escritorio.</li>
           </ul>
           <div class="stack muted">PHP · Symfony · JavaScript · SQL · GitLab · Testing · Seguridad web</div>
         </article>
@@ -230,9 +282,18 @@
             <div class="role">Capacitación de personal · Jornada parcial</div>
             <div class="when">Jun. 2021 — Ene. 2022</div>
             <ul>
-              <li>Implementación de software en DigitalOcean y configuración de dominio, SSL y un entorno VPC.</li>
+              <li>Implementación de software en DigitalOcean y configuración de dominio, SSL y entorno VPC.</li>
               <li>Configuración de entornos de desarrollo con acceso SSH y capacitación sobre Symfony.</li>
             </ul>
+          </div>
+        </article>
+
+        <article class="card" aria-label="Inbakcar S.A. de C.V.">
+          <div class="card-header">
+            <div>
+              <div class="employer">Inbakcar S.A. de C.V.</div>
+            </div>
+            <div class="logo-badge">INBAKCAR</div>
           </div>
 
           <div class="role-block">
@@ -259,7 +320,7 @@
           </div>
           <ul>
             <li>Programación con Symfony y SQL Server.</li>
-            <li>Migración de datos hacia una base de datos central en PostgreSQL mediante tareas programadas.</li>
+            <li>Migración de datos hacia una base central PostgreSQL mediante tareas programadas.</li>
             <li>Pruebas de ETL con SQL Server Integration Services y desarrollo de procedimientos almacenados.</li>
             <li>Configuración de servidores virtuales en Azure.</li>
           </ul>
@@ -271,66 +332,76 @@
         <h2>Experiencia técnica destacada</h2>
         <div class="card">
           <h3>Arquitectura, sistemas empresariales e integraciones</h3>
-          <p>Análisis, diseño y evolución de soluciones para RR. HH., presupuestos, inventarios, compras, logística y facturación electrónica. Diseño de APIs REST, aplicación de patrones de desarrollo y arquitectura multitenant para proyectos multiempresa; integración con servicios de pago, Microsoft 365 y servicios externos.</p>
+          <p>Análisis, diseño y evolución de soluciones para RR. HH., presupuestos, inventarios, compras, logística y facturación electrónica. Diseño de API REST, patrones de desarrollo y arquitectura multitenant para proyectos multiempresa; servicios de pago, Microsoft 365 y servicios externos.</p>
         </div>
         <div class="card">
           <h3>Infraestructura, contenedores, alta disponibilidad y monitoreo</h3>
-          <p>Administración de Linux y Windows Server, Docker/Docker Compose, Nginx como proxy inverso, Kubernetes, Rook/Ceph, Redis, KVM, DNS, certificados TLS/SSL, redes y automatización mediante scripts. Monitoreo y observabilidad con Grafana, Prometheus y Alertmanager.</p>
+          <p>Administración Linux y Windows Server, Docker/Compose, Nginx como proxy inverso, Kubernetes, Rook/Ceph, Redis, KVM, DNS, certificados TLS/SSL, redes y automatización por scripts. Monitoreo y observabilidad con Grafana, Prometheus y Alertmanager.</p>
         </div>
         <div class="card">
           <h3>Análisis, diseño de bases de datos y rendimiento</h3>
-          <p>Modelado y diseño de bases de datos relacionales y NoSQL con PostgreSQL, MongoDB, MySQL/MariaDB y SQL Server; optimización de consultas, sincronización de datos, procesos ETL, migraciones y análisis de rendimiento.</p>
+          <p>Modelado y diseño de bases de datos relacionales y NoSQL con PostgreSQL, MongoDB, MySQL/MariaDB y SQL Server; optimización de consultas, sincronización de datos, ETL, migraciones y análisis de rendimiento.</p>
         </div>
         <div class="card">
           <h3>IA aplicada — especialización en curso</h3>
           <p>Experimentación y entrenamiento de modelos de visión por computadora para <em>virtual try-on</em>, incluyendo IDM-VTON y evaluación de flujos de entrenamiento en infraestructura de cómputo.</p>
         </div>
       </section>
+
+      <section>
+        <h2>Cursos y certificaciones</h2>
+        <p class="muted">Selección de cursos aprobados en Platzi (2021–2022).</p>
+
+        <div class="card">
+          <h3>Backend y programación</h3>
+          <ul class="compact">
+            <li>Backend con Node.js: API REST con Express.js</li>
+            <li>Fundamentos de Node.js</li>
+            <li>Programación Orientada a Objetos</li>
+            <li>ECMAScript 6+</li>
+            <li>Closures y Scope en JavaScript</li>
+            <li>Manipulación de Arrays en JavaScript</li>
+            <li>Básico de Algoritmos y Pensamiento Lógico</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Frontend y diseño web</h3>
+          <ul class="compact">
+            <li>Definitivo de HTML y CSS</li>
+            <li>Responsive Design: Maquetación Mobile First</li>
+            <li>Diseño Web con CSS Grid y Flexbox</li>
+            <li>Sistemas de Diseño</li>
+            <li>Frontend Developer</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Herramientas y entorno</h3>
+          <ul class="compact">
+            <li>Introducción a la Terminal y Línea de Comandos</li>
+            <li>Configuración de Entorno de Desarrollo en Linux</li>
+          </ul>
+        </div>
+      </section>
     </main>
 
     <aside>
       <section class="box">
-        <h2>Gestión y liderazgo</h2>
-        <div class="chips">
-          <span class="chip">Liderazgo técnico</span>
-          <span class="chip">Gestión de equipo</span>
-          <span class="chip">Code Review</span>
-          <span class="chip">Backlog</span>
-          <span class="chip">Seguimiento de avances</span>
-          <span class="chip">Gestión multiproyecto</span>
-          <span class="chip">Roadmap técnico</span>
-          <span class="chip">Requerimientos</span>
-          <span class="chip">Mentoría</span>
-          <span class="chip">Arquitectura</span>
-          <span class="chip">Documentación</span>
-        </div>
-
-        <h2>Arquitectura y diseño</h2>
-        <div class="chips">
-          <span class="chip">Análisis de sistemas</span>
-          <span class="chip">Diseño de bases de datos</span>
-          <span class="chip">Patrones de diseño</span>
-          <span class="chip">MVC</span>
-          <span class="chip">Arquitectura multitenant</span>
-          <span class="chip">Sistemas multiempresa</span>
-          <span class="chip">API REST</span>
-          <span class="chip">Integración de sistemas</span>
-          <span class="chip">Reverse proxy nginx</span>
-        </div>
-
         <h2>Backend</h2>
         <div class="chips">
           <span class="chip">Python</span>
+          <span class="chip">Django</span>
           <span class="chip">Django REST</span>
-          <span class="chip">JavaScript</span>
-          <span class="chip">Bash linux</span>
           <span class="chip">PHP</span>
           <span class="chip">Symfony</span>
           <span class="chip">Laravel</span>
           <span class="chip">Node.js</span>
           <span class="chip">API REST</span>
         </div>
+      </section>
 
+      <section class="box">
         <h2>Frontend</h2>
         <div class="chips">
           <span class="chip">JavaScript</span>
@@ -341,7 +412,9 @@
           <span class="chip">jQuery</span>
           <span class="chip">Bootstrap</span>
         </div>
+      </section>
 
+      <section class="box">
         <h2>Bases de datos</h2>
         <div class="chips">
           <span class="chip">PostgreSQL</span>
@@ -353,7 +426,9 @@
           <span class="chip">SQL</span>
           <span class="chip">ETL</span>
         </div>
+      </section>
 
+      <section class="box">
         <h2>DevOps e infraestructura</h2>
         <div class="chips">
           <span class="chip">Linux</span>
@@ -369,7 +444,9 @@
           <span class="chip">GitLab</span>
           <span class="chip">Bash</span>
         </div>
+      </section>
 
+      <section class="box">
         <h2>Monitoreo y observabilidad</h2>
         <div class="chips">
           <span class="chip">Grafana</span>
@@ -379,7 +456,9 @@
           <span class="chip">Alertas</span>
           <span class="chip">Monitoreo de servidores</span>
         </div>
+      </section>
 
+      <section class="box">
         <h2>Cloud y virtualización</h2>
         <div class="chips">
           <span class="chip">DigitalOcean</span>
@@ -388,7 +467,9 @@
           <span class="chip">OpenStack</span>
           <span class="chip">VPC / VM</span>
         </div>
+      </section>
 
+      <section class="box">
         <h2>Redes y seguridad</h2>
         <div class="chips">
           <span class="chip">SSH</span>
@@ -400,26 +481,28 @@
           <span class="chip">Reverse Proxy</span>
           <span class="chip">Hardening básico</span>
         </div>
+      </section>
 
+      <section class="box">
         <h2>Automatización e integración</h2>
         <div class="chips">
           <span class="chip">Power Automate</span>
           <span class="chip">Power Apps</span>
           <span class="chip">SharePoint</span>
           <span class="chip">Microsoft 365</span>
+          <span class="chip">SAP / ERP</span>
           <span class="chip">Webhooks</span>
           <span class="chip">Scraping</span>
           <span class="chip">Cron</span>
         </div>
+      </section>
 
+      <section class="box">
         <h2>Software y herramientas</h2>
         <div class="chips">
           <span class="chip">VS Code</span>
           <span class="chip">DBeaver</span>
           <span class="chip">Postman</span>
-          <span class="chip">Copilot</span>
-          <span class="chip">chatGPT</span>
-          <span class="chip">Api Deepsek</span>
           <span class="chip">Linux</span>
           <span class="chip">Windows Server</span>
           <span class="chip">Git</span>
@@ -427,7 +510,6 @@
           <span class="chip">GitLab</span>
           <span class="chip">PlantUML</span>
           <span class="chip">Jira</span>
-          <span class="chip">Remina (Remote Desktop)</span>
           <span class="chip">Grafana</span>
           <span class="chip">GA4</span>
           <span class="chip">GTM</span>
