@@ -41,6 +41,8 @@
     h1{font-size:var(--h1);line-height:1.1;margin:0;letter-spacing:.2px}
     .tagline{color:var(--muted);margin-top:4px;font-weight:600}
     .actions{display:flex;gap:8px}
+    .header-right{display:flex;flex-direction:column;align-items:flex-end;gap:8px}
+    .photo{width:110px;height:auto;border-radius:12px;border:1px solid var(--rule);object-fit:cover;background:#eef2f7}
     .btn{appearance:none;border:1px solid var(--rule);background:#fff;padding:6px 8px;border-radius:10px;font-size:11px;cursor:pointer}
     .btn:hover{border-color:#cbd5e1}
     main{display:flex;flex-direction:column;gap:12px}
@@ -113,7 +115,10 @@
           <a href="https://github.com/UcedaMunto" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
       </div>
-      <div class="actions"><button class="btn" onclick="window.print()">Imprimir / Guardar en PDF</button></div>
+      <div class="header-right">
+        <img class="photo" src="foto_alex_uceda.png" alt="Foto de Alex Uceda">
+        <div class="actions"><button class="btn" onclick="window.print()">Imprimir / Guardar en PDF</button></div>
+      </div>
     </header>
 
     <main>
@@ -388,6 +393,12 @@
 
     <aside>
       <section class="box">
+        <h2>Información adicional</h2>
+        <p><strong>Licencia de conducir:</strong> Particular</p>
+        <p><strong>Disponibilidad para viajar:</strong> Sí</p>
+      </section>
+
+      <section class="box">
         <h2>Backend</h2>
         <div class="chips">
           <span class="chip">Python</span>
@@ -490,10 +501,11 @@
           <span class="chip">Power Apps</span>
           <span class="chip">SharePoint</span>
           <span class="chip">Microsoft 365</span>
-          <span class="chip">SAP / ERP</span>
+          <span class="chip">Procedimientos almacenados</span>
           <span class="chip">Webhooks</span>
           <span class="chip">Scraping</span>
-          <span class="chip">Cron</span>
+          <span class="chip">ETL</span>
+          <span class="chip">Cron(tareas programadas)</span>
         </div>
       </section>
 
@@ -502,6 +514,8 @@
         <div class="chips">
           <span class="chip">VS Code</span>
           <span class="chip">DBeaver</span>
+          <span class="chip">Cpanel</span>
+          <span class="chip">WHM</span>
           <span class="chip">Postman</span>
           <span class="chip">Linux</span>
           <span class="chip">Windows Server</span>
@@ -564,8 +578,22 @@
         <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/alex-uceda" target="_blank" rel="noopener noreferrer">alex-uceda</a></p>
         <p><strong>GitHub:</strong> <a href="https://github.com/UcedaMunto" target="_blank" rel="noopener noreferrer">UcedaMunto</a></p>
       </section>
+
+      <section class="box">
+        <h2>Referencias</h2>
+
+        <h3>Referencias laborales</h3>
+        <p><strong>Douglas Serbino</strong><br>Ethnix Group · Desarrollador Senior<br>Cel. <a href="tel:+50373467652">+503 7346 7652</a></p>
+        <p><strong>Francisco Gómez</strong><br>DTIC · Técnico informático<br>Cel. <a href="tel:+50370082145">+503 7008 2145</a></p>
+        <p><strong>Javier Cea</strong><br>Bank Credimatic · Analista programador<br>Cel. <a href="tel:+50374131813">+503 7413 1813</a></p>
+
+        <h3>Referencias personales</h3>
+        <p><strong>Salvador Ayala</strong><br>DTIC · Coordinador de desarrollo<br>Cel. <a href="tel:+50363104779">+503 6310 4779</a></p>
+        <p><strong>Lucy Aleman</strong><br>Hanesbrands · Coordinadora de procesos de teñido<br>Cel. <a href="tel:+50372911886">+503 7291 1886</a></p>
+      </section>
     </aside>
 
   </section>
 </body>
 </html>
+
