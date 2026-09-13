@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ucedamunto.github.io/patrones_disenio_python/Curriculum/sitemap.xml
